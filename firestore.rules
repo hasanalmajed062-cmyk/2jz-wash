@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // غيّر الإيميلات التالية إلى إيميلاتك أنت والعاملين فقط
+    function allowed() {
+      return request.auth != null
+        && request.auth.token.email in [
+          'hasanalmajed11@gmail.com',
+          'kareemalmajed@2jz.com'
+        ];
+    }
+
+    match /entries/{id} {
+      allow read, write: if allowed();
+    }
+    match /config/{id} {
+      allow read, write: if allowed();
+    }
+  }
+}
