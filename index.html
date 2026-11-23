@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>2jz wash</title>
+<title>2jz Wash</title>
 <meta name="theme-color" content="#D90429">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,69 +16,90 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal",system-ui,sans-serif;font-size:16px;line-height:1.5;transition:background .2s,color .2s}
-main{max-width:560px;margin:0 auto;padding:12px 14px 104px}
+main{max-width:580px;margin:0 auto;padding:12px 14px 104px}
 .top{background:linear-gradient(135deg,var(--red),#A8001F);color:#fff;border-radius:18px;padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow)}
-.topRow{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.top h1{font-size:22px;font-weight:800;margin:0}
-.top .date{font-size:13.5px;opacity:.92}
-.top .icon{background:rgba(255,255,255,.2);border:0;color:#fff;border-radius:50%;width:44px;height:44px;min-height:44px;font-size:20px;padding:0;flex:none}
+.topRow{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.top h1{font-size:21px;font-weight:800;margin:0}
+.top .date{font-size:13px;opacity:.92}
+.topBtns{display:flex;gap:8px;align-items:center}
+.top .icon{position:relative;background:rgba(255,255,255,.2);border:0;color:#fff;border-radius:50%;width:42px;height:42px;min-height:42px;font-size:19px;padding:0;flex:none;display:inline-flex;align-items:center;justify-content:center}
+#alertBadge{position:absolute;top:-3px;inset-inline-start:-3px;background:#FBBF24;color:#1B1B1F;font-weight:800;border-radius:999px;font-size:11px;min-width:19px;height:19px;line-height:19px;padding:0 5px;display:none;box-shadow:0 2px 6px rgba(0,0,0,.25)}
 .online{font-size:13px;margin-top:8px;background:rgba(255,255,255,.16);border-radius:10px;padding:4px 10px;display:none}
 .online:empty{display:none!important}
+.alertStrip{background:var(--tint);border:1px solid var(--bd);border-radius:14px;padding:9px 12px;margin-bottom:10px;display:none;align-items:center;justify-content:space-between;gap:8px;font-size:14px;cursor:pointer}
+.alertStrip b{color:var(--red)}
 #status{font-size:13px;color:var(--mute);margin:0 2px 10px;min-height:20px}
 #status.bad{color:var(--out);font-weight:700}
 .sum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}
 .sum div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center;box-shadow:var(--shadow)}
-.sum b{display:block;font-size:19px;font-weight:800}
-.sum span{font-size:13px;color:var(--mute)}
+.sum b{display:block;font-size:18px;font-weight:800}
+.sum span{font-size:12.5px;color:var(--mute)}
 .sum.today div:nth-child(1) b{color:var(--in)}.sum.today div:nth-child(2) b{color:var(--out)}
 .info{font-size:13.5px;color:var(--mute);margin:0 2px 12px}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px;box-shadow:var(--shadow)}
 h2{font-size:17px;margin:0 0 10px;font-weight:800}
-h3{font-size:15px;margin:14px 0 2px;color:var(--red)}
-button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--inp);color:var(--ink);border-radius:12px;padding:10px 12px;min-height:44px;transition:transform .08s}
+h3{font-size:15px;margin:14px 0 4px;color:var(--red)}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--inp);color:var(--ink);border-radius:12px;padding:10px 12px;min-height:44px;transition:transform .08s,background .15s}
 button:active{transform:scale(.97)}
 button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--red);outline-offset:2px}
-.sm{min-height:36px;padding:4px 12px;font-size:14px}
-.tabs{display:flex;gap:6px;margin-bottom:12px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:4px}
-.tabs button{flex:1;border:0;background:transparent}
+.sm{min-height:36px;padding:4px 11px;font-size:13.5px}
+.tabs{display:flex;gap:6px;margin-bottom:12px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:4px;overflow-x:auto}
+.tabs button{flex:1;border:0;background:transparent;white-space:nowrap;font-size:14px;padding:8px 10px;min-height:40px}
 .tabs button.on{background:var(--red);color:#fff;font-weight:800}
+.pills{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:8px;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pills button{min-height:34px;padding:4px 12px;border-radius:999px;font-size:13px;white-space:nowrap;flex:none}
+.pills button.on{background:var(--red);border-color:var(--red);color:#fff;font-weight:700}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
 .chips .grp{display:flex;gap:8px;flex-wrap:wrap;width:100%}
 .chips button.on{border-color:var(--red);background:var(--tint);box-shadow:inset 0 0 0 1px var(--red);font-weight:700}
 #loyal{display:none;background:var(--tint);border:1px solid var(--bd);border-radius:12px;padding:8px 10px;margin-bottom:10px;font-size:14px;flex-direction:column;gap:6px}
 .lrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:8px 0}
+.miniStat{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:6px 4px;text-align:center}
+.miniStat b{display:block;font-size:14.5px;font-weight:800}
+.miniStat span{font-size:11.5px;color:var(--mute)}
 label{display:block;font-size:14px;color:var(--mute);margin-bottom:3px}
 input,select,textarea{width:100%;font:inherit;min-height:46px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:var(--inp);color:var(--ink)}
 textarea{min-height:90px}
-.chk{display:flex;gap:8px;align-items:center;margin-top:8px;color:var(--ink)}
-.chk input{width:auto;min-height:0}
-.save{width:100%;margin-top:6px;background:var(--red);border-color:var(--red);color:#fff;font-weight:800;font-size:18px;min-height:52px}
+.chk{display:flex;gap:8px;align-items:center;margin-top:8px;color:var(--ink);cursor:pointer}
+.chk input{width:18px;height:18px;min-height:0;accent-color:var(--red)}
+.save{width:100%;margin-top:6px;background:var(--red);border-color:var(--red);color:#fff;font-weight:800;font-size:17px;min-height:50px}
 .wbox{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
 .wbox button{min-height:38px;padding:6px 14px;border-radius:999px;font-size:14px}
 .wbox button.on{background:var(--tint);border-color:var(--red);color:var(--red);font-weight:700}
 .item{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 0;border-top:1px solid var(--line)}
 .item:first-of-type{border-top:0}
-.item>div:first-child{flex:1;min-width:130px}
+.item>div:first-child{flex:1;min-width:140px}
 .item small{color:var(--mute);display:block}
-.act{display:flex;gap:6px;flex-wrap:wrap}
+.act{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
 .amt{font-weight:800;white-space:nowrap}
 .amt.in{color:var(--in)}.amt.out{color:var(--out)}
 .del{color:var(--out)}
-.empty{color:var(--mute);padding:8px 0}
-.kv{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-top:1px solid var(--line)}
+.empty{color:var(--mute);padding:8px 0;font-size:14.5px}
+.kv{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 0;border-top:1px solid var(--line)}
 .kv:first-of-type{border-top:0}
 .kv small{color:var(--mute)}
 .big{font-size:18px;margin-bottom:8px}.big b{color:var(--red);font-size:22px}
-.card{border-top:1px solid var(--line);padding:12px 0}
-.card:first-child{border-top:0}
+.card{border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:12px;margin-bottom:10px}
 .card small{color:var(--mute);display:block}
-.badge{display:inline-block;font-size:12.5px;font-weight:700;border-radius:999px;padding:1px 10px;margin-inline-start:6px}
-.badge.ok{background:rgba(27,138,90,.15);color:var(--in)}.badge.warn{background:rgba(245,158,11,.18);color:#B45309}.badge.bad{background:rgba(176,0,32,.14);color:var(--out)}
+.cardHead{display:flex;justify-content:space-between;align-items:flex-start;gap:6px;flex-wrap:wrap}
+.badge{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;margin-inline-start:4px}
+.badge.ok{background:rgba(27,138,90,.15);color:var(--in)}
+.badge.warn{background:rgba(245,158,11,.18);color:#B45309}
+.badge.bad{background:rgba(176,0,32,.14);color:var(--out)}
+.badge.info{background:rgba(37,99,235,.14);color:#1D4ED8}
+.badge.vip{background:rgba(147,51,234,.15);color:#7E22CE}
 :root[data-theme="dark"] .badge.warn{color:#FBBF24}
+:root[data-theme="dark"] .badge.info{color:#60A5FA}
+:root[data-theme="dark"] .badge.vip{color:#C084FC}
+.prog{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin:6px 0}
+.prog>i{display:block;height:100%;background:linear-gradient(90deg,var(--red),#F59E0B);border-radius:999px;transition:width .3s}
+.prog.ok>i{background:linear-gradient(90deg,var(--in),#34D399)}
 .ben{margin:4px 0 6px;padding:0;list-style:none;font-size:14px}
 .ben li::before{content:"• ";color:var(--red)}
-.btnlink{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:4px 12px;border-radius:12px;background:#25D366;color:#06210f;font-weight:700;font-size:14px;text-decoration:none}
+.btnlink{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:4px 12px;border-radius:12px;background:#25D366;color:#06210f;font-weight:700;font-size:13.5px;text-decoration:none}
 .tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 #report{display:none;min-height:120px;margin-top:8px;font-size:14px}
 #rcptText{min-height:240px;font-size:15px;line-height:1.7}
@@ -87,14 +108,20 @@ textarea{min-height:90px}
 .ed .del{min-height:46px}
 .plan{border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:8px;background:var(--bg)}
 .plan .row{margin-bottom:6px}
-#nav{position:fixed;inset-inline:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
-#nav button{flex:1;position:relative;display:flex;flex-direction:column;align-items:center;gap:1px;border:0;border-radius:0;background:transparent;color:var(--mute);font-size:11.5px;min-height:58px;padding:6px 1px}
-#nav button i{font-style:normal;font-size:19px;line-height:1.1}
+.permGrid{display:grid;grid-template-columns:1fr;gap:6px;margin:8px 0}
+.permItem{display:flex;justify-content:space-between;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:14px}
+.permItem input{width:20px;height:20px;min-height:0;accent-color:var(--red)}
+.logRow{padding:8px 0;border-top:1px solid var(--line);font-size:13.5px}
+.logRow:first-child{border-top:0}
+#nav{position:fixed;inset-inline:0;bottom:0;display:flex;overflow-x:auto;scrollbar-width:none;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+#nav::-webkit-scrollbar{display:none}
+#nav button{flex:1 0 58px;position:relative;display:flex;flex-direction:column;align-items:center;gap:1px;border:0;border-radius:0;background:transparent;color:var(--mute);font-size:11px;min-height:58px;padding:6px 2px;white-space:nowrap}
+#nav button i{font-style:normal;font-size:18px;line-height:1.1}
 #nav button.on{color:var(--red);font-weight:800;box-shadow:inset 0 3px 0 var(--red)}
-#subBadge{position:absolute;top:4px;inset-inline-start:calc(50% + 6px);background:var(--red);color:#fff;border-radius:999px;font-size:10px;min-width:16px;height:16px;line-height:16px;padding:0 4px;display:none}
-.sheet{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center;z-index:30}
-.sheet>div{background:var(--bg);width:100%;max-width:560px;max-height:92vh;overflow:auto;border-radius:20px 20px 0 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom,0px))}
-.toast{position:fixed;inset-inline:0;bottom:calc(76px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90%;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+.navBadge{position:absolute;top:4px;inset-inline-start:calc(50% + 5px);background:var(--red);color:#fff;border-radius:999px;font-size:10px;min-width:16px;height:16px;line-height:16px;padding:0 4px;display:none}
+.sheet{position:fixed;inset:0;background:rgba(0,0,0,.58);display:none;align-items:flex-end;justify-content:center;z-index:30}
+.sheet>div{background:var(--bg);width:100%;max-width:580px;max-height:92vh;overflow:auto;border-radius:20px 20px 0 0;padding:16px 14px calc(18px + env(safe-area-inset-bottom,0px))}
+.toast{position:fixed;inset-inline:0;bottom:calc(76px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90%;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40;font-weight:700}
 .toast.show{opacity:1}
 </style>
 </head>
@@ -103,12 +130,22 @@ textarea{min-height:90px}
 <header class="top">
   <div class="topRow">
     <div><h1 id="appName">🧽 2jz wash</h1><div class="date" id="today"></div></div>
-    <button class="icon" id="themeBtn" type="button" aria-label="تبديل الوضع الليلي">🌙</button>
+    <div class="topBtns">
+      <button class="icon" id="alertBtn" type="button" aria-label="التنبيهات" style="display:none">🔔<span id="alertBadge">0</span></button>
+      <button class="icon" id="themeBtn" type="button" aria-label="تبديل الوضع الليلي">🌙</button>
+    </div>
   </div>
   <div class="online" id="online"></div>
 </header>
+
+<div class="alertStrip" id="alertStrip">
+  <span id="alertStripTxt"></span>
+  <b>عرض الكل ←</b>
+</div>
+
 <div id="status">جاري الاتصال بالسجل المشترك…</div>
 
+<!-- LOGIN -->
 <div id="login" style="display:none">
   <section class="panel">
     <h2>🔐 تسجيل الدخول</h2>
@@ -117,10 +154,14 @@ textarea{min-height:90px}
     <label for="pw" style="margin-top:8px">كلمة المرور</label>
     <input id="pw" type="password" dir="ltr" style="text-align:right" autocomplete="current-password">
     <button class="save" id="lg" type="button">دخول</button>
+    <div style="margin-top:8px;text-align:center">
+      <button id="forgotPw" type="button" class="sm" style="border:0;background:transparent;color:var(--red);font-weight:700">نسيت كلمة المرور؟ أرسل رابط التغيير</button>
+    </div>
     <div id="lgErr" class="empty" style="color:var(--out)"></div>
   </section>
 </div>
 
+<!-- SET NAME -->
 <div id="nameBox" style="display:none">
   <section class="panel">
     <h2>👋 اسمك</h2>
@@ -130,15 +171,39 @@ textarea{min-height:90px}
   </section>
 </div>
 
+<!-- FORCE PASSWORD RESET -->
+<div id="forcePwBox" style="display:none">
+  <section class="panel">
+    <h2>🔐 مطلوب تعيين كلمة مرور جديدة</h2>
+    <div class="empty">طلب المالك تحديث كلمة المرور الخاصة بحسابك قبل المتابعة. اكتب كلمة مرور جديدة (٦ أحرف على الأقل).</div>
+    <label for="fpNew">كلمة المرور الجديدة</label>
+    <input id="fpNew" type="password" dir="ltr" style="text-align:right" placeholder="******">
+    <label for="fpConf" style="margin-top:8px">تأكيد كلمة المرور الجديدة</label>
+    <input id="fpConf" type="password" dir="ltr" style="text-align:right" placeholder="******">
+    <button class="save" id="fpSave" type="button">حفظ كلمة المرور والمتابعة</button>
+    <div id="fpErr" class="empty" style="color:var(--out)"></div>
+  </section>
+</div>
+
+<!-- DISABLED ACCOUNT -->
+<div id="disabledBox" style="display:none">
+  <section class="panel">
+    <h2>⛔ الحساب موقوف</h2>
+    <div class="empty">تم إيقاف صلاحية دخول هذا الحساب مؤقتاً من قِبل المالك. تواصل مع الإدارة للتفعيل.</div>
+    <button id="disLogout" type="button">تسجيل الخروج</button>
+  </section>
+</div>
+
+<!-- MAIN: REGISTER & TODAY -->
 <div class="view" id="v-main" style="display:none">
-  <div class="sum today">
+  <div class="sum today" id="todaySumBox">
     <div><b id="sIn">0.000</b><span>الدخل (د.ب)</span></div>
     <div><b id="sOut">0.000</b><span>المصروف (د.ب)</span></div>
     <div><b id="sNet">0.000</b><span>الصافي (د.ب)</span></div>
   </div>
   <div class="info" id="todayInfo"></div>
 
-  <section class="panel">
+  <section class="panel" id="entryFormPanel">
     <div class="tabs">
       <button id="tabIn" class="on" type="button">➕ دخل</button>
       <button id="tabOut" type="button">➖ مصروف</button>
@@ -172,6 +237,51 @@ textarea{min-height:90px}
   </section>
 </div>
 
+<!-- QUEUE & APPOINTMENTS -->
+<div class="view" id="v-queue" style="display:none">
+  <section class="panel" id="bkFormPanel">
+    <h2 id="bkTitle">🕒 حجز موعد / إضافة للانتظار</h2>
+    <div class="row">
+      <div><label for="bkKind">النوع</label>
+        <select id="bkKind">
+          <option value="appt">📅 حجز موعد (يوم ووقت)</option>
+          <option value="walkin">🚗 انتظار مباشر (الآن)</option>
+        </select>
+      </div>
+      <div><label for="bkVeh">نوع المركبة</label><select id="bkVeh"></select></div>
+    </div>
+    <div class="row" id="bkTimeRow">
+      <div><label for="bkDate">التاريخ</label><input id="bkDate" type="date"></div>
+      <div><label for="bkTime">الوقت</label><input id="bkTime" type="time"></div>
+    </div>
+    <div class="row">
+      <div><label for="bkPhone">رقم هاتف العميل</label><input id="bkPhone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
+      <div><label for="bkPlate">رقم المركبة</label><input id="bkPlate" dir="ltr" style="text-align:right" placeholder="123456"></div>
+    </div>
+    <div class="row">
+      <div><label for="bkSvc">الخدمة المطلوبة</label><input id="bkSvc" placeholder="مثال: غسيل سريع + عند العميل"></div>
+      <div><label for="bkPrice">السعر المتوقع (د.ب)</label><input id="bkPrice" type="number" inputmode="decimal" step="0.001" min="0" placeholder="0.000"></div>
+    </div>
+    <label for="bkNote">ملاحظة / الموقع</label>
+    <input id="bkNote" placeholder="اختياري: مثال عند البيت أو غسيل داخلي">
+    <div class="tools">
+      <button class="save" id="bkSave" type="button" style="flex:1;margin:0;width:auto">إضافة للقائمة</button>
+      <button id="bkCancel" type="button" style="display:none">إلغاء التعديل</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>🚦 قائمة الانتظار والمواعيد</h2>
+    <div class="pills" id="bkFilter">
+      <button type="button" data-f="active" class="on">النشطة والقادمة</button>
+      <button type="button" data-f="today">مواعيد اليوم</button>
+      <button type="button" data-f="done">المنتهية</button>
+    </div>
+    <div id="bkList"></div>
+  </section>
+</div>
+
+<!-- DEBTS -->
 <div class="view" id="v-debts" style="display:none">
   <section class="panel">
     <h2>⏳ الآجل وغير المدفوع</h2>
@@ -180,16 +290,42 @@ textarea{min-height:90px}
   </section>
 </div>
 
+<!-- CUSTOMERS (ORGANIZED & FILTERABLE) -->
 <div class="view" id="v-cust" style="display:none">
+  <div class="sum" id="custStats">
+    <div><b id="csTot">0</b><span>إجمالي العملاء</span></div>
+    <div><b id="csSub">0</b><span>مشتركين نشطين</span></div>
+    <div><b id="csVip">0</b><span>عملاء VIP</span></div>
+  </div>
   <section class="panel">
-    <h2>👥 العملاء</h2>
-    <input id="custQ" placeholder="ابحث برقم الهاتف أو المركبة">
-    <div id="custList" style="margin-top:8px"></div>
+    <h2>👥 سجل العملاء المرتب</h2>
+    <div class="row" style="margin-bottom:8px">
+      <div><input id="custQ" placeholder="🔍 بحث بالرقم أو اللوحة..."></div>
+      <div>
+        <select id="custSort">
+          <option value="visits">ترتيب: الأكثر زيارات</option>
+          <option value="spend">ترتيب: الأعلى إنفاقاً</option>
+          <option value="recent">ترتيب: الأحدث زيارة</option>
+          <option value="oldest">ترتيب: الأقدم زيارة</option>
+          <option value="loyal">ترتيب: الأقرب للمجانية</option>
+        </select>
+      </div>
+    </div>
+    <div class="pills" id="custFilter">
+      <button type="button" data-f="all" class="on">الكل</button>
+      <button type="button" data-f="sub">⭐ مشتركين</button>
+      <button type="button" data-f="free">🎁 قربت المجانية</button>
+      <button type="button" data-f="debt">⏳ عليهم آجل</button>
+      <button type="button" data-f="vip">👑 VIP (+5 زيارات)</button>
+      <button type="button" data-f="idle">💤 غائبين (+30 يوم)</button>
+    </div>
+    <div id="custList" style="margin-top:6px"></div>
   </section>
 </div>
 
+<!-- SUBSCRIPTIONS -->
 <div class="view" id="v-subs" style="display:none">
-  <section class="panel">
+  <section class="panel" id="subFormPanel">
     <h2 id="sbTitle">⭐ اشتراك جديد</h2>
     <div class="row">
       <div><label for="sbPhone">رقم هاتف العميل</label><input id="sbPhone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
@@ -227,6 +363,7 @@ textarea{min-height:90px}
   </section>
 </div>
 
+<!-- REPORTS -->
 <div class="view" id="v-rep" style="display:none">
   <section class="panel">
     <h2>📊 تقرير الشهر</h2>
@@ -253,32 +390,153 @@ textarea{min-height:90px}
   </section>
 </div>
 
+<!-- OWNER EXCLUSIVE DASHBOARD -->
+<div class="view" id="v-owner" style="display:none">
+  <div class="tabs" id="owTabs">
+    <button type="button" data-ot="ow-team" class="on">👷 العمال والرتب</button>
+    <button type="button" data-ot="ow-logs">📜 سجل الرقابة</button>
+    <button type="button" data-ot="ow-ideas">💡 أدوات المالك</button>
+    <button type="button" data-ot="ow-guard">🛡️ حماية الموقع</button>
+  </div>
+
+  <!-- Owner Subtab 1: Team, Ranks & Worker Files -->
+  <div class="owSub" id="ow-team">
+    <section class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px">
+        <h2 style="margin:0">👑 إدارة الفريق والرتب</h2>
+        <button id="openNewWorker" type="button" class="sm" style="background:var(--red);color:#fff;border-color:var(--red);font-weight:700">+ عامل جديد</button>
+      </div>
+      <div class="empty" style="padding-top:0">اضغط على <b>📁 ملف العامل</b> لمشاهدة كل عملياته وسجلاته، أو <b>🔐 الصلاحيات</b> للتحكم برتبته وحسابه.</div>
+      <div id="owStaffList"></div>
+    </section>
+  </div>
+
+  <!-- Owner Subtab 2: Full Audit Log -->
+  <div class="owSub" id="ow-logs" style="display:none">
+    <section class="panel">
+      <h2>📜 سجل رقابة العمال (كل حركة في الموقع)</h2>
+      <div class="row" style="margin-bottom:8px">
+        <div><select id="logWorkerFilter"><option value="">كل العمال</option></select></div>
+        <div>
+          <select id="logActFilter">
+            <option value="">كل الحركات</option>
+            <option value="entry">عمليات الدخل والمصروف</option>
+            <option value="del">عمليات الحذف والتعديل</option>
+            <option value="sub">الاشتراكات والتمديد</option>
+            <option value="bk">الحجوزات والانتظار</option>
+            <option value="cfg">الإعدادات والصلاحيات</option>
+          </select>
+        </div>
+      </div>
+      <div id="owLogsList"></div>
+    </section>
+  </div>
+
+  <!-- Owner Subtab 3: Smart Owner Ideas & Tools -->
+  <div class="owSub" id="ow-ideas" style="display:none">
+    <!-- Idea 1: Revenue Targets -->
+    <section class="panel">
+      <h2>🎯 أهداف الدخل (اليومي والشهري)</h2>
+      <div class="row">
+        <div><label for="owGoalDay">هدف اليوم (د.ب)</label><input id="owGoalDay" type="number" step="1" min="0" placeholder="50"></div>
+        <div><label for="owGoalMon">هدف الشهر (د.ب)</label><input id="owGoalMon" type="number" step="10" min="0" placeholder="1200"></div>
+      </div>
+      <div id="owGoalOut"></div>
+    </section>
+
+    <!-- Idea 2: Worker Leaderboard & Commission -->
+    <section class="panel">
+      <h2>🏆 صدارة العمال وحاسبة العمولات</h2>
+      <div class="row">
+        <div><label for="owCommMon">الشهر</label><input id="owCommMon" type="month"></div>
+        <div><label for="owCommPct">نسبة العمولة % من الغسيل</label><input id="owCommPct" type="number" step="1" min="0" max="100" placeholder="10"></div>
+      </div>
+      <div id="owCommOut"></div>
+    </section>
+
+    <!-- Idea 3: Daily Cash Drawer Reconciliation -->
+    <section class="panel">
+      <h2>💵 جرد الصندوق اليومي (مطابقة الكاش)</h2>
+      <div class="empty" style="padding-top:0">اكتب مبلغ الكاش الفعلي الموجود في يدك/الدرج اليوم لمقارنته بكاش النظام:</div>
+      <div class="row">
+        <div><label for="owCashActual">الكاش الفعلي (د.ب)</label><input id="owCashActual" type="number" step="0.001" min="0" placeholder="0.000"></div>
+        <div style="display:flex;align-items:flex-end"><button id="owCashCheck" type="button" style="width:100%;background:var(--red);color:#fff;border-color:var(--red);font-weight:700">مطابقة الآن</button></div>
+      </div>
+      <div id="owCashOut"></div>
+    </section>
+
+    <!-- Idea 4: Peak Hours & Busiest Days -->
+    <section class="panel">
+      <h2>⏰ تحليل أوقات الذروة وأيام الزحمة</h2>
+      <div id="owPeakOut"></div>
+    </section>
+
+    <!-- Idea 5: Win-Back Campaign for Idle Customers -->
+    <section class="panel">
+      <h2>📲 حملة استرجاع العملاء الغائبين (+30 يوم)</h2>
+      <label for="owWinMsg">رسالة العرض الترويجي</label>
+      <input id="owWinMsg" placeholder="اشتقنالك في 2jz wash! لك خصم خاص في زيارتك الجاية 🧽✨">
+      <div id="owWinList" style="margin-top:8px"></div>
+    </section>
+  </div>
+
+  <!-- Owner Subtab 4: Site Protection & Rules -->
+  <div class="owSub" id="ow-guard" style="display:none">
+    <section class="panel">
+      <h2>🛡️ قواعد حماية الموقع ومنع العبث</h2>
+      <div class="permGrid">
+        <label class="permItem"><span>إخفاء إجمالي الدخل والأرباح عن العمال</span><input id="gdHideRev" type="checkbox"></label>
+        <label class="permItem"><span>إجبار إدخال رقم هاتف العميل في كل غسلة</span><input id="gdReqPhone" type="checkbox"></label>
+        <label class="permItem"><span>إجبار اختيار عامل واحد على الأقل لكل غسلة</span><input id="gdReqWorker" type="checkbox"></label>
+        <label class="permItem"><span>منع تعديل أو حذف العمليات التي مر عليها 24 ساعة (غير المالك)</span><input id="gdLockOld" type="checkbox"></label>
+      </div>
+      <h3 style="margin-top:14px">🎖️ مسميات رتب العمال</h3>
+      <div class="empty" style="padding-top:0">تقدر تغير مسميات الرتب حسب نظام مغسلتك:</div>
+      <div id="owRanksEd"></div>
+    </section>
+  </div>
+</div>
+
+<!-- SETTINGS -->
 <div class="view" id="v-set" style="display:none">
   <section class="panel">
-    <h2>👷 الفريق</h2>
+    <h2>👷 الفريق المتصل</h2>
     <div id="team"></div>
     <label for="myName2" style="margin-top:10px">اسمي (يظهر على العمليات)</label>
     <input id="myName2" placeholder="اسمك">
   </section>
+
   <section class="panel">
-    <h2>⚙️ الإعدادات</h2>
-    <label for="biz">اسم المغسلة (يظهر في الإيصال)</label>
-    <input id="biz" placeholder="2jz wash">
-    <label for="loyN" style="margin-top:8px">غسلة مجانية لكل (عدد الزيارات)</label>
-    <input id="loyN" type="number" inputmode="numeric" min="2" placeholder="10">
-    <h2 style="margin-top:16px">الخدمات الأساسية</h2>
-    <div id="edV"></div>
-    <button id="addV" type="button">+ خدمة أساسية</button>
-    <h2 style="margin-top:16px">الإضافات (تنزاد على السعر)</h2>
-    <div id="edA"></div>
-    <button id="addA" type="button">+ إضافة</button>
+    <h2>🔐 تغيير كلمة المرور الخاصة بي</h2>
+    <label for="pwCur">كلمة المرور الحالية</label>
+    <input id="pwCur" type="password" dir="ltr" style="text-align:right">
+    <label for="pwNew" style="margin-top:8px">كلمة المرور الجديدة (٦ أحرف+)</label>
+    <input id="pwNew" type="password" dir="ltr" style="text-align:right">
+    <button id="pwChangeBtn" type="button" style="margin-top:8px">تحديث كلمة المرور</button>
   </section>
-  <section class="panel">
-    <h2>⭐ قوالب الاشتراك</h2>
-    <div class="empty" style="padding-top:0">تسهّل عليك تعبئة الاشتراك. وتقدر تعدّل المزايا لكل عميل لحاله وقت التسجيل.</div>
-    <div id="edP"></div>
-    <button id="addP" type="button">+ قالب اشتراك</button>
-  </section>
+
+  <div id="bizSettingsBox">
+    <section class="panel">
+      <h2>⚙️ إعدادات المغسلة والأسعار</h2>
+      <label for="biz">اسم المغسلة (يظهر في الإيصال)</label>
+      <input id="biz" placeholder="2jz wash">
+      <label for="loyN" style="margin-top:8px">غسلة مجانية لكل (عدد الزيارات)</label>
+      <input id="loyN" type="number" inputmode="numeric" min="2" placeholder="10">
+      <h2 style="margin-top:16px">الخدمات الأساسية</h2>
+      <div id="edV"></div>
+      <button id="addV" type="button">+ خدمة أساسية</button>
+      <h2 style="margin-top:16px">الإضافات (تنزاد على السعر)</h2>
+      <div id="edA"></div>
+      <button id="addA" type="button">+ إضافة</button>
+    </section>
+    <section class="panel">
+      <h2>⭐ قوالب الاشتراك</h2>
+      <div class="empty" style="padding-top:0">تسهّل عليك تعبئة الاشتراك. وتقدر تعدّل المزايا لكل عميل لحاله وقت التسجيل.</div>
+      <div id="edP"></div>
+      <button id="addP" type="button">+ قالب اشتراك</button>
+    </section>
+  </div>
+
   <section class="panel">
     <h2>الحساب</h2>
     <button id="logout" type="button">تسجيل الخروج</button>
@@ -286,6 +544,14 @@ textarea{min-height:90px}
 </div>
 </main>
 
+<!-- SHEET: ALERTS CENTER -->
+<div class="sheet" id="alertSheet"><div>
+  <h2>🔔 التنبيهات الذكية</h2>
+  <div id="alertList"></div>
+  <div class="tools"><button id="closeAlerts" type="button" style="width:100%">إغلاق</button></div>
+</div></div>
+
+<!-- SHEET: EDIT ORDER -->
 <div class="sheet" id="editSheet"><div>
   <h2>✏️ تعديل العملية</h2>
   <div class="row">
@@ -311,6 +577,37 @@ textarea{min-height:90px}
   </div>
 </div></div>
 
+<!-- SHEET: EXTEND SUBSCRIPTION -->
+<div class="sheet" id="extSheet"><div>
+  <h2 id="extTitle">⏳ تمديد الاشتراك</h2>
+  <div id="extInfo" class="empty" style="padding-top:0"></div>
+  <div class="pills" id="extPresets">
+    <button type="button" data-d="7">+7 أيام</button>
+    <button type="button" data-d="15">+15 يوم</button>
+    <button type="button" data-d="30">+30 يوم</button>
+    <button type="button" data-d="60">+60 يوم</button>
+  </div>
+  <div class="row">
+    <div><label for="extDays">أيام إضافية</label><input id="extDays" type="number" inputmode="numeric" min="0" value="7"></div>
+    <div><label for="extWashes">غسلات إضافية</label><input id="extWashes" type="number" inputmode="numeric" min="0" value="0"></div>
+  </div>
+  <div id="extPreview" style="background:var(--tint);border:1px solid var(--bd);border-radius:10px;padding:8px 10px;margin-bottom:8px;font-weight:700;font-size:14px"></div>
+  <div class="row">
+    <div><label for="extFee">رسوم التمديد (د.ب)</label><input id="extFee" type="number" inputmode="decimal" step="0.001" min="0" value="0"></div>
+    <div><label for="extPay">الدفع</label>
+      <select id="extPay"><option>كاش</option><option>بنفت باي</option><option>آجل</option></select>
+      <label class="chk"><input id="extPaid" type="checkbox" checked> تم الدفع</label>
+    </div>
+  </div>
+  <label for="extNote">ملاحظة التمديد</label>
+  <input id="extNote" placeholder="مثال: تعويض أو تمديد أسبوع إضافي">
+  <div class="tools">
+    <button id="extSave" class="save" type="button" style="width:auto;flex:1;margin:0">تأكيد التمديد</button>
+    <button id="extCancel" type="button">إلغاء</button>
+  </div>
+</div></div>
+
+<!-- SHEET: RECEIPT -->
 <div class="sheet" id="rcptSheet"><div>
   <h2>🧾 الإيصال</h2>
   <textarea id="rcptText" readonly></textarea>
@@ -322,12 +619,70 @@ textarea{min-height:90px}
   </div>
 </div></div>
 
+<!-- SHEET: OWNER EDIT WORKER PERMISSIONS & ACCOUNT -->
+<div class="sheet" id="workerPermSheet"><div>
+  <h2 id="wpTitle">🔐 إدارة حساب وصلاحيات العامل</h2>
+  <label for="wpName">اسم العامل (يظهر في الموقع والعمليات)</label>
+  <input id="wpName">
+  <label for="wpRank" style="margin-top:8px">الرتبة</label>
+  <select id="wpRank"></select>
+  <label class="chk" style="margin:10px 0;color:var(--out);font-weight:700"><input id="wpDisabled" type="checkbox"> إيقاف الحساب ومنعه من الدخول للموقع</label>
+
+  <h3 style="margin-top:10px">الصلاحيات المسموحة للعامل</h3>
+  <div class="permGrid" id="wpPermsBox"></div>
+
+  <h3 style="margin-top:12px">إدارة كلمة المرور</h3>
+  <div class="tools" style="margin-bottom:10px">
+    <button id="wpResetEmail" type="button" class="sm">📧 إرسال رابط تغيير الباسورد لإيميله</button>
+    <button id="wpForcePw" type="button" class="sm">🔑 إجباره يكتب باسورد جديد عند الدخول</button>
+  </div>
+
+  <div class="tools">
+    <button id="wpSave" class="save" type="button" style="width:auto;flex:1;margin:0">حفظ التغييرات</button>
+    <button id="wpCancel" type="button">إغلاق</button>
+  </div>
+</div></div>
+
+<!-- SHEET: OWNER CREATE NEW WORKER -->
+<div class="sheet" id="newWorkerSheet"><div>
+  <h2>➕ إضافة عامل جديد</h2>
+  <div class="empty" style="padding-top:0">ينشئ حساب دخول جديد للعامل مباشرة ويحفظ رتبته وصلاحياته بدون ما يطلعك من حسابك.</div>
+  <label for="nwName">اسم العامل</label>
+  <input id="nwName" placeholder="مثال: علي حسين">
+  <label for="nwEmail" style="margin-top:8px">البريد الإلكتروني للدخول</label>
+  <input id="nwEmail" type="email" dir="ltr" style="text-align:right" placeholder="ali@2jzwash.com">
+  <label for="nwPass" style="margin-top:8px">كلمة المرور الأولية (٦ أحرف+)</label>
+  <input id="nwPass" type="text" dir="ltr" style="text-align:right" placeholder="123456">
+  <label for="nwRank" style="margin-top:8px">الرتبة</label>
+  <select id="nwRank"></select>
+  <label class="chk" style="margin-top:8px"><input id="nwForcePw" type="checkbox" checked> إجبار العامل على تغيير كلمة المرور أول ما يدخل</label>
+  <div class="tools" style="margin-top:12px">
+    <button id="nwCreate" class="save" type="button" style="width:auto;flex:1;margin:0">إنشاء الحساب</button>
+    <button id="nwCancel" type="button">إلغاء</button>
+  </div>
+</div></div>
+
+<!-- SHEET: WORKER FULL PROFILE / FILE -->
+<div class="sheet" id="workerFileSheet"><div>
+  <div id="wfBody"></div>
+  <div class="tools"><button id="wfClose" type="button" style="width:100%">إغلاق الملف</button></div>
+</div></div>
+
+<!-- SHEET: CUSTOMER FULL DETAIL -->
+<div class="sheet" id="custDetailSheet"><div>
+  <div id="cdBody"></div>
+  <div class="tools"><button id="cdClose" type="button" style="width:100%">إغلاق</button></div>
+</div></div>
+
+<!-- BOTTOM NAV -->
 <nav id="nav" style="display:none">
   <button type="button" data-v="v-main" class="on"><i>🧾</i>التسجيل</button>
+  <button type="button" data-v="v-queue"><i>🕒</i>الانتظار<span class="navBadge" id="queueBadge"></span></button>
   <button type="button" data-v="v-debts"><i>⏳</i>الآجل</button>
   <button type="button" data-v="v-cust"><i>👥</i>العملاء</button>
-  <button type="button" data-v="v-subs"><i>⭐</i>الاشتراكات<span id="subBadge"></span></button>
-  <button type="button" data-v="v-rep"><i>📊</i>التقارير</button>
+  <button type="button" data-v="v-subs"><i>⭐</i>الاشتراكات<span class="navBadge" id="subBadge"></span></button>
+  <button type="button" data-v="v-rep" id="repNavBtn"><i>📊</i>التقارير</button>
+  <button type="button" data-v="v-owner" id="ownerNavBtn" style="display:none"><i>👑</i>المالك</button>
   <button type="button" data-v="v-set"><i>⚙️</i>الإعدادات</button>
 </nav>
 <div class="toast" id="toast" role="status"></div>
@@ -338,26 +693,57 @@ textarea{min-height:90px}
 <script src="config.js"></script>
 <script>
 (function(){
-var DEF={vehicles:[{id:'car',name:'سيارة',price:6},{id:'bike',name:'دراجة نارية',price:3}],
- addons:[{id:'cust',name:'عند العميل',price:1.5,only:''},{id:'chain',name:'غسيل جنزير',price:1.5,only:'bike'}],plans:[]};
+var DEF={
+  vehicles:[{id:'car',name:'سيارة',price:6},{id:'bike',name:'دراجة نارية',price:3}],
+  addons:[{id:'cust',name:'عند العميل',price:1.5,only:''},{id:'chain',name:'غسيل جنزير',price:1.5,only:'bike'}],
+  plans:[],
+  ownerUid:'',
+  ranks:{owner:'👑 مالك',supervisor:'🛡️ مشرف',senior:'⭐ عامل خبير',worker:'👷 عامل',trainee:'🌱 متدرب'},
+  guard:{hideRev:false,reqPhone:false,reqWorker:false,lockOld:false},
+  goals:{day:50,month:1200,commPct:10,winMsg:'اشتقنالك في 2jz wash! لك خصم خاص في زيارتك الجاية 🧽✨'}
+};
+var RANK_KEYS=['owner','supervisor','senior','worker','trainee'];
+var PERM_DEFS=[
+  {k:'addEntry',t:'تسجيل عمليات دخل (غسيل)'},
+  {k:'addExpense',t:'تسجيل مصروفات'},
+  {k:'editEntry',t:'تعديل العمليات المسجلة'},
+  {k:'deleteEntry',t:'حذف العمليات المسجلة'},
+  {k:'manageSubs',t:'إضافة وتعديل وتمديد الاشتراكات'},
+  {k:'deleteSub',t:'حذف الاشتراكات'},
+  {k:'manageQueue',t:'إدارة قائمة الانتظار والمواعيد'},
+  {k:'viewReports',t:'الاطلاع على التقارير المالية'},
+  {k:'editSettings',t:'تعديل الأسعار والخدمات وإعدادات الموقع'}
+];
+var RANK_PRESETS={
+  owner:{addEntry:true,addExpense:true,editEntry:true,deleteEntry:true,manageSubs:true,deleteSub:true,manageQueue:true,viewReports:true,editSettings:true},
+  supervisor:{addEntry:true,addExpense:true,editEntry:true,deleteEntry:false,manageSubs:true,deleteSub:false,manageQueue:true,viewReports:true,editSettings:false},
+  senior:{addEntry:true,addExpense:false,editEntry:true,deleteEntry:false,manageSubs:false,deleteSub:false,manageQueue:true,viewReports:false,editSettings:false},
+  worker:{addEntry:true,addExpense:false,editEntry:false,deleteEntry:false,manageSubs:false,deleteSub:false,manageQueue:true,viewReports:false,editSettings:false},
+  trainee:{addEntry:true,addExpense:false,editEntry:false,deleteEntry:false,manageSubs:false,deleteSub:false,manageQueue:false,viewReports:false,editSettings:false}
+};
 var EXP=['صابون','ماء','كهرباء','راتب','أخرى'];
-var VIEWS=['v-main','v-debts','v-cust','v-subs','v-rep','v-set'];
-var cfg=DEF,data=[],subs=[],staff=[],pres=[],me={uid:'',name:''},type='in',veh=null,sel={},selW=[],edSelW=[],
- col=null,subCol=null,staffCol=null,presCol=null,cfgRef=null,FDB=null,auth=null,unsubs=[],unsubE=null,
- freeNext=false,subUse=null,editing=null,editingSub=null,curR=null,LIMIT=5000,curView='v-main',state='login',timer=null;
+var VIEWS=['v-main','v-queue','v-debts','v-cust','v-subs','v-rep','v-owner','v-set'];
+
+var cfg=JSON.parse(JSON.stringify(DEF)),data=[],subs=[],bookings=[],logs=[],staff=[],pres=[],
+ me={uid:'',name:'',email:'',role:'worker',perms:Object.assign({},RANK_PRESETS.worker),disabled:false,forcePwReset:false},
+ type='in',veh=null,sel={},selW=[],edSelW=[],
+ col=null,subCol=null,bkCol=null,logCol=null,staffCol=null,presCol=null,cfgRef=null,FDB=null,auth=null,unsubs=[],unsubE=null,
+ freeNext=false,subUse=null,editing=null,editingSub=null,editingBk=null,extendingSub=null,wpTarget=null,wfTarget=null,wfPeriod='month',
+ custF='all',bkF='active',curR=null,LIMIT=5000,curView='v-main',state='login',timer=null,ownerBooted=false;
 
 function $(id){return document.getElementById(id)}
 function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n}
 function kv(box,k,v,cls){var r=el('div','kv');r.appendChild(el('span',null,k));r.appendChild(el('b',cls,v));box.appendChild(r)}
 function btn(text,cls,fn){var b=el('button',cls,text);b.type='button';b.onclick=fn;return b}
-function toast(m){var t=$('toast');t.textContent=m;t.className='toast show';setTimeout(function(){t.className='toast'},2200)}
-function f(n){return (Math.round(n*1000)/1000).toFixed(3)}
+function toast(m){var t=$('toast');t.textContent=m;t.className='toast show';setTimeout(function(){t.className='toast'},2400)}
+function f(n){return (Math.round((Number(n)||0)*1000)/1000).toFixed(3)}
 function dkey(t){var d=new Date(t);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function tnow(){var d=new Date();return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')}
 function keyToDate(k){var p=k.split('-');return new Date(+p[0],+p[1]-1,+p[2],12)}
 function addDays(k,n){var d=keyToDate(k);d.setDate(d.getDate()+n);return dkey(d.getTime())}
 function daysBetween(a,b){return Math.round((keyToDate(b)-keyToDate(a))/864e5)}
 function status(m,bad){var s=$('status');s.textContent=m;s.className=bad?'bad':''}
-function saveCfg(){if(cfgRef)cfgRef.set(cfg).catch(function(){toast('تعذر حفظ التعديل')})}
+function saveCfg(){if(cfgRef)cfgRef.set(cfg).catch(function(){toast('تعذر حفظ الإعدادات')})}
 function LOY(){var n=parseInt(cfg.loyal,10);return n>1?n:10}
 function paidOf(e){return e.paid===undefined?e.pay!=='آجل':!!e.paid}
 function vtypeOf(e){if(e.vtype)return e.vtype;var m=/^غسيل سريع - ([^+(]+)/.exec(e.label||'');return m?m[1].trim():''}
@@ -373,6 +759,48 @@ function pl(p){return p?ltr(p):''}
 function nextNo(){var mx=1000;data.forEach(function(e){if(e.no>mx)mx=e.no});subs.forEach(function(s){if(s.no>mx)mx=s.no});return mx+1}
 function rid(p){return p+Date.now()+Math.floor(Math.random()*1000)}
 
+/* permissions & roles */
+function isOwner(){return me.role==='owner'||(cfg.ownerUid&&cfg.ownerUid===me.uid)}
+function can(perm){
+  if(isOwner())return true;
+  if(me.disabled)return false;
+  return !!(me.perms&&me.perms[perm]);
+}
+function canModifyEntry(e){
+  if(isOwner())return true;
+  if(!can('editEntry'))return false;
+  if(cfg.guard&&cfg.guard.lockOld&&(Date.now()-e.ts)>864e5)return false;
+  return true;
+}
+function canDeleteEntry(e){
+  if(isOwner())return true;
+  if(!can('deleteEntry'))return false;
+  if(cfg.guard&&cfg.guard.lockOld&&(Date.now()-e.ts)>864e5)return false;
+  return true;
+}
+function rankLabel(rk){return (cfg.ranks&&cfg.ranks[rk])||DEF.ranks[rk]||'👷 عامل'}
+function addLog(cat,action,target,details){
+  if(!logCol||!me.uid)return;
+  logCol.doc(rid('l')).set({
+    ts:Date.now(),uid:me.uid,name:me.name||me.email||'مستخدم',role:me.role||'worker',
+    cat:cat,action:action,target:target||'',details:details||''
+  }).catch(function(){});
+}
+function syncRoleUI(){
+  var ow=isOwner();
+  $('ownerNavBtn').style.display=ow?'flex':'none';
+  $('repNavBtn').style.display=can('viewReports')?'flex':'none';
+  $('bizSettingsBox').style.display=can('editSettings')?'block':'none';
+  $('entryFormPanel').style.display=(can('addEntry')||can('addExpense'))?'block':'none';
+  $('tabOut').style.display=can('addExpense')?'block':'none';
+  $('subFormPanel').style.display=can('manageSubs')?'block':'none';
+  $('bkFormPanel').style.display=can('manageQueue')?'block':'none';
+  var hideRev=!ow&&cfg.guard&&cfg.guard.hideRev;
+  $('todaySumBox').style.display=hideRev?'none':'grid';
+  if(curView==='v-owner'&&!ow)showView('v-main');
+  if(curView==='v-rep'&&!can('viewReports'))showView('v-main');
+}
+
 /* theme */
 function applyTheme(t){
   document.documentElement.setAttribute('data-theme',t);
@@ -384,19 +812,26 @@ function curTheme(){return document.documentElement.getAttribute('data-theme')==
 
 /* state and views */
 function showView(id){
+  if(id==='v-owner'&&!isOwner())id='v-main';
+  if(id==='v-rep'&&!can('viewReports'))id='v-main';
   curView=id;
   VIEWS.forEach(function(v){$(v).style.display=v===id?'block':'none'});
   Array.prototype.forEach.call($('nav').children,function(b){b.className=b.getAttribute('data-v')===id?'on':''});
   window.scrollTo(0,0);
+  if(id==='v-owner')renderOwner();
 }
 function setState(s){
   state=s;
   $('login').style.display=s==='login'?'block':'none';
   $('nameBox').style.display=s==='name'?'block':'none';
+  $('forcePwBox').style.display=s==='forcePw'?'block':'none';
+  $('disabledBox').style.display=s==='disabled'?'block':'none';
   $('nav').style.display=s==='app'?'flex':'none';
   $('online').style.display=s==='app'?'block':'none';
+  $('alertBtn').style.display=s==='app'?'inline-flex':'none';
   VIEWS.forEach(function(v){$(v).style.display='none'});
-  if(s==='app'){showView(curView);beat();setType('in')}
+  if(s==='app'){syncRoleUI();showView(curView);beat();setType('in')}
+  else{$('alertStrip').style.display='none'}
 }
 
 /* subscriptions helpers */
@@ -411,6 +846,77 @@ function activeSubOf(p){
   var n=nph(p);if(!n)return null;
   var l=subs.filter(function(s){return !s.cancelled&&nph(s.phone)===n&&subState(s).k==='active'}).sort(function(a,b){return a.end<b.end?1:-1});
   return l[0]||null;
+}
+
+/* smart alerts engine */
+function computeAlerts(){
+  var alerts=[],tk=dkey(Date.now()),nowMs=Date.now();
+  // 1. Upcoming or overdue appointments
+  bookings.forEach(function(b){
+    if(b.status==='done'||b.status==='cancelled')return;
+    if(b.kind==='walkin'){
+      var mins=Math.max(0,Math.round((nowMs-b.ts)/60000));
+      alerts.push({sev:mins>30?'bad':'info',icon:'🚗',title:'انتظار مباشر: '+(b.plate||fph(b.phone)||'مركبة'),
+        sub:(b.svc||'غسيل')+' · ينتظر منذ '+mins+' دقيقة',actText:'فتح الانتظار',fn:function(){closeSheet('alertSheet');showView('v-queue')}});
+      return;
+    }
+    if(!b.date)return;
+    var bMs=new Date(b.date+'T'+(b.time||'12:00')+':00').getTime();
+    var diffMin=Math.round((bMs-nowMs)/60000);
+    if(diffMin<0&&b.date<=tk){
+      var late=Math.abs(diffMin);
+      alerts.push({sev:'bad',icon:'⏰',title:'موعد متأخر: '+(b.plate||fph(b.phone)||'عميل'),
+        sub:'الموعد كان '+ltr(b.date)+' الساعة '+ltr(b.time||'')+' (متأخر '+(late>=60?Math.round(late/60)+' ساعة':late+' دقيقة')+')',
+        actText:'إدارة الموعد',fn:function(){closeSheet('alertSheet');showView('v-queue')}});
+    }else if(diffMin>=0&&diffMin<=180){
+      alerts.push({sev:diffMin<=45?'warn':'info',icon:'📅',title:'موعد قريب: '+(b.plate||fph(b.phone)||'عميل'),
+        sub:'الساعة '+ltr(b.time||'')+' · باقي '+(diffMin===0?'الآن!':diffMin+' دقيقة'),
+        actText:'إدارة الموعد',fn:function(){closeSheet('alertSheet');showView('v-queue')}});
+    }
+  });
+  // 2. Subscriptions expiring soon, expired, or out of washes
+  subs.forEach(function(s){
+    if(s.cancelled)return;
+    var st=subState(s),u=usedOf(s),outWashes=s.washes>0&&u>=s.washes;
+    if(outWashes){
+      alerts.push({sev:'bad',icon:'⭐',title:'نفدت غسلات الاشتراك: '+fph(s.phone),
+        sub:'باقة '+s.plan+' ('+u+'/'+s.washes+' غسلة) · '+(s.plate||''),
+        actText:'تجديد / تمديد',fn:function(){closeSheet('alertSheet');showView('v-subs');$('subQ').value=fph(s.phone);renderSubs()}});
+    }else if(st.k==='expired'&&st.d<=14){
+      alerts.push({sev:'bad',icon:'⛔',title:'انتهى اشتراك: '+fph(s.phone),
+        sub:'باقة '+s.plan+' انتهت منذ '+(st.d===0?'اليوم':st.d+' يوم'),
+        actText:'تجديد / تمديد',fn:function(){closeSheet('alertSheet');showView('v-subs');$('subQ').value=fph(s.phone);renderSubs()}});
+    }else if(st.k==='active'&&st.d<=5){
+      alerts.push({sev:'warn',icon:'⚠️',title:'اشتراك ينتهي قريباً: '+fph(s.phone),
+        sub:'باقة '+s.plan+' · '+(st.d===0?'ينتهي اليوم!':'باقي '+st.d+' يوم'),
+        actText:'تمديد',fn:function(){closeSheet('alertSheet');openExtSheet(s)}});
+    }
+  });
+  return alerts;
+}
+function renderAlerts(){
+  var list=computeAlerts(),badge=$('alertBadge'),strip=$('alertStrip'),box=$('alertList');
+  badge.textContent=list.length;
+  badge.style.display=list.length?'block':'none';
+  if(list.length&&state==='app'){
+    strip.style.display='flex';
+    $('alertStripTxt').innerHTML='🔔 لديك <b>'+list.length+'</b> تنبيه مهم: '+list[0].title;
+  }else{
+    strip.style.display='none';
+  }
+  box.innerHTML='';
+  if(!list.length){box.appendChild(el('div','empty','لا توجد تنبيهات عاجلة حالياً 👌'));return}
+  list.forEach(function(a){
+    var c=el('div','card');
+    var h=el('b',null,a.icon+' '+a.title);
+    h.appendChild(el('span','badge '+a.sev,a.sev==='bad'?'عاجل':a.sev==='warn'?'قريباً':'معلومة'));
+    c.appendChild(h);
+    c.appendChild(el('small',null,a.sub));
+    var act=el('div','act');
+    act.appendChild(btn(a.actText,'sm',a.fn));
+    c.appendChild(act);
+    box.appendChild(c);
+  });
 }
 
 /* entry form */
@@ -471,6 +977,7 @@ function loyal(){
   box.style.display='flex';
 }
 function setType(t){
+  if(t==='out'&&!can('addExpense'))t='in';
   type=t;$('tabIn').className=t==='in'?'on':'';$('tabOut').className=t==='out'?'on':'';
   $('payBox').style.visibility=t==='in'?'visible':'hidden';
   $('custRow').style.display=t==='in'?'grid':'none';
@@ -479,29 +986,49 @@ function setType(t){
   selW=me.name?[me.name]:[];chips();loyal();renderWorkers();
 }
 function save(){
+  if(type==='in'&&!can('addEntry')){toast('ليس لديك صلاحية تسجيل عمليات');return}
+  if(type==='out'&&!can('addExpense')){toast('ليس لديك صلاحية تسجيل مصروفات');return}
   var label=$('label').value.trim(),amt=parseFloat($('amount').value);
   if(!col){toast('السجل المشترك غير متصل');return}
   if(!label){toast('اكتب الخدمة أو اختر من الأزرار');return}
   if(isNaN(amt)||amt<0||(amt===0&&!zeroNext())){toast('اكتب المبلغ');return}
-  var ts=Date.now(),isIn=type==='in',no=isIn?nextNo():0,workers=selW.length?selW.slice():(me.name?[me.name]:[]);
-  col.doc(rid('e')).set({ts:ts,type:type,label:label,amount:amt,
-    pay:isIn?$('pay').value:'',paid:isIn?$('paid').checked:true,phone:isIn?(nph($('phone').value)||$('phone').value.trim()):'',plate:isIn?$('plate').value.trim():'',
+  var isIn=type==='in',phoneVal=isIn?(nph($('phone').value)||$('phone').value.trim()):'';
+  var workers=selW.length?selW.slice():(me.name?[me.name]:[]);
+  if(isIn&&!isOwner()&&cfg.guard){
+    if(cfg.guard.reqPhone&&!phoneVal){toast('المالك فرض إدخال رقم هاتف العميل');return}
+    if(cfg.guard.reqWorker&&!workers.length){toast('اختر عاملاً واحداً على الأقل');return}
+  }
+  var ts=Date.now(),no=isIn?nextNo():0,id=rid('e');
+  col.doc(id).set({ts:ts,type:type,label:label,amount:amt,
+    pay:isIn?$('pay').value:'',paid:isIn?$('paid').checked:true,phone:phoneVal,plate:isIn?$('plate').value.trim():'',
     vtype:isIn&&vObj()?vObj().name:'',workers:isIn?workers:[],worker:isIn?workers.join('، '):'',free:isIn&&freeNext,subId:isIn&&subUse?subUse.id:'',
-    no:no,note:$('note').value.trim(),by:me.name||''})
-   .then(function(){toast(isIn?'تم الحفظ، رقم الإيصال '+no:'تم الحفظ')}).catch(function(){toast('تعذر الحفظ، تأكد أن عندك صلاحية التعديل')});
+    no:no,note:$('note').value.trim(),by:me.name||'',byUid:me.uid||''})
+   .then(function(){
+     addLog('entry',isIn?'تسجيل دخل':'تسجيل مصروف',label,f(amt)+' د.ب'+(phoneVal?' · عميل '+fph(phoneVal):''));
+     toast(isIn?'تم الحفظ، رقم الإيصال '+no:'تم الحفظ');
+   }).catch(function(){toast('تعذر الحفظ، تأكد من صلاحيتك')});
   $('label').value='';$('amount').value='';$('note').value='';$('phone').value='';$('plate').value='';
   $('paid').checked=$('pay').value!=='آجل';veh=null;sel={};freeNext=false;subUse=null;selW=me.name?[me.name]:[];chips();loyal();renderWorkers();
 }
-function del(id){
-  if(!col){status('السجل المشترك غير متصل، ما يمدي تحذف.',true);return}
-  data=data.filter(function(e){return e.id!==id});render();
-  col.doc(id).delete().then(function(){toast('انحذفت')}).catch(function(err){status('تعذر الحذف: '+((err&&(err.code||err.message))||'خطأ غير معروف'),true)});
+function del(e){
+  if(!col||!canDeleteEntry(e)){toast('ليس لديك صلاحية حذف هذه العملية');return}
+  data=data.filter(function(x){return x.id!==e.id});render();
+  col.doc(e.id).delete().then(function(){
+    addLog('del','حذف عملية',e.label,'المبلغ: '+f(e.amount)+' د.ب'+(e.phone?' · عميل '+fph(e.phone):''));
+    toast('انحذفت العملية');
+  }).catch(function(err){status('تعذر الحذف: '+((err&&(err.code||err.message))||'خطأ غير معروف'),true)});
 }
-function markPaid(e){if(col)col.doc(e.id).update({paid:true}).then(function(){toast('تم تسجيل الدفع')}).catch(function(){toast('تعذر التحديث')})}
+function markPaid(e){
+  if(!col)return;
+  col.doc(e.id).update({paid:true}).then(function(){
+    addLog('entry','تأكيد استلام مبلغ آجل',e.label,f(e.amount)+' د.ب'+(e.phone?' · '+fph(e.phone):''));
+    toast('تم تسجيل الدفع');
+  }).catch(function(){toast('تعذر التحديث')});
+}
 
 /* workers */
 function allNames(sel0){
-  var s={},out=[];staff.forEach(function(x){if(x.name&&!s[x.name]){s[x.name]=1;out.push(x.name)}});
+  var s={},out=[];staff.forEach(function(x){if(x.name&&!x.disabled&&!s[x.name]){s[x.name]=1;out.push(x.name)}});
   sel0.forEach(function(n){if(!s[n]){s[n]=1;out.push(n)}});
   return out;
 }
@@ -513,13 +1040,131 @@ function wChips(box,selArr,again){
     b.onclick=function(){var i=selArr.indexOf(n);if(i>-1)selArr.splice(i,1);else selArr.push(n);again()};
     box.appendChild(b);
   });
-  var add=el('button','','+ اسم آخر');add.type='button';
-  add.onclick=function(){var v=(window.prompt('اسم العامل')||'').trim();if(v&&selArr.indexOf(v)<0){selArr.push(v);again()}};
-  box.appendChild(add);
 }
 function renderWorkers(){
   wChips($('wBox'),selW,renderWorkers);
   if($('editSheet').style.display==='flex')drawEdW();
+}
+
+/* queue & appointments */
+function renderBkVeh(){
+  var s=$('bkVeh'),cur=s.value;s.innerHTML='';
+  var o0=el('option',null,'— اختر —');o0.value='';s.appendChild(o0);
+  cfg.vehicles.forEach(function(v){var o=el('option',null,v.name);o.value=v.name;s.appendChild(o)});
+  s.value=cur;
+}
+function clearBkForm(){
+  editingBk=null;
+  $('bkKind').value='appt';$('bkTimeRow').style.display='grid';
+  $('bkDate').value=dkey(Date.now());$('bkTime').value=tnow();
+  ['bkPhone','bkPlate','bkSvc','bkPrice','bkNote'].forEach(function(i){$(i).value=''});
+  $('bkVeh').value='';$('bkTitle').textContent='🕒 حجز موعد / إضافة للانتظار';$('bkSave').textContent='إضافة للقائمة';$('bkCancel').style.display='none';
+}
+function loadBkForm(b){
+  editingBk=b;$('bkKind').value=b.kind||'appt';$('bkTimeRow').style.display=(b.kind||'appt')==='appt'?'grid':'none';
+  $('bkDate').value=b.date||dkey(Date.now());$('bkTime').value=b.time||tnow();
+  $('bkPhone').value=fph(b.phone||'');$('bkPlate').value=b.plate||'';$('bkVeh').value=b.vtype||'';
+  $('bkSvc').value=b.svc||'';$('bkPrice').value=b.price||'';$('bkNote').value=b.note||'';
+  $('bkTitle').textContent='✏️ تعديل الموعد';$('bkSave').textContent='حفظ التعديل';$('bkCancel').style.display='inline-block';
+  showView('v-queue');$('bkTitle').scrollIntoView({behavior:'smooth'});
+}
+function saveBk(){
+  if(!bkCol||!can('manageQueue')){toast('ليس لديك صلاحية إدارة المواعيد');return}
+  var kind=$('bkKind').value,date=kind==='appt'?$('bkDate').value:dkey(Date.now()),time=kind==='appt'?$('bkTime').value:tnow();
+  var phone=nph($('bkPhone').value)||$('bkPhone').value.trim(),plate=$('bkPlate').value.trim(),svc=$('bkSvc').value.trim()||'غسيل سريع';
+  var price=parseFloat($('bkPrice').value)||0;
+  if(!phone&&!plate){toast('اكتب رقم العميل أو رقم المركبة');return}
+  if(kind==='appt'&&(!date||!time)){toast('حدد تاريخ ووقت الموعد');return}
+  var obj={kind:kind,date:date,time:time,phone:phone,plate:plate,vtype:$('bkVeh').value,svc:svc,price:price,note:$('bkNote').value.trim()};
+  if(editingBk){
+    bkCol.doc(editingBk.id).update(obj).then(function(){
+      addLog('bk','تعديل موعد',plate||fph(phone),date+' '+time);
+      toast('تم تعديل الموعد');clearBkForm();
+    }).catch(function(){toast('تعذر التعديل')});
+  }else{
+    obj.ts=Date.now();obj.status='waiting';obj.by=me.name||'';obj.byUid=me.uid||'';
+    bkCol.doc(rid('b')).set(obj).then(function(){
+      addLog('bk',kind==='appt'?'حجز موعد جديد':'إضافة لقائمة الانتظار',plate||fph(phone),svc+' · '+date+' '+time);
+      toast('تمت الإضافة لقائمة الانتظار');clearBkForm();
+    }).catch(function(){toast('تعذر الحفظ')});
+  }
+}
+function completeBkToEntry(b){
+  if(!col||!bkCol)return;
+  var as=b.phone?activeSubOf(b.phone):null;
+  var useSub=as&&(!as.washes||usedOf(as)<as.washes);
+  var amt=useSub?0:(Number(b.price)||0);
+  var lbl=(b.svc||'غسيل سريع')+(b.vtype?' - '+b.vtype:'')+(useSub?' (ضمن الاشتراك)':'');
+  var ws=me.name?[me.name]:[],eid=rid('e'),no=nextNo();
+  var batch=FDB.batch();
+  batch.set(col.doc(eid),{ts:Date.now(),type:'in',label:lbl,amount:amt,pay:'كاش',paid:true,
+    phone:b.phone||'',plate:b.plate||'',vtype:b.vtype||'',workers:ws,worker:ws.join('، '),
+    free:false,subId:useSub?as.id:'',no:no,note:b.note||'',by:me.name||'',byUid:me.uid||''});
+  batch.update(bkCol.doc(b.id),{status:'done',doneTs:Date.now(),entryId:eid,doneBy:me.name||''});
+  batch.commit().then(function(){
+    addLog('bk','إنهاء موعد وتحويله لدخل',b.plate||fph(b.phone),lbl+' · '+f(amt)+' د.ب');
+    toast('تم إنهاء الغسلة وتسجيل الإيصال #'+no);
+  }).catch(function(){toast('تعذر إتمام العملية')});
+}
+function renderQueue(){
+  var box=$('bkList');box.innerHTML='';
+  var tk=dkey(Date.now()),nowMs=Date.now();
+  var activeCount=bookings.filter(function(b){return b.status!=='done'&&b.status!=='cancelled'}).length;
+  var qb=$('queueBadge');qb.textContent=activeCount;qb.style.display=activeCount?'block':'none';
+  var arr=bookings.filter(function(b){
+    if(bkF==='done')return b.status==='done'||b.status==='cancelled';
+    if(bkF==='today')return b.status!=='done'&&b.status!=='cancelled'&&b.date===tk;
+    return b.status!=='done'&&b.status!=='cancelled';
+  }).sort(function(a,b){
+    if(a.status==='washing'&&b.status!=='washing')return -1;
+    if(b.status==='washing'&&a.status!=='washing')return 1;
+    var ta=(a.date||'9999')+' '+(a.time||'99:99'),tb=(b.date||'9999')+' '+(b.time||'99:99');
+    return bkF==='done'?(b.ts-a.ts):(ta<tb?-1:ta>tb?1:0);
+  });
+  if(!arr.length){box.appendChild(el('div','empty','لا توجد سيارات في هذه القائمة حالياً.'));return}
+  arr.forEach(function(b){
+    var c=el('div','card'),head=el('div','cardHead');
+    var title=(b.plate?pl(b.plate)+' · ':'')+(b.phone?ph(b.phone):'بدون رقم');
+    var h=el('b',null,title);
+    // Badge calculation
+    if(b.status==='done')h.appendChild(el('span','badge ok','✅ تم الإنجاز'));
+    else if(b.status==='cancelled')h.appendChild(el('span','badge bad','❌ ملغي'));
+    else if(b.status==='washing')h.appendChild(el('span','badge info','🧼 قيد الغسيل الآن'));
+    else if(b.kind==='walkin'){
+      var wm=Math.max(0,Math.round((nowMs-b.ts)/60000));
+      h.appendChild(el('span','badge warn','🚗 انتظار مباشر ('+wm+' د)'));
+    }else{
+      var bMs=new Date(b.date+'T'+(b.time||'12:00')+':00').getTime();
+      var diff=Math.round((bMs-nowMs)/60000);
+      if(diff<0)h.appendChild(el('span','badge bad','⏰ متأخر '+Math.abs(diff)+' د'));
+      else if(diff<=60)h.appendChild(el('span','badge warn','🔥 باقي '+diff+' دقيقة'));
+      else h.appendChild(el('span','badge ok','📅 '+ltr(b.date)+' · '+ltr(b.time)));
+    }
+    head.appendChild(h);
+    if(b.price>0)head.appendChild(el('span','amt in',f(b.price)+' د.ب'));
+    c.appendChild(head);
+    c.appendChild(el('small',null,(b.svc||'غسيل')+(b.vtype?' · '+b.vtype:'')+(b.kind==='appt'?' · الموعد: '+ltr(b.date)+' '+ltr(b.time):'')));
+    if(b.note)c.appendChild(el('small',null,'ملاحظة: '+b.note));
+    if(b.phone&&activeSubOf(b.phone))c.appendChild(el('small',null,'⭐ العميل لديه اشتراك نشط'));
+    if(b.status!=='done'&&b.status!=='cancelled'&&can('manageQueue')){
+      var act=el('div','act');
+      if(b.status!=='washing')act.appendChild(btn('🧼 بدء الغسيل','sm',function(){bkCol.doc(b.id).update({status:'washing'}).then(function(){toast('بدأت عملية الغسيل')})}));
+      act.appendChild(btn('✅ إنهاء وتسجيل دخل','sm',function(){completeBkToEntry(b)}));
+      act.appendChild(btn('تعديل','sm',function(){loadBkForm(b)}));
+      if(b.phone){
+        var a=el('a','btnlink','واتساب');a.target='_blank';a.rel='noopener';
+        a.href='https://wa.me/'+waNum(b.phone)+'?text='+encodeURIComponent('السلام عليكم، تذكير بموعد غسيل مركبتك لدى '+(cfg.biz||'2jz wash')+(b.kind==='appt'?' بتاريخ '+b.date+' الساعة '+b.time:'')+'. حياك الله 🙏');
+        act.appendChild(a);
+      }
+      var x=btn('إلغاء','sm del',function(){
+        if(x.dataset.ok){bkCol.doc(b.id).update({status:'cancelled'}).then(function(){toast('تم إلغاء الموعد')})}
+        else{x.dataset.ok='1';x.textContent='تأكيد الإلغاء؟';setTimeout(function(){x.dataset.ok='';x.textContent='إلغاء'},3000)}
+      });
+      act.appendChild(x);
+      c.appendChild(act);
+    }
+    box.appendChild(c);
+  });
 }
 
 /* lists */
@@ -535,7 +1180,7 @@ function renderToday(){
   today.forEach(function(e){
     var d=el('div','item'),info=el('div'),time=new Date(e.ts).toLocaleTimeString('ar-BH',{hour:'2-digit',minute:'2-digit'});
     info.appendChild(el('b',null,(e.subFee?'⭐ ':'')+e.label));
-    info.appendChild(el('small',null,time+(e.pay?' · '+e.pay:'')+(e.type==='in'?(paidOf(e)?' · تم الدفع':' · غير مدفوع'):'')));
+    info.appendChild(el('small',null,time+(e.pay?' · '+e.pay:'')+(e.type==='in'?(paidOf(e)?' · تم الدفع':' · غير مدفوع'):'')+(e.by?' · سجلها: '+e.by:'')));
     var l2=[];if(e.phone)l2.push(ph(e.phone));if(e.plate)l2.push(pl(e.plate));
     var ws=workersOf(e);if(ws.length)l2.push('👷 '+ws.join('، '));if(e.note)l2.push(e.note);
     if(l2.length){var s2=el('small',null,l2.join(' · '));s2.style.fontWeight='700';s2.style.color='var(--ink)';info.appendChild(s2)}
@@ -544,11 +1189,13 @@ function renderToday(){
       var s0=e.subFee?subs.filter(function(x){return x.id===e.subFee})[0]:null;showRcpt(s0?subRcpt(s0):entryRcpt(e));
     }));
     if(!e.subFee){
-      act.appendChild(btn('تعديل','sm',function(){showEdit(e)}));
-      var x=btn('حذف','sm del',function(){
-        if(x.dataset.ok){del(e.id)}else{x.dataset.ok='1';x.textContent='تأكيد الحذف؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف'},3000)}
-      });
-      act.appendChild(x);
+      if(canModifyEntry(e))act.appendChild(btn('تعديل','sm',function(){showEdit(e)}));
+      if(canDeleteEntry(e)){
+        var x=btn('حذف','sm del',function(){
+          if(x.dataset.ok){del(e)}else{x.dataset.ok='1';x.textContent='تأكيد الحذف؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف'},3000)}
+        });
+        act.appendChild(x);
+      }
     }
     d.appendChild(info);d.appendChild(a);d.appendChild(act);L.appendChild(d);
   });
@@ -585,31 +1232,127 @@ function renderDebts(){
     box.appendChild(c);
   });
 }
-function renderCust(){
-  var box=$('custList');box.innerHTML='';var q=$('custQ').value.trim().toLowerCase(),map={},n=LOY();
+
+/* organized customers list & detail sheet */
+function buildCustMap(){
+  var map={},n=LOY(),nowMs=Date.now();
   data.forEach(function(e){
-    if(e.type!=='in'||!e.phone||e.subFee)return;
-    var k=nph(e.phone)||e.phone,c=map[k]||(map[k]={phone:e.phone,n:0,sum:0,last:0,plate:'',vt:''});
-    c.n++;c.sum+=e.amount;
+    if(e.type!=='in'||!e.phone)return;
+    var k=nph(e.phone)||e.phone;
+    var c=map[k]||(map[k]={key:k,phone:e.phone,n:0,sum:0,debt:0,last:0,plate:'',vt:'',entries:[]});
+    c.entries.push(e);
+    if(!e.subFee)c.n++;
+    c.sum+=e.amount;
+    if(!paidOf(e))c.debt+=e.amount;
     if(e.ts>c.last){c.last=e.ts;c.plate=e.plate||c.plate;c.vt=vtypeOf(e)||c.vt}
   });
-  var arr=Object.keys(map).map(function(k){return map[k]}).filter(function(c){
-    return !q||c.phone.toLowerCase().indexOf(q)>-1||nph(c.phone).indexOf(q.replace(/\D/g,'')||'x')>-1||(c.plate||'').toLowerCase().indexOf(q)>-1;
-  }).sort(function(a,b){return b.n-a.n});
-  if(!arr.length){box.appendChild(el('div','empty','ما في عملاء مسجلين بأرقام هواتف بعد.'));return}
-  arr.slice(0,100).forEach(function(c){
-    var d=el('div','card'),as=activeSubOf(c.phone);
+  subs.forEach(function(s){
+    if(s.cancelled||!s.phone)return;
+    var k=nph(s.phone)||s.phone;
+    var c=map[k]||(map[k]={key:k,phone:s.phone,n:0,sum:0,debt:0,last:s.ts||0,plate:s.plate||'',vt:s.vtype||'',entries:[]});
+    if(!c.plate&&s.plate)c.plate=s.plate;
+    if(!c.vt&&s.vtype)c.vt=s.vtype;
+  });
+  return Object.keys(map).map(function(k){
+    var c=map[k];
+    c.sub=activeSubOf(c.phone);
+    c.idleDays=c.last?Math.floor((nowMs-c.last)/864e5):999;
+    c.rem=(n*Math.ceil((c.n+1)/n)-(c.n+1));
+    c.due=(c.n>0&&(c.n+1)%n===0);
+    c.vip=c.n>=5||c.sum>=30;
+    return c;
+  });
+}
+function openCustDetail(c){
+  var box=$('cdBody');box.innerHTML='';
+  box.appendChild(el('h2',null,'👤 ملف العميل: '+fph(c.phone)));
+  var meta=[];if(c.vt)meta.push(c.vt);if(c.plate)meta.push('لوحة: '+c.plate);
+  box.appendChild(el('div','empty',meta.length?meta.join(' · '):'لا توجد تفاصيل مركبة مسجلة'));
+  var g=el('div','row3');
+  [['الزيارات',String(c.n)],['إجمالي الدفع',f(c.sum)+' د.ب'],['الآجل',f(c.debt)+' د.ب']].forEach(function(p){
+    var d=el('div','miniStat');d.appendChild(el('b',null,p[1]));d.appendChild(el('span',null,p[0]));g.appendChild(d);
+  });
+  box.appendChild(g);
+  var act=el('div','tools');
+  act.appendChild(btn('🧾 تسجيل غسلة','sm',function(){
+    closeSheet('custDetailSheet');showView('v-main');setType('in');$('phone').value=fph(c.phone);$('plate').value=c.plate||'';loyal();
+  }));
+  act.appendChild(btn('🕒 حجز موعد','sm',function(){
+    closeSheet('custDetailSheet');showView('v-queue');$('bkPhone').value=fph(c.phone);$('bkPlate').value=c.plate||'';$('bkVeh').value=c.vt||'';
+  }));
+  var wa=el('a','btnlink','واتساب');wa.target='_blank';wa.rel='noopener';wa.href='https://wa.me/'+waNum(c.phone);
+  act.appendChild(wa);
+  box.appendChild(act);
+  box.appendChild(el('h3',null,'سجل العمليات ('+c.entries.length+')'));
+  c.entries.slice().sort(function(a,b){return b.ts-a.ts}).forEach(function(e){
+    var r=el('div','item'),inf=el('div');
+    inf.appendChild(el('b',null,e.label));
+    inf.appendChild(el('small',null,ltr(dkey(e.ts))+' · '+(e.pay||'')+(paidOf(e)?'':' · غير مدفوع')));
+    r.appendChild(inf);r.appendChild(el('span','amt in',f(e.amount)+' د.ب'));
+    box.appendChild(r);
+  });
+  openSheet('custDetailSheet');
+}
+function renderCust(){
+  var box=$('custList');box.innerHTML='';
+  var all=buildCustMap(),q=$('custQ').value.trim().toLowerCase(),sortBy=$('custSort').value;
+  $('csTot').textContent=all.length;
+  $('csSub').textContent=all.filter(function(c){return !!c.sub}).length;
+  $('csVip').textContent=all.filter(function(c){return c.vip}).length;
+
+  var arr=all.filter(function(c){
+    if(custF==='sub'&&!c.sub)return false;
+    if(custF==='free'&&!c.due&&c.rem>2)return false;
+    if(custF==='debt'&&!(c.debt>0))return false;
+    if(custF==='vip'&&!c.vip)return false;
+    if(custF==='idle'&&c.idleDays<30)return false;
+    if(!q)return true;
+    var qd=q.replace(/\D/g,'');
+    return c.phone.toLowerCase().indexOf(q)>-1||(qd&&nph(c.phone).indexOf(qd)>-1)||(c.plate||'').toLowerCase().indexOf(q)>-1||(c.vt||'').toLowerCase().indexOf(q)>-1;
+  }).sort(function(a,b){
+    if(sortBy==='spend')return b.sum-a.sum;
+    if(sortBy==='recent')return b.last-a.last;
+    if(sortBy==='oldest')return a.last-b.last;
+    if(sortBy==='loyal')return (a.due?-1:a.rem)-(b.due?-1:b.rem);
+    return b.n-a.n;
+  });
+
+  if(!arr.length){box.appendChild(el('div','empty','لا يوجد عملاء يطابقون هذا البحث أو الفلتر.'));return}
+  var n=LOY();
+  arr.slice(0,120).forEach(function(c){
+    var d=el('div','card'),head=el('div','cardHead');
     var h=el('b',null,ph(c.phone)+(c.vt?' · '+c.vt:'')+(c.plate?' · '+pl(c.plate):''));
-    if(as)h.appendChild(el('span','badge ok','⭐ مشترك'));
-    d.appendChild(h);
-    d.appendChild(el('small',null,c.n+' زيارة · إجمالي '+f(c.sum)+' د.ب · آخر زيارة '+ltr(dkey(c.last))));
-    d.appendChild(el('small',null,(c.n+1)%n===0?'الزيارة الجاية مجانية 🎁':'باقي '+(n*Math.ceil((c.n+1)/n)-(c.n+1))+' زيارة للغسلة المجانية'));
+    if(c.sub)h.appendChild(el('span','badge ok','⭐ مشترك'));
+    if(c.vip)h.appendChild(el('span','badge vip','👑 VIP'));
+    if(c.due)h.appendChild(el('span','badge warn','🎁 مجانية جاهزة'));
+    if(c.debt>0)h.appendChild(el('span','badge bad','⏳ آجل '+f(c.debt)));
+    head.appendChild(h);
+    d.appendChild(head);
+
+    var g=el('div','row3');
+    var m1=el('div','miniStat');m1.appendChild(el('b',null,String(c.n)));m1.appendChild(el('span',null,'الزيارات'));g.appendChild(m1);
+    var m2=el('div','miniStat');m2.appendChild(el('b',null,f(c.sum)));m2.appendChild(el('span',null,'الإجمالي (د.ب)'));g.appendChild(m2);
+    var m3=el('div','miniStat');m3.appendChild(el('b',null,c.last?(c.idleDays===0?'اليوم':'منذ '+c.idleDays+' يوم'):'—'));m3.appendChild(el('span',null,'آخر زيارة'));g.appendChild(m3);
+    d.appendChild(g);
+
+    // Loyalty progress bar
+    var mod=c.n%n,pct=c.due?100:Math.round((mod/n)*100);
+    var pr=el('div','prog'+(c.due?' ok':'')),bar=el('i');bar.style.width=pct+'%';pr.appendChild(bar);d.appendChild(pr);
+    d.appendChild(el('small',null,c.due?'🎁 الزيارة القادمة مجانية!':'الولاء: '+mod+' من '+n+' (باقي '+c.rem+' زيارة للمجانية)'));
+
+    var act=el('div','act');
+    act.appendChild(btn('📋 السجل والتفاصيل','sm',function(){openCustDetail(c)}));
+    act.appendChild(btn('🧾 غسلة سريعة','sm',function(){
+      showView('v-main');setType('in');$('phone').value=fph(c.phone);$('plate').value=c.plate||'';loyal();
+    }));
     var a=el('a','btnlink','واتساب');a.target='_blank';a.rel='noopener';a.href='https://wa.me/'+waNum(c.phone);
-    a.style.marginTop='6px';d.appendChild(a);box.appendChild(d);
+    act.appendChild(a);
+    d.appendChild(act);
+    box.appendChild(d);
   });
 }
 
-/* subscriptions */
+/* subscriptions: add, edit, renew, extend */
 function planByName(n){return cfg.plans.filter(function(p){return p.name===n})[0]}
 function renderSubForm(){
   var s=$('sbVeh'),cur=s.value;s.innerHTML='';
@@ -626,6 +1369,7 @@ function clearSubForm(){
   $('sbTitle').textContent='⭐ اشتراك جديد';$('sbSave').textContent='حفظ الاشتراك';$('sbCancel').style.display='none';
 }
 function loadSubForm(s,asNew){
+  if(!can('manageSubs')){toast('ليس لديك صلاحية إدارة الاشتراكات');return}
   $('sbPhone').value=fph(s.phone);$('sbPlate').value=s.plate||'';$('sbVeh').value=s.vtype||'';$('sbPlan').value=s.plan;
   $('sbPrice').value=s.price;$('sbDays').value=s.days;$('sbWashes').value=s.washes||0;$('sbStart').value=asNew?addDays(s.end,1)>dkey(Date.now())?addDays(s.end,1):dkey(Date.now()):s.start;
   $('sbBen').value=s.benefits||'';$('sbPay').value=s.pay||'كاش';$('sbPaid').checked=asNew?true:!!s.paid;$('sbNote').value=asNew?'':(s.note||'');
@@ -634,8 +1378,47 @@ function loadSubForm(s,asNew){
   $('sbSave').textContent=asNew?'حفظ التجديد':'حفظ التعديل';$('sbCancel').style.display='inline-block';
   showView('v-subs');$('sbTitle').scrollIntoView({behavior:'smooth'});
 }
+function openExtSheet(s){
+  if(!can('manageSubs')){toast('ليس لديك صلاحية تمديد الاشتراكات');return}
+  extendingSub=s;
+  $('extTitle').textContent='⏳ تمديد اشتراك: '+fph(s.phone);
+  $('extInfo').textContent='الباقة: '+s.plan+' · ينتهي حالياً بتاريخ '+ltr(s.end)+(s.washes?' · الغسلات: '+usedOf(s)+'/'+s.washes:'');
+  $('extDays').value=7;$('extWashes').value=0;$('extFee').value=0;$('extPay').value='كاش';$('extPaid').checked=true;$('extNote').value='';
+  updateExtPreview();
+  openSheet('extSheet');
+}
+function updateExtPreview(){
+  if(!extendingSub)return;
+  var addD=parseInt($('extDays').value,10)||0,addW=parseInt($('extWashes').value,10)||0;
+  var baseEnd=extendingSub.end<dkey(Date.now())?dkey(Date.now()):extendingSub.end;
+  var newEnd=addD>0?addDays(baseEnd,addD):extendingSub.end;
+  var txt='📅 تاريخ الانتهاء الجديد: '+ltr(newEnd);
+  if(extendingSub.washes>0||addW>0)txt+=' · إجمالي الغسلات: '+((extendingSub.washes||0)+addW);
+  $('extPreview').textContent=txt;
+}
+function saveExtend(){
+  if(!extendingSub||!subCol||!FDB)return;
+  var addD=parseInt($('extDays').value,10)||0,addW=parseInt($('extWashes').value,10)||0,fee=parseFloat($('extFee').value)||0;
+  if(addD<=0&&addW<=0){toast('حدد عدد الأيام أو الغسلات الإضافية');return}
+  var s=extendingSub,baseEnd=s.end<dkey(Date.now())?dkey(Date.now()):s.end;
+  var newEnd=addD>0?addDays(baseEnd,addD):s.end;
+  var newDays=(s.days||30)+addD,newWashes=(s.washes||0)+addW;
+  var b=FDB.batch();
+  b.update(subCol.doc(s.id),{end:newEnd,days:newDays,washes:newWashes});
+  if(fee>0){
+    var eid=rid('e'),no=nextNo(),ws=me.name?[me.name]:[];
+    b.set(col.doc(eid),{ts:Date.now(),type:'in',label:'تمديد اشتراك - '+s.plan,amount:fee,
+      pay:$('extPay').value,paid:$('extPaid').checked,phone:s.phone,plate:s.plate||'',vtype:s.vtype||'',
+      workers:ws,worker:ws.join('، '),free:false,no:no,note:$('extNote').value.trim(),subFee:s.id,by:me.name||'',byUid:me.uid||''});
+  }
+  b.commit().then(function(){
+    addLog('sub','تمديد اشتراك',fph(s.phone),'+'+addD+' يوم'+(addW?' و +'+addW+' غسلة':'')+' · ينتهي '+newEnd+(fee>0?' · رسوم '+f(fee):''));
+    toast('تم تمديد الاشتراك بنجاح حتى '+newEnd);
+    closeSheet('extSheet');extendingSub=null;
+  }).catch(function(){toast('تعذر تمديد الاشتراك')});
+}
 function saveSub(){
-  if(!subCol||!FDB){toast('السجل المشترك غير متصل');return}
+  if(!subCol||!FDB||!can('manageSubs')){toast('ليس لديك صلاحية إدارة الاشتراكات');return}
   var phone=nph($('sbPhone').value)||$('sbPhone').value.trim(),plan=$('sbPlan').value.trim(),
       price=parseFloat($('sbPrice').value),days=parseInt($('sbDays').value,10),start=$('sbStart').value;
   if(!phone){toast('اكتب رقم العميل');return}
@@ -651,21 +1434,27 @@ function saveSub(){
     if(s.entryId){b.update(col.doc(s.entryId),{label:lbl,amount:price,pay:o.pay,paid:o.paid,phone:phone,plate:o.plate,vtype:o.vtype})}
     else if(price>0){
       var eid0=rid('e');o.entryId=eid0;
-      b.set(col.doc(eid0),{ts:s.ts,type:'in',label:lbl,amount:price,pay:o.pay,paid:o.paid,phone:phone,plate:o.plate,vtype:o.vtype,workers:s.workers||[],worker:(s.workers||[]).join('، '),free:false,no:s.no,note:'',subFee:s.id,by:me.name||''});
+      b.set(col.doc(eid0),{ts:s.ts,type:'in',label:lbl,amount:price,pay:o.pay,paid:o.paid,phone:phone,plate:o.plate,vtype:o.vtype,workers:s.workers||[],worker:(s.workers||[]).join('، '),free:false,no:s.no,note:'',subFee:s.id,by:me.name||'',byUid:me.uid||''});
     }
     b.update(subCol.doc(s.id),o);
   }else{
     var ts=Date.now(),sid=rid('s'),eid=rid('e'),no=nextNo(),ws=me.name?[me.name]:[];
     o.ts=ts;o.no=no;o.workers=ws;o.entryId=price>0?eid:'';o.cancelled=false;
     b.set(subCol.doc(sid),o);
-    if(price>0)b.set(col.doc(eid),{ts:ts,type:'in',label:lbl,amount:price,pay:o.pay,paid:o.paid,phone:phone,plate:o.plate,vtype:o.vtype,workers:ws,worker:ws.join('، '),free:false,no:no,note:'',subFee:sid,by:me.name||''});
+    if(price>0)b.set(col.doc(eid),{ts:ts,type:'in',label:lbl,amount:price,pay:o.pay,paid:o.paid,phone:phone,plate:o.plate,vtype:o.vtype,workers:ws,worker:ws.join('، '),free:false,no:no,note:'',subFee:sid,by:me.name||'',byUid:me.uid||''});
   }
-  b.commit().then(function(){toast(editingSub?'تم تعديل الاشتراك':'تم حفظ الاشتراك');clearSubForm()}).catch(function(){toast('تعذر الحفظ، تأكد من صلاحيتك وقواعد Firestore')});
+  b.commit().then(function(){
+    addLog('sub',editingSub?'تعديل اشتراك':'تسجيل اشتراك جديد',fph(phone),plan+' · '+f(price)+' د.ب');
+    toast(editingSub?'تم تعديل الاشتراك':'تم حفظ الاشتراك');clearSubForm();
+  }).catch(function(){toast('تعذر الحفظ، تأكد من صلاحيتك')});
 }
 function delSub(s){
-  if(!subCol||!FDB)return;
+  if(!subCol||!FDB||!can('deleteSub')){toast('ليس لديك صلاحية حذف الاشتراكات');return}
   var b=FDB.batch();b.delete(subCol.doc(s.id));if(s.entryId)b.delete(col.doc(s.entryId));
-  b.commit().then(function(){toast('تم حذف الاشتراك')}).catch(function(){toast('تعذر الحذف')});
+  b.commit().then(function(){
+    addLog('del','حذف اشتراك',fph(s.phone),s.plan);
+    toast('تم حذف الاشتراك');
+  }).catch(function(){toast('تعذر الحذف')});
 }
 function subCard(x){
   var s=x.s,st=x.st,c=el('div','card'),h=el('b',null,s.plan+' · '+ph(s.phone));
@@ -678,17 +1467,23 @@ function subCard(x){
   if(ben.length){var ul=el('ul','ben');ben.forEach(function(t){ul.appendChild(el('li',null,t))});c.appendChild(ul)}
   var act=el('div','act');
   act.appendChild(btn('إيصال','sm',function(){showRcpt(subRcpt(s))}));
-  act.appendChild(btn('تعديل','sm',function(){loadSubForm(s,false)}));
-  act.appendChild(btn('تجديد','sm',function(){loadSubForm(s,true)}));
+  if(can('manageSubs')){
+    act.appendChild(btn('⏳ تمديد','sm',function(){openExtSheet(s)}));
+    act.appendChild(btn('🔄 تجديد','sm',function(){loadSubForm(s,true)}));
+    act.appendChild(btn('تعديل','sm',function(){loadSubForm(s,false)}));
+  }
   if(st.k!=='future'&&(st.k==='expired'||st.d<=5)){
     var a=el('a','btnlink','تذكير واتساب');a.target='_blank';a.rel='noopener';
-    a.href='https://wa.me/'+waNum(s.phone)+'?text='+encodeURIComponent('السلام عليكم، نذكّرك بأن اشتراكك ('+s.plan+') '+(st.k==='expired'?'انتهى':'ينتهي')+' بتاريخ '+s.end+'. يسعدنا نجدده لك 🙏 '+(cfg.biz||''));
+    a.href='https://wa.me/'+waNum(s.phone)+'?text='+encodeURIComponent('السلام عليكم، نذكّرك بأن اشتراكك ('+s.plan+') '+(st.k==='expired'?'انتهى':'ينتهي')+' بتاريخ '+s.end+'. يسعدنا نجدده أو نمدده لك 🙏 '+(cfg.biz||''));
     act.appendChild(a);
   }
-  var x2=btn('حذف','sm del',function(){
-    if(x2.dataset.ok){delSub(s)}else{x2.dataset.ok='1';x2.textContent='تأكيد الحذف؟';setTimeout(function(){x2.dataset.ok='';x2.textContent='حذف'},3000)}
-  });
-  act.appendChild(x2);c.appendChild(act);return c;
+  if(can('deleteSub')){
+    var x2=btn('حذف','sm del',function(){
+      if(x2.dataset.ok){delSub(s)}else{x2.dataset.ok='1';x2.textContent='تأكيد الحذف؟';setTimeout(function(){x2.dataset.ok='';x2.textContent='حذف'},3000)}
+    });
+    act.appendChild(x2);
+  }
+  c.appendChild(act);return c;
 }
 function renderSubs(){
   var box=$('subList');box.innerHTML='';var q=$('subQ').value.trim().toLowerCase();
@@ -732,10 +1527,10 @@ function renderMonth(){
   groupRows(out,'حسب نوع المركبة',wash,function(e){return vtypeOf(e)||'غير محدد'});
   groupRows(out,'حسب طريقة الدفع',ins,function(e){return e.pay||'غير محدد'});
   groupRows(out,'حسب العامل (المبلغ موزّع بالتساوي إذا اشتغل أكثر من عامل)',wash,function(e){var w=workersOf(e);return w.length?w:'بدون اسم'});
-  if(data.length>=LIMIT)out.appendChild(el('div','empty','تنبيه: السجل المعروض محدود بآخر '+LIMIT+' عملية، فقد تكون الأشهر القديمة ناقصة.'));
 }
 function render(){
-  renderToday();renderDays();renderDebts();renderCust();renderSubs();renderMonth();loyal();
+  renderToday();renderQueue();renderDays();renderDebts();renderCust();renderSubs();renderMonth();loyal();renderAlerts();
+  if(curView==='v-owner'&&isOwner())renderOwner();
 }
 function report(){
   var tk=dkey(Date.now()),today=data.filter(function(e){return dkey(e.ts)===tk});
@@ -748,10 +1543,230 @@ function report(){
   try{document.execCommand('copy');toast('تم النسخ')}catch(e){}
 }
 
+/* OWNER EXCLUSIVE SUITE: TEAM, RANKS, WORKER FILE, AUDIT LOGS, IDEAS */
+function openWorkerPermSheet(s){
+  wpTarget=s;
+  $('wpTitle').textContent='🔐 إدارة حساب: '+(s.name||s.email);
+  $('wpName').value=s.name||'';
+  var rkSel=$('wpRank');rkSel.innerHTML='';
+  RANK_KEYS.forEach(function(k){var o=el('option',null,rankLabel(k));o.value=k;rkSel.appendChild(o)});
+  rkSel.value=s.role||'worker';
+  $('wpDisabled').checked=!!s.disabled;
+  $('wpDisabled').disabled=(s.id===me.uid||s.id===cfg.ownerUid);
+
+  var box=$('wpPermsBox');box.innerHTML='';
+  var curP=Object.assign({},RANK_PRESETS[s.role||'worker'],s.perms||{});
+  PERM_DEFS.forEach(function(pd){
+    var lbl=el('label','permItem');
+    lbl.appendChild(el('span',null,pd.t));
+    var cb=document.createElement('input');cb.type='checkbox';cb.dataset.pk=pd.k;cb.checked=!!curP[pd.k];
+    lbl.appendChild(cb);box.appendChild(lbl);
+  });
+  openSheet('workerPermSheet');
+}
+function openWorkerFile(s){
+  wfTarget=s;
+  var box=$('wfBody');box.innerHTML='';
+  var name=s.name||s.email||'عامل';
+  box.appendChild(el('h2',null,'📁 ملف العامل: '+name));
+  var p=pres.filter(function(x){return x.id===s.id})[0],on=p&&isOnline(p);
+  box.appendChild(el('div','empty',rankLabel(s.role||'worker')+' · '+(s.email||'بدون إيميل')+' · '+(on?'🟢 متصل الآن':'⚪ غير متصل')));
+
+  var tabs=el('div','pills');
+  [['today','اليوم'],['month','هذا الشهر'],['all','كل الأوقات']].forEach(function(t){
+    var b=el('button',wfPeriod===t[0]?'on':'',t[1]);b.type='button';
+    b.onclick=function(){wfPeriod=t[0];openWorkerFile(s)};
+    tabs.appendChild(b);
+  });
+  box.appendChild(tabs);
+
+  var tk=dkey(Date.now()),mk0=tk.slice(0,7);
+  var wEntries=data.filter(function(e){
+    var ws=workersOf(e);
+    var involved=ws.indexOf(name)>-1||e.byUid===s.id||e.by===name;
+    if(!involved)return false;
+    if(wfPeriod==='today')return dkey(e.ts)===tk;
+    if(wfPeriod==='month')return dkey(e.ts).slice(0,7)===mk0;
+    return true;
+  });
+  var wLogs=logs.filter(function(l){
+    if(l.uid!==s.id&&l.name!==name)return false;
+    if(wfPeriod==='today')return dkey(l.ts)===tk;
+    if(wfPeriod==='month')return dkey(l.ts).slice(0,7)===mk0;
+    return true;
+  });
+
+  var washes=wEntries.filter(function(e){return e.type==='in'&&!e.subFee});
+  var solo=washes.filter(function(e){return workersOf(e).length<=1}).length;
+  var revShare=washes.reduce(function(sum,e){var c=Math.max(1,workersOf(e).length);return sum+(e.amount/c)},0);
+  var subsSold=wEntries.filter(function(e){return e.subFee}).length;
+  var delCount=wLogs.filter(function(l){return l.cat==='del'}).length;
+
+  var g=el('div','row3');
+  [['الغسلات',washes.length+' ('+solo+' منفرد)'],['حصة الدخل',f(revShare)+' د.ب'],['اشتراكات / حذف',subsSold+' اشتراك · '+delCount+' حذف']].forEach(function(k){
+    var d=el('div','miniStat');d.appendChild(el('b',null,k[1]));d.appendChild(el('span',null,k[0]));g.appendChild(d);
+  });
+  box.appendChild(g);
+
+  var act=el('div','tools');
+  act.appendChild(btn('🔐 الصلاحيات والرتبة','sm',function(){closeSheet('workerFileSheet');openWorkerPermSheet(s)}));
+  act.appendChild(btn('💾 تصدير عمليات العامل CSV','sm',function(){exportCsv(wEntries,'worker-'+name+'.csv')}));
+  box.appendChild(act);
+
+  box.appendChild(el('h3',null,'🧾 العمليات المسجلة أو المنفذة ('+wEntries.length+')'));
+  if(!wEntries.length)box.appendChild(el('div','empty','لا توجد عمليات في هذه الفترة.'));
+  wEntries.slice(0,40).forEach(function(e){
+    var r=el('div','item'),inf=el('div');
+    inf.appendChild(el('b',null,e.label));
+    inf.appendChild(el('small',null,ltr(dkey(e.ts))+' · '+(e.phone?fph(e.phone)+' · ':'')+'الطاقم: '+(workersOf(e).join('، ')||name)));
+    r.appendChild(inf);r.appendChild(el('span','amt '+e.type,f(e.amount)+' د.ب'));
+    box.appendChild(r);
+  });
+
+  box.appendChild(el('h3',null,'📜 سجل النشاط والرقابة ('+wLogs.length+')'));
+  if(!wLogs.length)box.appendChild(el('div','empty','لا توجد حركات مسجلة في سجل الرقابة.'));
+  wLogs.slice(0,40).forEach(function(l){
+    var r=el('div','logRow');
+    r.innerHTML='<b>'+l.action+'</b>'+(l.target?' · '+l.target:'')+'<br><small style="color:var(--mute)">'+ltr(dkey(l.ts))+' '+new Date(l.ts).toLocaleTimeString('ar-BH',{hour:'2-digit',minute:'2-digit'})+(l.details?' · '+l.details:'')+'</small>';
+    box.appendChild(r);
+  });
+
+  openSheet('workerFileSheet');
+}
+
+function renderOwner(){
+  if(!isOwner())return;
+  // 1. Staff & Ranks list
+  var sBox=$('owStaffList');sBox.innerHTML='';
+  if(!staff.length)sBox.appendChild(el('div','empty','لا يوجد أعضاء مسجلون بعد.'));
+  staff.forEach(function(s){
+    var c=el('div','card'),head=el('div','cardHead');
+    var p=pres.filter(function(x){return x.id===s.id})[0],on=p&&isOnline(p);
+    var h=el('b',null,(on?'🟢 ':'⚪ ')+(s.name||s.email||'بدون اسم'));
+    h.appendChild(el('span','badge info',rankLabel(s.role||'worker')));
+    if(s.disabled)h.appendChild(el('span','badge bad','موقوف'));
+    if(s.forcePwReset)h.appendChild(el('span','badge warn','مطلوب تغيير الباسورد'));
+    head.appendChild(h);
+    c.appendChild(head);
+    c.appendChild(el('small',null,(s.email||'')+(p&&p.ts?' · آخر تواجد: '+new Date(p.ts).toLocaleString('ar-BH',{day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}):'')));
+    var wCount=data.filter(function(e){return e.type==='in'&&!e.subFee&&(workersOf(e).indexOf(s.name)>-1||e.byUid===s.id)}).length;
+    c.appendChild(el('small',null,'إجمالي الغسلات المشارك فيها: '+wCount+' غسلة'));
+    var act=el('div','act');
+    act.appendChild(btn('📁 ملف العامل','sm',function(){openWorkerFile(s)}));
+    act.appendChild(btn('🔐 الصلاحيات والرتبة','sm',function(){openWorkerPermSheet(s)}));
+    c.appendChild(act);
+    sBox.appendChild(c);
+  });
+
+  // 2. Audit logs
+  var wf=$('logWorkerFilter'),curWf=wf.value;wf.innerHTML='<option value="">كل العمال</option>';
+  staff.forEach(function(s){var o=el('option',null,s.name||s.email);o.value=s.id;wf.appendChild(o)});
+  wf.value=curWf;
+  var af=$('logActFilter').value,lBox=$('owLogsList');lBox.innerHTML='';
+  var fLogs=logs.filter(function(l){
+    if(curWf&&l.uid!==curWf)return false;
+    if(af&&l.cat!==af)return false;
+    return true;
+  }).slice(0,100);
+  if(!fLogs.length)lBox.appendChild(el('div','empty','لا توجد حركات مسجلة تطابق الفلتر.'));
+  fLogs.forEach(function(l){
+    var r=el('div','logRow');
+    var badgeCls=l.cat==='del'?'bad':l.cat==='sub'?'ok':'info';
+    r.innerHTML='<span class="badge '+badgeCls+'">'+l.name+'</span> <b>'+l.action+'</b>'+(l.target?' · '+l.target:'')+
+      '<br><small style="color:var(--mute)">'+ltr(dkey(l.ts))+' '+new Date(l.ts).toLocaleTimeString('ar-BH',{hour:'2-digit',minute:'2-digit'})+(l.details?' · '+l.details:'')+'</small>';
+    lBox.appendChild(r);
+  });
+
+  // 3. Owner Ideas: Goals, Commissions, Peak Hours, Win-Back
+  var goals=cfg.goals||DEF.goals;
+  if(document.activeElement!==$('owGoalDay'))$('owGoalDay').value=goals.day||50;
+  if(document.activeElement!==$('owGoalMon'))$('owGoalMon').value=goals.month||1200;
+  if(document.activeElement!==$('owCommPct'))$('owCommPct').value=goals.commPct!=null?goals.commPct:10;
+  if(document.activeElement!==$('owWinMsg'))$('owWinMsg').value=goals.winMsg||DEF.goals.winMsg;
+
+  var tk=dkey(Date.now()),mk0=tk.slice(0,7);
+  var dayIn=totals(data.filter(function(e){return dkey(e.ts)===tk})).i;
+  var monIn=totals(data.filter(function(e){return dkey(e.ts).slice(0,7)===mk0})).i;
+  var gDay=Number(goals.day)||50,gMon=Number(goals.month)||1200;
+  var pDay=Math.min(100,Math.round((dayIn/Math.max(1,gDay))*100));
+  var pMon=Math.min(100,Math.round((monIn/Math.max(1,gMon))*100));
+  $('owGoalOut').innerHTML=
+    '<div style="margin-top:8px"><b>هدف اليوم:</b> '+f(dayIn)+' / '+f(gDay)+' د.ب ('+pDay+'%)'+
+    '<div class="prog'+(pDay>=100?' ok':'')+'"><i style="width:'+pDay+'%"></i></div></div>'+
+    '<div style="margin-top:8px"><b>هدف الشهر:</b> '+f(monIn)+' / '+f(gMon)+' د.ب ('+pMon+'%)'+
+    '<div class="prog'+(pMon>=100?' ok':'')+'"><i style="width:'+pMon+'%"></i></div></div>';
+
+  // Commissions & Leaderboard
+  var cm=$('owCommMon').value||mk0,pct=(Number(goals.commPct)||0)/100;
+  var cBox=$('owCommOut');cBox.innerHTML='';
+  var wStats={};
+  data.filter(function(e){return e.type==='in'&&!e.subFee&&dkey(e.ts).slice(0,7)===cm}).forEach(function(e){
+    var ws=workersOf(e);if(!ws.length)ws=['غير محدد'];
+    var share=e.amount/ws.length;
+    ws.forEach(function(w){wStats[w]=wStats[w]||{n:0,rev:0};wStats[w].n++;wStats[w].rev+=share});
+  });
+  var wKeys=Object.keys(wStats).sort(function(a,b){return wStats[b].rev-wStats[a].rev});
+  if(!wKeys.length)cBox.appendChild(el('div','empty','لا توجد غسلات مسجلة في هذا الشهر.'));
+  wKeys.forEach(function(w,idx){
+    var st=wStats[w],comm=st.rev*pct;
+    kv(cBox,(idx===0?'🥇 ':idx===1?'🥈 ':idx===2?'🥉 ':'')+w,st.n+' غسلة · دخل '+f(st.rev)+' · عمولة '+f(comm)+' د.ب','in');
+  });
+
+  // Peak Hours & Days
+  var pkBox=$('owPeakOut');pkBox.innerHTML='';
+  var hrs={},dows={},dowNames=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+  data.filter(function(e){return e.type==='in'&&!e.subFee}).forEach(function(e){
+    var dt=new Date(e.ts),h=dt.getHours(),dw=dowNames[dt.getDay()];
+    hrs[h]=(hrs[h]||0)+1;dows[dw]=(dows[dw]||0)+1;
+  });
+  var topH=Object.keys(hrs).sort(function(a,b){return hrs[b]-hrs[a]})[0];
+  var topD=Object.keys(dows).sort(function(a,b){return dows[b]-dows[a]})[0];
+  if(topH!=null){
+    var hNum=parseInt(topH,10),hStr=(hNum===0?'12 ص':hNum<12?hNum+' ص':hNum===12?'12 م':(hNum-12)+' م');
+    kv(pkBox,'🔥 ساعة الذروة الأكثر ازدحاماً','حوالي الساعة '+hStr+' ('+hrs[topH]+' غسلة)');
+    kv(pkBox,'📅 أكثر يوم في الأسبوع زحمة',topD+' ('+dows[topD]+' غسلة)');
+  }else{
+    pkBox.appendChild(el('div','empty','ستظهر التحليلات تلقائياً مع تراكم الغسلات.'));
+  }
+
+  // Win-Back Idle Customers
+  var winBox=$('owWinList');winBox.innerHTML='';
+  var idles=buildCustMap().filter(function(c){return c.idleDays>=30}).sort(function(a,b){return b.n-a.n}).slice(0,15);
+  if(!idles.length)winBox.appendChild(el('div','empty','ممتاز! لا يوجد عملاء غائبون أكثر من 30 يوم.'));
+  idles.forEach(function(c){
+    var r=el('div','item'),inf=el('div');
+    inf.appendChild(el('b',null,ph(c.phone)+(c.plate?' · '+pl(c.plate):'')));
+    inf.appendChild(el('small',null,'غائب منذ '+c.idleDays+' يوم · زياراته السابقة: '+c.n));
+    r.appendChild(inf);
+    var a=el('a','btnlink','إرسال عرض واتساب');a.target='_blank';a.rel='noopener';
+    a.href='https://wa.me/'+waNum(c.phone)+'?text='+encodeURIComponent('السلام عليكم، '+($('owWinMsg').value||DEF.goals.winMsg));
+    r.appendChild(a);
+    winBox.appendChild(r);
+  });
+
+  // 4. Guard checkboxes & Rank labels
+  var gd=cfg.guard||DEF.guard;
+  $('gdHideRev').checked=!!gd.hideRev;
+  $('gdReqPhone').checked=!!gd.reqPhone;
+  $('gdReqWorker').checked=!!gd.reqWorker;
+  $('gdLockOld').checked=!!gd.lockOld;
+
+  var rEd=$('owRanksEd');rEd.innerHTML='';
+  RANK_KEYS.forEach(function(rk){
+    var row=el('div','kv');
+    row.appendChild(el('span',null,rk));
+    var inp0=document.createElement('input');inp0.style.maxWidth='220px';inp0.value=rankLabel(rk);
+    inp0.onchange=function(){cfg.ranks=cfg.ranks||Object.assign({},DEF.ranks);cfg.ranks[rk]=this.value.trim()||DEF.ranks[rk];saveCfg();renderOwner()};
+    row.appendChild(inp0);
+    rEd.appendChild(row);
+  });
+}
+
 /* edit order */
 function openSheet(id){$(id).style.display='flex'}
 function closeSheet(id){$(id).style.display='none'}
 function showEdit(e){
+  if(!canModifyEntry(e)){toast('ليس لديك صلاحية تعديل هذه العملية');return}
   editing=e;$('edLabel').value=e.label;$('edAmount').value=e.amount;$('edPhone').value=e.phone?fph(e.phone):'';$('edPlate').value=e.plate||'';
   $('edVtype').value=vtypeOf(e);$('edNote').value=e.note||'';
   if(e.pay)$('edPay').value=e.pay;$('edPaid').checked=paidOf(e);
@@ -767,7 +1782,11 @@ function saveEdit(){
   if(isNaN(amt)||amt<0){toast('اكتب المبلغ');return}
   var u={label:label,amount:amt,note:$('edNote').value.trim()};
   if(editing.type==='in'){u.pay=$('edPay').value;u.paid=$('edPaid').checked;u.phone=nph($('edPhone').value)||$('edPhone').value.trim();u.plate=$('edPlate').value.trim();u.vtype=$('edVtype').value.trim();u.workers=edSelW.slice();u.worker=edSelW.join('، ')}
-  col.doc(editing.id).update(u).then(function(){toast('تم التعديل');closeSheet('editSheet');editing=null}).catch(function(){toast('تعذر التعديل، تأكد أن عندك صلاحية التعديل')});
+  var oldLbl=editing.label,oldAmt=editing.amount;
+  col.doc(editing.id).update(u).then(function(){
+    addLog('del','تعديل عملية',label,'من ('+oldLbl+' '+f(oldAmt)+') إلى ('+label+' '+f(amt)+')');
+    toast('تم التعديل');closeSheet('editSheet');editing=null;
+  }).catch(function(){toast('تعذر التعديل، تأكد من صلاحيتك')});
 }
 
 /* export */
@@ -905,8 +1924,8 @@ function rcptPdf(r){
 function inp(val,tp,fn,pholder){var i=document.createElement('input');i.type=tp;i.value=val;if(pholder)i.placeholder=pholder;if(tp==='number'){i.step='0.001';i.inputMode='decimal'}i.onchange=fn;return i}
 function rowEd(box,list,i,isAddon){
   var it=list[i],d=el('div','ed');
-  d.appendChild(inp(it.name,'text',function(){it.name=this.value.trim()||it.name;saveCfg()},'الاسم'));
-  d.appendChild(inp(it.price,'number',function(){var p=parseFloat(this.value);if(p>=0){it.price=p;saveCfg()}},'السعر'));
+  d.appendChild(inp(it.name,'text',function(){it.name=this.value.trim()||it.name;saveCfg();addLog('cfg','تعديل خدمة',it.name,'')},'الاسم'));
+  d.appendChild(inp(it.price,'number',function(){var p=parseFloat(this.value);if(p>=0){it.price=p;saveCfg();addLog('cfg','تعديل سعر',it.name,f(p)+' د.ب')}},'السعر'));
   var x=btn('حذف','del',function(){
     if(x.dataset.ok){list.splice(i,1);saveCfg();edRender();chips()}else{x.dataset.ok='1';x.textContent='تأكيد؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف'},3000)}
   });
@@ -938,7 +1957,7 @@ function edRender(){
   cfg.vehicles.forEach(function(_,i){rowEd(V,cfg.vehicles,i,false)});
   cfg.addons.forEach(function(_,i){rowEd(A,cfg.addons,i,true)});
   (cfg.plans||[]).forEach(function(_,i){planRow(P,i)});
-  renderSubForm();
+  renderSubForm();renderBkVeh();
 }
 
 /* team and presence */
@@ -957,7 +1976,9 @@ function renderTeam(){
   if(!staff.length){box.appendChild(el('div','empty','ما في أعضاء بعد.'));return}
   staff.forEach(function(s){
     var p=pres.filter(function(x){return x.id===s.id})[0],on=p&&isOnline(p),r=el('div','kv');
-    r.appendChild(el('span',null,(on?'🟢 ':'⚪ ')+s.name+(s.id===me.uid?' (أنت)':'')));
+    var left=el('span',null,(on?'🟢 ':'⚪ ')+s.name+(s.id===me.uid?' (أنت)':''));
+    left.appendChild(el('span','badge info',rankLabel(s.role||'worker')));
+    r.appendChild(left);
     r.appendChild(el('small',null,on?'متصل الآن':(p&&p.ts?'آخر ظهور '+new Date(p.ts).toLocaleString('ar-BH',{day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}):'لم يدخل بعد')));
     box.appendChild(r);
   });
@@ -966,6 +1987,9 @@ function renderTeam(){
 /* wiring */
 Array.prototype.forEach.call($('nav').children,function(b){b.onclick=function(){showView(b.getAttribute('data-v'))}});
 $('themeBtn').onclick=function(){var t=curTheme()==='dark'?'light':'dark';try{localStorage.setItem('washlog.theme',t)}catch(e){}applyTheme(t)};
+$('alertBtn').onclick=function(){renderAlerts();openSheet('alertSheet')};
+$('alertStrip').onclick=function(){renderAlerts();openSheet('alertSheet')};
+$('closeAlerts').onclick=function(){closeSheet('alertSheet')};
 $('tabIn').onclick=function(){setType('in')};
 $('tabOut').onclick=function(){setType('out')};
 $('save').onclick=save;$('rep').onclick=report;
@@ -976,33 +2000,168 @@ $('phone').onchange=function(){var p=this.value.trim();if(!p)return;this.value=f
 $('sbPhone').onchange=function(){var p=this.value.trim();if(!p)return;this.value=fph(p);if($('sbPlate').value)return;var n=nph(p),m=data.filter(function(e){return e.phone&&nph(e.phone)===n&&e.plate})[0];if(m)$('sbPlate').value=m.plate};
 $('sbPlan').onchange=function(){var p=planByName(this.value.trim());if(p){$('sbPrice').value=p.price;$('sbDays').value=p.days||30;$('sbWashes').value=p.washes||0;$('sbBen').value=p.benefits||''}};
 $('sbSave').onclick=saveSub;$('sbCancel').onclick=clearSubForm;$('subQ').oninput=renderSubs;
+
+/* queue wiring */
+$('bkKind').onchange=function(){$('bkTimeRow').style.display=this.value==='appt'?'grid':'none'};
+$('bkPhone').onchange=function(){var p=this.value.trim();if(!p)return;this.value=fph(p);var n=nph(p),m=data.filter(function(e){return e.phone&&nph(e.phone)===n})[0];if(m){if(!$('bkPlate').value&&m.plate)$('bkPlate').value=m.plate;if(!$('bkVeh').value&&vtypeOf(m))$('bkVeh').value=vtypeOf(m)}};
+$('bkVeh').onchange=function(){var v=cfg.vehicles.filter(function(x){return x.name===this.value}.bind(this))[0];if(v&&!$('bkPrice').value)$('bkPrice').value=v.price};
+$('bkSave').onclick=saveBk;$('bkCancel').onclick=clearBkForm;
+Array.prototype.forEach.call($('bkFilter').children,function(b){b.onclick=function(){
+  bkF=b.getAttribute('data-f');
+  Array.prototype.forEach.call($('bkFilter').children,function(x){x.className=x===b?'on':''});
+  renderQueue();
+}});
+
+/* customer filters wiring */
+$('custQ').oninput=renderCust;$('custSort').onchange=renderCust;
+Array.prototype.forEach.call($('custFilter').children,function(b){b.onclick=function(){
+  custF=b.getAttribute('data-f');
+  Array.prototype.forEach.call($('custFilter').children,function(x){x.className=x===b?'on':''});
+  renderCust();
+}});
+
+/* extend subscription wiring */
+Array.prototype.forEach.call($('extPresets').children,function(b){b.onclick=function(){$('extDays').value=b.getAttribute('data-d');updateExtPreview()}});
+$('extDays').oninput=updateExtPreview;$('extWashes').oninput=updateExtPreview;
+$('extSave').onclick=saveExtend;$('extCancel').onclick=function(){closeSheet('extSheet');extendingSub=null};
+
+/* owner tabs & actions wiring */
+Array.prototype.forEach.call($('owTabs').children,function(b){b.onclick=function(){
+  var t=b.getAttribute('data-ot');
+  Array.prototype.forEach.call($('owTabs').children,function(x){x.className=x===b?'on':''});
+  ['ow-team','ow-logs','ow-ideas','ow-guard'].forEach(function(id){$(id).style.display=id===t?'block':'none'});
+  renderOwner();
+}});
+$('logWorkerFilter').onchange=renderOwner;$('logActFilter').onchange=renderOwner;
+$('owCommMon').value=dkey(Date.now()).slice(0,7);$('owCommMon').onchange=renderOwner;
+$('owGoalDay').onchange=function(){cfg.goals=cfg.goals||Object.assign({},DEF.goals);cfg.goals.day=parseFloat(this.value)||0;saveCfg();renderOwner()};
+$('owGoalMon').onchange=function(){cfg.goals=cfg.goals||Object.assign({},DEF.goals);cfg.goals.month=parseFloat(this.value)||0;saveCfg();renderOwner()};
+$('owCommPct').onchange=function(){cfg.goals=cfg.goals||Object.assign({},DEF.goals);cfg.goals.commPct=parseFloat(this.value)||0;saveCfg();renderOwner()};
+$('owWinMsg').onchange=function(){cfg.goals=cfg.goals||Object.assign({},DEF.goals);cfg.goals.winMsg=this.value.trim();saveCfg()};
+$('owCashCheck').onclick=function(){
+  var actual=parseFloat($('owCashActual').value);
+  if(isNaN(actual)){toast('اكتب مبلغ الكاش الفعلي');return}
+  var tk=dkey(Date.now()),sysCash=data.filter(function(e){return dkey(e.ts)===tk&&e.type==='in'&&e.pay==='كاش'&&paidOf(e)}).reduce(function(s,e){return s+e.amount},0);
+  var diff=actual-sysCash,box=$('owCashOut');box.innerHTML='';
+  kv(box,'كاش النظام المسجل اليوم',f(sysCash)+' د.ب');
+  kv(box,'الكاش الفعلي بالدرج',f(actual)+' د.ب');
+  kv(box,'النتيجة',Math.abs(diff)<0.001?'✅ مطابق تماماً (0.000 د.ب)':(diff>0?'➕ زيادة +'+f(diff)+' د.ب':'⚠️ عجز '+f(diff)+' د.ب'),Math.abs(diff)<0.001?'in':'out');
+};
+['gdHideRev','gdReqPhone','gdReqWorker','gdLockOld'].forEach(function(id){
+  $(id).onchange=function(){
+    cfg.guard=cfg.guard||Object.assign({},DEF.guard);
+    cfg.guard.hideRev=$('gdHideRev').checked;
+    cfg.guard.reqPhone=$('gdReqPhone').checked;
+    cfg.guard.reqWorker=$('gdReqWorker').checked;
+    cfg.guard.lockOld=$('gdLockOld').checked;
+    saveCfg();syncRoleUI();addLog('cfg','تحديث قواعد حماية الموقع','','');toast('تم حفظ قواعد الحماية');
+  };
+});
+
+/* owner worker permission modal wiring */
+$('wpRank').onchange=function(){
+  var pr=RANK_PRESETS[this.value]||RANK_PRESETS.worker;
+  Array.prototype.forEach.call($('wpPermsBox').querySelectorAll('input[type=checkbox]'),function(cb){cb.checked=!!pr[cb.dataset.pk]});
+};
+$('wpResetEmail').onclick=function(){
+  if(!wpTarget||!wpTarget.email||!auth){toast('هذا العامل ليس لديه إيميل مسجل');return}
+  auth.sendPasswordResetEmail(wpTarget.email).then(function(){
+    addLog('cfg','إرسال رابط إعادة تعيين باسورد',wpTarget.name,wpTarget.email);
+    toast('تم إرسال رابط تغيير الباسورد إلى '+wpTarget.email);
+  }).catch(function(){toast('تعذر إرسال الرابط')});
+};
+$('wpForcePw').onclick=function(){
+  if(!wpTarget||!staffCol)return;
+  staffCol.doc(wpTarget.id).update({forcePwReset:true}).then(function(){
+    addLog('cfg','تفعيل إجبار تغيير الباسورد',wpTarget.name,'');
+    toast('سيُطلب من العامل كتابة باسورد جديد فور دخوله');
+  }).catch(function(){toast('تعذر التحديث')});
+};
+$('wpSave').onclick=function(){
+  if(!wpTarget||!staffCol)return;
+  var newName=$('wpName').value.trim()||wpTarget.name,newRole=$('wpRank').value,dis=$('wpDisabled').checked,perms={};
+  Array.prototype.forEach.call($('wpPermsBox').querySelectorAll('input[type=checkbox]'),function(cb){perms[cb.dataset.pk]=cb.checked});
+  if(newRole==='owner'&&!cfg.ownerUid){cfg.ownerUid=wpTarget.id;saveCfg()}
+  staffCol.doc(wpTarget.id).update({name:newName,role:newRole,disabled:dis,perms:perms}).then(function(){
+    addLog('cfg','تعديل صلاحيات/رتبة عامل',newName,'الرتبة: '+rankLabel(newRole)+(dis?' (حساب موقوف)':''));
+    toast('تم حفظ صلاحيات العامل');closeSheet('workerPermSheet');wpTarget=null;
+  }).catch(function(){toast('تعذر حفظ الصلاحيات')});
+};
+$('wpCancel').onclick=function(){closeSheet('workerPermSheet');wpTarget=null};
+
+/* owner create new worker account */
+$('openNewWorker').onclick=function(){
+  $('nwName').value='';$('nwEmail').value='';$('nwPass').value='';$('nwForcePw').checked=true;
+  var selR=$('nwRank');selR.innerHTML='';
+  RANK_KEYS.forEach(function(k){var o=el('option',null,rankLabel(k));o.value=k;selR.appendChild(o)});
+  selR.value='worker';
+  openSheet('newWorkerSheet');
+};
+$('nwCancel').onclick=function(){closeSheet('newWorkerSheet')};
+$('nwCreate').onclick=function(){
+  var name=$('nwName').value.trim(),email=$('nwEmail').value.trim(),pass=$('nwPass').value,role=$('nwRank').value,fp=$('nwForcePw').checked;
+  if(!name){toast('اكتب اسم العامل');return}
+  if(!email){toast('اكتب الإيميل');return}
+  if(!pass||pass.length<6){toast('كلمة المرور يجب أن تكون ٦ أحرف على الأقل');return}
+  var appName='secApp_'+Date.now(),secApp=null;
+  try{
+    secApp=firebase.initializeApp(FIREBASE_CONFIG,appName);
+    secApp.auth().createUserWithEmailAndPassword(email,pass).then(function(cred){
+      var uid=cred.user.uid;
+      return staffCol.doc(uid).set({
+        name:name,email:email,role:role,perms:Object.assign({},RANK_PRESETS[role]||RANK_PRESETS.worker),
+        disabled:false,forcePwReset:fp,ts:Date.now()
+      }).then(function(){
+        addLog('cfg','إنشاء حساب عامل جديد',name,email+' · '+rankLabel(role));
+        toast('تم إنشاء حساب العامل بنجاح');
+        closeSheet('newWorkerSheet');
+        secApp.auth().signOut().then(function(){secApp.delete()},function(){secApp.delete()});
+      });
+    }).catch(function(err){
+      if(secApp)secApp.delete();
+      toast('تعذر إنشاء الحساب: '+((err&&err.message)||'تأكد من صيغة الإيميل وأنه غير مستخدم'));
+    });
+  }catch(e){if(secApp)secApp.delete();toast('تعذر إنشاء الحساب')}
+};
+
+$('wfClose').onclick=function(){closeSheet('workerFileSheet');wfTarget=null};
+$('cdClose').onclick=function(){closeSheet('custDetailSheet')};
+
+/* sheets & misc wiring */
 $('rcCopy').onclick=function(){var r=$('rcptText');r.focus();r.select();try{document.execCommand('copy');toast('تم النسخ')}catch(e){}};
 $('rcClose').onclick=function(){closeSheet('rcptSheet')};
 $('rcPdf').onclick=function(){if(curR)rcptPdf(curR)};
 $('edSave').onclick=saveEdit;$('edCancel').onclick=function(){closeSheet('editSheet');editing=null};
-['editSheet','rcptSheet'].forEach(function(id){$(id).onclick=function(ev){if(ev.target===$(id))closeSheet(id)}});
-$('custQ').oninput=renderCust;
+['alertSheet','editSheet','extSheet','rcptSheet','workerPermSheet','newWorkerSheet','workerFileSheet','custDetailSheet'].forEach(function(id){
+  $(id).onclick=function(ev){if(ev.target===$(id))closeSheet(id)};
+});
 $('mon').value=dkey(Date.now()).slice(0,7);$('mon').onchange=renderMonth;
 $('monExp').onclick=function(){var m=$('mon').value;exportCsv(data.filter(function(e){return dkey(e.ts).slice(0,7)===m}),'wash-log-'+m+'.csv')};
 $('expDate').value=dkey(Date.now());
 $('expDay').onclick=function(){var k=$('expDate').value;exportCsv(data.filter(function(e){return dkey(e.ts)===k}),'wash-log-'+k+'.csv')};
 $('expAll').onclick=function(){exportCsv(data,'wash-log-all.csv')};
-$('biz').onchange=function(){cfg.biz=this.value.trim();saveCfg();applyBiz()};
-$('loyN').onchange=function(){var n=parseInt(this.value,10);cfg.loyal=n>1?n:10;saveCfg();render()};
-$('addV').onclick=function(){cfg.vehicles.push({id:'v'+Date.now(),name:'خدمة جديدة',price:0});saveCfg();edRender();chips()};
-$('addA').onclick=function(){cfg.addons.push({id:'a'+Date.now(),name:'إضافة جديدة',price:0,only:''});saveCfg();edRender();chips()};
-$('addP').onclick=function(){cfg.plans=cfg.plans||[];cfg.plans.push({id:'p'+Date.now(),name:'اشتراك شهري',price:0,days:30,washes:0,benefits:''});saveCfg();edRender()};
-$('myName2').onchange=function(){var n=this.value.trim();if(n&&staffCol&&me.uid){staffCol.doc(me.uid).set({name:n,email:auth.currentUser?auth.currentUser.email:'',ts:Date.now()}).then(function(){toast('تم حفظ الاسم');beat()})}};
+$('biz').onchange=function(){if(!can('editSettings'))return;cfg.biz=this.value.trim();saveCfg();applyBiz()};
+$('loyN').onchange=function(){if(!can('editSettings'))return;var n=parseInt(this.value,10);cfg.loyal=n>1?n:10;saveCfg();render()};
+$('addV').onclick=function(){if(!can('editSettings'))return;cfg.vehicles.push({id:'v'+Date.now(),name:'خدمة جديدة',price:0});saveCfg();edRender();chips()};
+$('addA').onclick=function(){if(!can('editSettings'))return;cfg.addons.push({id:'a'+Date.now(),name:'إضافة جديدة',price:0,only:''});saveCfg();edRender();chips()};
+$('addP').onclick=function(){if(!can('editSettings'))return;cfg.plans=cfg.plans||[];cfg.plans.push({id:'p'+Date.now(),name:'اشتراك شهري',price:0,days:30,washes:0,benefits:''});saveCfg();edRender()};
+$('myName2').onchange=function(){
+  var n=this.value.trim();
+  if(n&&staffCol&&me.uid){staffCol.doc(me.uid).set({name:n,email:me.email||'',ts:Date.now()},{merge:true}).then(function(){toast('تم حفظ الاسم');beat()})}
+};
 $('nameSave').onclick=function(){
   var n=$('myName').value.trim();if(!n){toast('اكتب اسمك');return}
   if(!staffCol||!me.uid)return;
-  staffCol.doc(me.uid).set({name:n,email:auth.currentUser?auth.currentUser.email:'',ts:Date.now()}).catch(function(){toast('تعذر حفظ الاسم')});
+  var makeOwner=(!cfg.ownerUid&&!staff.some(function(s){return s.role==='owner'}));
+  var role=makeOwner?'owner':'worker';
+  if(makeOwner){cfg.ownerUid=me.uid;saveCfg()}
+  staffCol.doc(me.uid).set({name:n,email:me.email||'',role:role,perms:Object.assign({},RANK_PRESETS[role]),disabled:false,forcePwReset:false,ts:Date.now()},{merge:true}).catch(function(){toast('تعذر حفظ الاسم')});
 };
 $('today').textContent=new Date().toLocaleDateString('ar-BH',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 applyTheme(curTheme());
-clearSubForm();edRender();setType('in');render();
+clearSubForm();clearBkForm();edRender();setType('in');render();
 setInterval(function(){if(document.visibilityState!=='hidden')beat()},40000);
-setInterval(function(){renderOnline();renderTeam();renderSubs()},20000);
+setInterval(function(){renderOnline();renderTeam();renderSubs();renderQueue();renderAlerts()},20000);
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')beat()});
 
 /* database */
@@ -1016,44 +2175,89 @@ function sub(limit){
     if(limit>1000){sub(1000)}else{clearTimeout(timer);status('تعذر قراءة السجل المشترك.',true)}
   });
 }
-function rulesErr(what){return function(){status('تعذر قراءة '+what+'. حدّث قواعد Firestore حسب ملف README.',true)}}
+function rulesErr(what){return function(){status('تعذر قراءة '+what+'. حدّث قواعد Firestore.',true)}}
 function startDb(fdb,u){
-  FDB=fdb;me.uid=u.uid;
-  col=fdb.collection('entries');subCol=fdb.collection('subs');staffCol=fdb.collection('staff');presCol=fdb.collection('presence');cfgRef=fdb.doc('config/prices');
+  FDB=fdb;me.uid=u.uid;me.email=u.email||'';ownerBooted=false;
+  col=fdb.collection('entries');subCol=fdb.collection('subs');bkCol=fdb.collection('bookings');
+  logCol=fdb.collection('logs');staffCol=fdb.collection('staff');presCol=fdb.collection('presence');cfgRef=fdb.doc('config/prices');
+
   unsubs.push(cfgRef.onSnapshot(function(s){
     var d=s.exists&&s.data();
-    cfg=d&&d.vehicles?{vehicles:d.vehicles,addons:d.addons||[],plans:d.plans||[],biz:d.biz||'',loyal:d.loyal||10}:DEF;
+    cfg=d&&d.vehicles?{
+      vehicles:d.vehicles,addons:d.addons||[],plans:d.plans||[],biz:d.biz||'',loyal:d.loyal||10,
+      ownerUid:d.ownerUid||'',ranks:Object.assign({},DEF.ranks,d.ranks||{}),
+      guard:Object.assign({},DEF.guard,d.guard||{}),goals:Object.assign({},DEF.goals,d.goals||{})
+    }:JSON.parse(JSON.stringify(DEF));
     if(document.activeElement!==$('biz'))$('biz').value=cfg.biz||'';applyBiz();
     if(document.activeElement!==$('loyN'))$('loyN').value=cfg.loyal||10;
-    if(!$('v-set').contains(document.activeElement))edRender();else renderSubForm();
-    chips();loyal();
+    if(!$('v-set').contains(document.activeElement))edRender();else{renderSubForm();renderBkVeh()}
+    syncRoleUI();chips();loyal();if(curView==='v-owner'&&isOwner())renderOwner();
   },function(){}));
+
   unsubs.push(subCol.onSnapshot(function(snap){
     subs=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});render();
   },rulesErr('الاشتراكات')));
+
+  unsubs.push(bkCol.onSnapshot(function(snap){
+    bookings=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});renderQueue();renderAlerts();
+  },function(){}));
+
+  unsubs.push(logCol.orderBy('ts','desc').limit(300).onSnapshot(function(snap){
+    logs=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});
+    if(curView==='v-owner'&&isOwner())renderOwner();
+  },function(){}));
+
   var staffReady=false;
   unsubs.push(staffCol.onSnapshot(function(snap){
     staff=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});
-    var m=staff.filter(function(s){return s.id===me.uid})[0];me.name=m?m.name:'';
+    var m=staff.filter(function(s){return s.id===me.uid})[0];
+    // Auto-bootstrap first user as Owner if no owner exists yet
+    if(m&&!m.role&&!ownerBooted&&!snap.metadata.fromCache){
+      ownerBooted=true;
+      var hasOwner=staff.some(function(s){return s.role==='owner'})||(cfg.ownerUid&&cfg.ownerUid!==me.uid);
+      var r0=hasOwner?'worker':'owner';
+      if(r0==='owner'&&!cfg.ownerUid){cfg.ownerUid=me.uid;saveCfg()}
+      staffCol.doc(me.uid).set({role:r0,perms:Object.assign({},RANK_PRESETS[r0]),email:me.email||m.email||''},{merge:true});
+    }
+    me.name=m?m.name:'';
+    me.role=(m&&m.role)?m.role:((cfg.ownerUid===me.uid)?'owner':'worker');
+    me.perms=Object.assign({},RANK_PRESETS[me.role]||RANK_PRESETS.worker,(m&&m.perms)||{});
+    me.disabled=!!(m&&m.disabled);
+    me.forcePwReset=!!(m&&m.forcePwReset);
+
     if(document.activeElement!==$('myName2'))$('myName2').value=me.name;
-    if(me.name){if(state!=='app')setState('app');else{if(!editing&&(selW.length===0))selW=[me.name]}}
-    else if(!snap.metadata.fromCache||staffReady){if(state!=='app')setState('name')}
-    else{setTimeout(function(){if(!me.name&&state!=='app')setState('name')},4000)}
+
+    if(me.disabled&&!isOwner()){
+      setState('disabled');
+    }else if(me.forcePwReset){
+      setState('forcePw');
+    }else if(me.name){
+      if(state!=='app')setState('app');
+      else{syncRoleUI();if(!editing&&(selW.length===0))selW=[me.name]}
+    }else if(!snap.metadata.fromCache||staffReady){
+      if(state!=='app')setState('name');
+    }else{
+      setTimeout(function(){if(!me.name&&state!=='app')setState('name')},4000);
+    }
     staffReady=true;renderWorkers();renderTeam();renderOnline();
+    if(curView==='v-owner'&&isOwner())renderOwner();
   },function(){
     me.name=me.name||String(u.email||'').split('@')[0];
     if(state!=='app')setState('app');
-    status('تعذر قراءة الفريق. حدّث قواعد Firestore حسب ملف README.',true);
+    status('تعذر قراءة الفريق. حدّث قواعد Firestore.',true);
   }));
+
   unsubs.push(presCol.onSnapshot(function(snap){
     pres=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});renderOnline();renderTeam();
   },function(){}));
+
   sub(5000);
 }
 function stopDb(){
   unsubs.forEach(function(fn){try{fn()}catch(e){}});unsubs=[];
   if(unsubE){try{unsubE()}catch(e){}}unsubE=null;
-  col=subCol=staffCol=presCol=cfgRef=null;data=[];subs=[];staff=[];pres=[];me={uid:'',name:''};render();
+  col=subCol=bkCol=logCol=staffCol=presCol=cfgRef=null;data=[];subs=[];bookings=[];logs=[];staff=[];pres=[];
+  me={uid:'',name:'',email:'',role:'worker',perms:Object.assign({},RANK_PRESETS.worker),disabled:false,forcePwReset:false};render();
 }
 timer=setTimeout(function(){status('ما قدرنا نوصل للسجل المشترك. تأكد من الإنترنت.',true)},10000);
 setState('login');
@@ -1066,17 +2270,45 @@ try{
     $('lgErr').textContent='';
     auth.signInWithEmailAndPassword($('em').value.trim(),$('pw').value).then(function(){$('pw').value=''}).catch(function(){$('lgErr').textContent='البريد أو كلمة المرور غير صحيحة'});
   };
+  $('forgotPw').onclick=function(){
+    var em=$('em').value.trim();
+    if(!em){$('lgErr').textContent='اكتب بريدك الإلكتروني أولاً ثم اضغط على نسيت كلمة المرور';return}
+    auth.sendPasswordResetEmail(em).then(function(){$('lgErr').textContent='';toast('تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك')}).catch(function(){$('lgErr').textContent='تعذر إرسال الرابط، تأكد من صحة البريد الإلكتروني'});
+  };
+  $('fpSave').onclick=function(){
+    var p1=$('fpNew').value,p2=$('fpConf').value;$('fpErr').textContent='';
+    if(!p1||p1.length<6){$('fpErr').textContent='كلمة المرور يجب أن تكون ٦ أحرف على الأقل';return}
+    if(p1!==p2){$('fpErr').textContent='كلمتا المرور غير متطابقتين';return}
+    auth.currentUser.updatePassword(p1).then(function(){
+      $('fpNew').value='';$('fpConf').value='';
+      if(staffCol&&me.uid)staffCol.doc(me.uid).update({forcePwReset:false});
+      addLog('cfg','تحديث كلمة المرور الإجباري',me.name,'');
+      toast('تم تحديث كلمة المرور بنجاح');
+    }).catch(function(){$('fpErr').textContent='يرجى تسجيل الخروج والدخول مجدداً لإتمام تغيير كلمة المرور'});
+  };
+  $('pwChangeBtn').onclick=function(){
+    var cur=$('pwCur').value,nw=$('pwNew').value;
+    if(!cur||!nw||nw.length<6){toast('اكتب كلمة المرور الحالية والجديدة (٦ أحرف+)');return}
+    var cred=firebase.auth.EmailAuthProvider.credential(auth.currentUser.email,cur);
+    auth.currentUser.reauthenticateWithCredential(cred).then(function(){
+      return auth.currentUser.updatePassword(nw);
+    }).then(function(){
+      $('pwCur').value='';$('pwNew').value='';
+      toast('تم تغيير كلمة المرور بنجاح');
+    }).catch(function(){toast('كلمة المرور الحالية غير صحيحة')});
+  };
   $('pw').addEventListener('keydown',function(ev){if(ev.key==='Enter')$('lg').click()});
-  $('logout').onclick=function(){
+  var doLogout=function(){
     var done=function(){auth.signOut()};
     if(presCol&&me.uid)presCol.doc(me.uid).set({name:me.name,ts:0}).then(done,done);else done();
   };
+  $('logout').onclick=doLogout;$('disLogout').onclick=doLogout;
   auth.onAuthStateChanged(function(u){
     if(u){startDb(fdb,u);status('جاري التحميل…')}
     else{stopDb();setState('login');clearTimeout(timer);status('سجّل الدخول للمتابعة')}
   });
 }catch(err){
-  clearTimeout(timer);status('لازم تعبّي إعدادات Firebase في ملف config.js (شوف ملف README).',true);
+  clearTimeout(timer);status('لازم تعبّي إعدادات Firebase في ملف config.js.',true);
 }
 })();
 </script>
