@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2jz wash</title>
+<link id="favIcon" rel="icon" href="icon.png">
+<link id="appleIcon" rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#0B0E13">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('washlog.theme')||'light')}catch(e){}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#F1F2F4;--card:#FFFFFF;--ink:#0B0E13;--mute:#5A606C;--red:#C8202B;--tint:#FCEEEF;--bd:#F0BEC2;--out:#A8141E;--in:#158052;--line:#D9DCE2;--inp:#FFFFFF;--shadow:0 2px 6px rgba(20,21,25,.05),0 8px 20px rgba(20,21,25,.04);color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"] body{background-image:linear-gradient(180deg,rgba(200,32,43,.10),rgba(200,32,43,0) 260px)}
+:root[data-theme="dark"]{--bg:#0A0C10;--card:#14171D;--ink:#F2F4F7;--mute:#9BA1AE;--red:#E0242F;--tint:#2A1217;--bd:#5E1D28;--out:#FF7A88;--in:#4CD08B;--line:#282B34;--inp:#111318;--shadow:none;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) linear-gradient(180deg,rgba(210,212,217,.35),rgba(210,212,217,0) 260px) no-repeat;color:var(--ink);font-family:"Tajawal",system-ui,sans-serif;font-size:16px;line-height:1.5;transition:background .2s,color .2s}
+main{max-width:580px;margin:0 auto;padding:12px 14px 104px}
+.top{position:relative;overflow:hidden;background:radial-gradient(120% 140% at 100% 0%,rgba(200,32,43,.55) 0%,rgba(200,32,43,0) 55%),linear-gradient(160deg,#0B0E13 0%,#171A21 60%,#1E1114 100%);color:#fff;border-radius:18px;padding:16px 16px 14px;margin-bottom:10px;box-shadow:0 10px 26px rgba(11,14,19,.28);border:1px solid rgba(210,212,217,.28)}
+.top::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,#C8202B 0%,#F5F6F8 35%,#9EA2AA 55%,#C8202B 100%)}
+.top::after{content:"";position:absolute;inset:4px 0 auto 0;height:46%;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0));pointer-events:none}
+.top>*{position:relative;z-index:1}
+.topRow{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.brandBox{display:flex;align-items:center;gap:11px;min-width:0}
+.brandLogo{width:66px;height:66px;border-radius:16px;object-fit:cover;background:#fff;padding:0;border:2px solid #D2D4D9;box-shadow:0 0 0 1px rgba(0,0,0,.4),0 6px 16px rgba(0,0,0,.45);flex:none}
+.top h1{font-size:23px;font-weight:800;margin:0;letter-spacing:.4px;line-height:1.2}
+.top .date{font-size:13px;color:#D5D9E0;opacity:.92}
+.topBtns{display:flex;gap:8px;align-items:center}
+.top .icon{position:relative;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.16);color:#fff;border-radius:50%;width:42px;height:42px;min-height:42px;font-size:19px;padding:0;flex:none;display:inline-flex;align-items:center;justify-content:center}
+.shopBar{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding-top:9px;border-top:1px solid rgba(255,255,255,.12)}
+.shopPill{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;min-height:34px;border-radius:999px;font-size:13px;font-weight:700;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.07));color:#F3F4F6;border:1px solid rgba(210,212,217,.35);text-decoration:none}
+.shopPill.wa{background:rgba(21,128,82,.28);border-color:rgba(76,208,139,.38);color:#D1FAE5}
+.shopPill.ig{background:linear-gradient(180deg,rgba(224,36,47,.55),rgba(168,20,30,.45));border-color:rgba(255,255,255,.28);color:#fff;cursor:default}
+.contactFoot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);border-radius:16px;padding:12px 14px;margin-top:6px;box-shadow:var(--shadow)}
+.contactFoot img{width:52px;height:52px;border-radius:14px;object-fit:cover;border:1px solid var(--line);background:#fff;flex:none}
+.ftTxt{flex:1;min-width:110px;display:flex;flex-direction:column;line-height:1.3}
+.ftTxt b{font-size:16px;font-weight:800}.ftTxt span{font-size:12.5px;color:var(--mute)}
+.ftBtns{display:flex;gap:6px;flex-wrap:wrap;width:100%}
+.contactFoot .shopPill{background:var(--bg);color:var(--ink);border-color:var(--line)}
+.contactFoot .shopPill.wa{background:#E6F6EE;color:#0B5D3A;border-color:#BFE6D1}
+.contactFoot .shopPill.ig{background:var(--tint);color:var(--red);border-color:var(--bd)}
+:root[data-theme="dark"] .contactFoot .shopPill.wa{background:rgba(21,128,82,.22);color:#9BE8C3;border-color:rgba(76,208,139,.35)}
+#alertBadge{position:absolute;top:-3px;inset-inline-start:-3px;background:#FBBF24;color:#0B0E13;font-weight:800;border-radius:999px;font-size:11px;min-width:19px;height:19px;line-height:19px;padding:0 5px;display:none;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.online{font-size:13px;margin-top:8px;background:rgba(255,255,255,.16);border-radius:10px;padding:4px 10px;display:none}
+.online:empty{display:none!important}
+.alertStrip{background:var(--tint);border:1px solid var(--bd);border-radius:14px;padding:9px 12px;margin-bottom:10px;display:none;align-items:center;justify-content:space-between;gap:8px;font-size:14px;cursor:pointer}
+.alertStrip b{color:var(--red)}
+#status{font-size:13px;color:var(--mute);margin:0 2px 10px;min-height:20px}
+#status.bad{color:var(--out);font-weight:700}
+.sum{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px}
+.sum div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center;box-shadow:var(--shadow)}
+.sum b{display:block;font-size:18px;font-weight:800}
+.sum span{font-size:12.5px;color:var(--mute)}
+.sum.today div:nth-child(1) b{color:var(--in)}.sum.today div:nth-child(2) b{color:var(--out)}
+.info{font-size:13.5px;color:var(--mute);margin:0 2px 12px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px;box-shadow:var(--shadow)}
+h2{font-size:17px;margin:0 0 10px;font-weight:800}
+h3{font-size:15px;margin:14px 0 4px;color:var(--red)}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--inp);color:var(--ink);border-radius:12px;padding:10px 12px;min-height:44px;transition:transform .08s,background .15s}
+button:active{transform:scale(.97)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.sm{min-height:36px;padding:4px 11px;font-size:13.5px}
+.tabs{display:flex;gap:6px;margin-bottom:12px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:4px;overflow-x:auto}
+.tabs button{flex:1;border:0;background:transparent;white-space:nowrap;font-size:14px;padding:8px 10px;min-height:40px}
+.tabs button.on{background:linear-gradient(180deg,#E0242F,#B3121C);color:#fff;font-weight:800;box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
+.pills{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:8px;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pills button{min-height:34px;padding:4px 12px;border-radius:999px;font-size:13px;white-space:nowrap;flex:none}
+.pills button.on{background:linear-gradient(180deg,#E0242F,#B3121C);border-color:#8E0F17;color:#fff;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chips .grp{display:flex;gap:8px;flex-wrap:wrap;width:100%}
+.chips button.on{border-color:var(--red);background:var(--tint);box-shadow:inset 0 0 0 1px var(--red);font-weight:700}
+#loyal{display:none;background:var(--tint);border:1px solid var(--bd);border-radius:12px;padding:8px 10px;margin-bottom:10px;font-size:14px;flex-direction:column;gap:6px}
+.lrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:8px 0}
+.miniStat{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:6px 4px;text-align:center}
+.miniStat b{display:block;font-size:14.5px;font-weight:800}
+.miniStat span{font-size:11.5px;color:var(--mute)}
+label{display:block;font-size:14px;color:var(--mute);margin-bottom:3px}
+input,select,textarea{width:100%;font:inherit;min-height:46px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:var(--inp);color:var(--ink)}
+textarea{min-height:90px}
+.chk{display:flex;gap:8px;align-items:center;margin-top:8px;color:var(--ink);cursor:pointer}
+.chk input{width:18px;height:18px;min-height:0;accent-color:var(--red)}
+.save{width:100%;margin-top:6px;background:linear-gradient(180deg,#E0242F 0%,#B3121C 100%);border-color:#8E0F17;color:#fff;font-weight:800;font-size:17px;min-height:50px;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 4px 10px rgba(168,20,30,.25)}
+.wbox{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.wbox button{min-height:38px;padding:6px 14px;border-radius:999px;font-size:14px}
+.wbox button.on{background:var(--tint);border-color:var(--red);color:var(--red);font-weight:700}
+.item{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:0}
+.item>div:first-child{flex:1;min-width:140px}
+.item small{color:var(--mute);display:block}
+.act{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.amt{font-weight:800;white-space:nowrap}
+.amt.in{color:var(--in)}.amt.out{color:var(--out)}
+.del{color:var(--out)}
+.empty{color:var(--mute);padding:8px 0;font-size:14.5px}
+.kv{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 0;border-top:1px solid var(--line)}
+.kv:first-of-type{border-top:0}
+.kv small{color:var(--mute)}
+.big{font-size:18px;margin-bottom:8px}.big b{color:var(--red);font-size:22px}
+.card{border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:12px;margin-bottom:10px}
+.card small{color:var(--mute);display:block}
+.cardHead{display:flex;justify-content:space-between;align-items:flex-start;gap:6px;flex-wrap:wrap}
+.badge{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px;margin-inline-start:4px}
+.badge.ok{background:rgba(27,138,90,.15);color:var(--in)}
+.badge.warn{background:rgba(245,158,11,.18);color:#B45309}
+.badge.bad{background:rgba(176,0,32,.14);color:var(--out)}
+.badge.info{background:rgba(37,99,235,.14);color:#1D4ED8}
+.badge.vip{background:rgba(147,51,234,.15);color:#7E22CE}
+:root[data-theme="dark"] .badge.warn{color:#FBBF24}
+:root[data-theme="dark"] .badge.info{color:#60A5FA}
+:root[data-theme="dark"] .badge.vip{color:#C084FC}
+.prog{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin:6px 0}
+.prog>i{display:block;height:100%;background:linear-gradient(90deg,#8E0F17,var(--red));border-radius:999px;transition:width .3s}
+.prog.ok>i{background:linear-gradient(90deg,var(--in),#34D399)}
+.ben{margin:4px 0 6px;padding:0;list-style:none;font-size:14px}
+.ben li::before{content:"• ";color:var(--red)}
+.btnlink{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:4px 12px;border-radius:12px;background:#25D366;color:#06210f;font-weight:700;font-size:13.5px;text-decoration:none}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+#report{display:none;min-height:120px;margin-top:8px;font-size:14px}
+#rcptText{min-height:240px;font-size:15px;line-height:1.7}
+.ed{display:grid;grid-template-columns:2fr 1fr auto;gap:6px;margin-bottom:6px}
+.ed select{grid-column:1/-1}
+.ed .del{min-height:46px}
+.plan{border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:8px;background:var(--bg)}
+.plan .row{margin-bottom:6px}
+.permGrid{display:grid;grid-template-columns:1fr;gap:6px;margin:8px 0}
+.permItem{display:flex;justify-content:space-between;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:14px}
+.permItem input{width:20px;height:20px;min-height:0;accent-color:var(--red)}
+.logRow{padding:8px 0;border-top:1px solid var(--line);font-size:13.5px}
+.logRow:first-child{border-top:0}
+#nav{position:fixed;inset-inline:0;bottom:0;display:flex;overflow-x:auto;scrollbar-width:none;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+#nav::-webkit-scrollbar{display:none}
+#nav button{flex:1 0 58px;position:relative;display:flex;flex-direction:column;align-items:center;gap:1px;border:0;border-radius:0;background:transparent;color:var(--mute);font-size:11px;min-height:58px;padding:6px 2px;white-space:nowrap}
+#nav button i{font-style:normal;font-size:18px;line-height:1.1}
+#nav button.on{color:var(--red);font-weight:800;box-shadow:inset 0 3px 0 var(--red)}
+.navBadge{position:absolute;top:4px;inset-inline-start:calc(50% + 5px);background:var(--red);color:#fff;border-radius:999px;font-size:10px;min-width:16px;height:16px;line-height:16px;padding:0 4px;display:none}
+.sheet{position:fixed;inset:0;background:rgba(0,0,0,.58);display:none;align-items:flex-end;justify-content:center;z-index:30}
+.sheet>div{background:var(--bg);width:100%;max-width:580px;max-height:92vh;overflow:auto;border-radius:20px 20px 0 0;padding:16px 14px calc(18px + env(safe-area-inset-bottom,0px))}
+.toast{position:fixed;inset-inline:0;bottom:calc(76px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90%;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40;font-weight:700}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<main>
+<header class="top">
+  <div class="topRow">
+    <div class="brandBox">
+      <img id="hdrLogo" class="brandLogo" src="icon.png" alt="2jz wash">
+      <div>
+        <h1 id="appName">2jz wash</h1>
+        <div class="date" id="today"></div>
+      </div>
+    </div>
+    <div class="topBtns">
+      <button class="icon" id="alertBtn" type="button" aria-label="التنبيهات" style="display:none">🔔<span id="alertBadge">0</span></button>
+      <button class="icon" id="themeBtn" type="button" aria-label="تبديل الوضع الليلي">🌙</button>
+    </div>
+  </div>
+  <div class="shopBar">
+    <a class="shopPill" id="hdrCall" href="tel:+97338974280">📞 <span dir="ltr">+973 3897 4280</span></a>
+    <a class="shopPill wa" id="hdrWa" href="https://wa.me/97338974280" target="_blank" rel="noopener">💬 واتساب</a>
+    <span class="shopPill ig" id="hdrIg">📸 2jz.bh</span>
+  </div>
+  <div class="online" id="online"></div>
+</header>
+
+<div class="alertStrip" id="alertStrip">
+  <span id="alertStripTxt"></span>
+  <b>عرض الكل ←</b>
+</div>
+
+<div id="status">جاري الاتصال بالسجل المشترك…</div>
+
+<!-- LOGIN -->
+<div id="login" style="display:none">
+  <section class="panel">
+    <div style="text-align:center;margin-bottom:10px">
+      <img id="loginLogo" src="icon.png" alt="2jz wash" style="width:130px;height:130px;border-radius:26px;object-fit:cover;background:#fff;border:2px solid #D2D4D9;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 10px 26px rgba(11,14,19,.25)">
+    </div>
+    <h2 style="text-align:center">🔐 تسجيل الدخول</h2>
+    <label for="em">البريد الإلكتروني</label>
+    <input id="em" type="email" dir="ltr" style="text-align:right" autocomplete="username">
+    <label for="pw" style="margin-top:8px">كلمة المرور</label>
+    <input id="pw" type="password" dir="ltr" style="text-align:right" autocomplete="current-password">
+    <button class="save" id="lg" type="button">دخول</button>
+    <div style="margin-top:8px;text-align:center">
+      <button id="forgotPw" type="button" class="sm" style="border:0;background:transparent;color:var(--red);font-weight:700">نسيت كلمة المرور؟ أرسل رابط التغيير</button>
+    </div>
+    <div id="lgErr" class="empty" style="color:var(--out)"></div>
+  </section>
+</div>
+
+<!-- SET NAME -->
+<div id="nameBox" style="display:none">
+  <section class="panel">
+    <h2>👋 اسمك</h2>
+    <div class="empty">اكتب اسمك مرة وحدة. يظهر على العمليات اللي تسجلها وفي قائمة المتصلين.</div>
+    <input id="myName" placeholder="مثال: أحمد">
+    <button class="save" id="nameSave" type="button">حفظ</button>
+  </section>
+</div>
+
+<!-- FORCE PASSWORD RESET -->
+<div id="forcePwBox" style="display:none">
+  <section class="panel">
+    <h2>🔐 مطلوب تعيين كلمة مرور جديدة</h2>
+    <div class="empty">طلب المالك تحديث كلمة المرور الخاصة بحسابك قبل المتابعة. اكتب كلمة مرور جديدة (٦ أحرف على الأقل).</div>
+    <label for="fpNew">كلمة المرور الجديدة</label>
+    <input id="fpNew" type="password" dir="ltr" style="text-align:right" placeholder="******">
+    <label for="fpConf" style="margin-top:8px">تأكيد كلمة المرور الجديدة</label>
+    <input id="fpConf" type="password" dir="ltr" style="text-align:right" placeholder="******">
+    <button class="save" id="fpSave" type="button">حفظ كلمة المرور والمتابعة</button>
+    <div id="fpErr" class="empty" style="color:var(--out)"></div>
+  </section>
+</div>
+
+<!-- DISABLED ACCOUNT -->
+<div id="disabledBox" style="display:none">
+  <section class="panel">
+    <h2>⛔ الحساب موقوف</h2>
+    <div class="empty">تم إيقاف صلاحية دخول هذا الحساب مؤقتاً من قِبل المالك. تواصل مع الإدارة للتفعيل.</div>
+    <button id="disLogout" type="button">تسجيل الخروج</button>
+  </section>
+</div>
+
+<!-- MAIN: REGISTER & TODAY -->
+<div class="view" id="v-main" style="display:none">
+  <div class="sum today" id="todaySumBox">
+    <div><b id="sIn">0.000</b><span>الدخل (د.ب)</span></div>
+    <div><b id="sOut">0.000</b><span>المصروف (د.ب)</span></div>
+    <div><b id="sNet">0.000</b><span>الصافي (د.ب)</span></div>
+  </div>
+  <div class="info" id="todayInfo"></div>
+
+  <section class="panel" id="entryFormPanel">
+    <div class="tabs">
+      <button id="tabIn" class="on" type="button">➕ دخل</button>
+      <button id="tabOut" type="button">➖ مصروف</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div id="loyal"></div>
+    <div class="row">
+      <div><label for="label">الخدمة / البند</label><input id="label" placeholder="مثال: غسيل سريع"></div>
+      <div><label for="amount">المبلغ (د.ب)</label><input id="amount" type="number" inputmode="decimal" step="0.001" min="0" placeholder="0.000"></div>
+    </div>
+    <div class="row" id="custRow">
+      <div style="grid-column:1/-1"><label for="cname">اسم العميل (اختياري)</label><input id="cname" placeholder="مثال: محمد"></div>
+      <div><label for="phone">رقم هاتف العميل</label><input id="phone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
+      <div><label for="plate">رقم المركبة</label><input id="plate" dir="ltr" style="text-align:right" placeholder="123456"></div>
+    </div>
+    <div class="row">
+      <div id="payBox"><label for="pay">الدفع</label>
+        <select id="pay"><option>كاش</option><option>بنفت باي</option><option>آجل</option></select>
+        <label class="chk"><input id="paid" type="checkbox" checked> تم الدفع</label></div>
+      <div><label for="note">ملاحظة</label><input id="note" placeholder="اختياري"></div>
+    </div>
+    <div id="workerRow">
+      <label>👷 العمال على هذا الطلب</label>
+      <div class="wbox" id="wBox"></div>
+    </div>
+    <button class="save" id="save" type="button">حفظ</button>
+  </section>
+
+  <section class="panel">
+    <h2>📋 عمليات اليوم</h2>
+    <div id="list"></div>
+  </section>
+</div>
+
+<!-- QUEUE & APPOINTMENTS -->
+<div class="view" id="v-queue" style="display:none">
+  <section class="panel" id="bkFormPanel">
+    <h2 id="bkTitle">🕒 حجز موعد / إضافة للانتظار</h2>
+    <div class="row">
+      <div><label for="bkKind">النوع</label>
+        <select id="bkKind">
+          <option value="appt">📅 حجز موعد (يوم ووقت)</option>
+          <option value="walkin">🚗 انتظار مباشر (الآن)</option>
+        </select>
+      </div>
+      <div><label for="bkVeh">نوع المركبة</label><select id="bkVeh"></select></div>
+    </div>
+    <div class="row" id="bkTimeRow">
+      <div><label for="bkDate">التاريخ</label><input id="bkDate" type="date"></div>
+      <div><label for="bkTime">الوقت</label><input id="bkTime" type="time"></div>
+    </div>
+    <div style="margin-bottom:8px"><label for="bkName">اسم العميل (اختياري)</label><input id="bkName" placeholder="مثال: محمد"></div>
+    <div class="row">
+      <div><label for="bkPhone">رقم هاتف العميل</label><input id="bkPhone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
+      <div><label for="bkPlate">رقم المركبة</label><input id="bkPlate" dir="ltr" style="text-align:right" placeholder="123456"></div>
+    </div>
+    <div class="row">
+      <div><label for="bkSvc">الخدمة المطلوبة</label><input id="bkSvc" placeholder="مثال: غسيل سريع + عند العميل"></div>
+      <div><label for="bkPrice">السعر المتوقع (د.ب)</label><input id="bkPrice" type="number" inputmode="decimal" step="0.001" min="0" placeholder="0.000"></div>
+    </div>
+    <label for="bkNote">ملاحظة / الموقع</label>
+    <input id="bkNote" placeholder="اختياري: مثال عند البيت أو غسيل داخلي">
+    <div class="tools">
+      <button class="save" id="bkSave" type="button" style="flex:1;margin:0;width:auto">إضافة للقائمة</button>
+      <button id="bkCancel" type="button" style="display:none">إلغاء التعديل</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>🚦 قائمة الانتظار والمواعيد</h2>
+    <div class="pills" id="bkFilter">
+      <button type="button" data-f="active" class="on">النشطة والقادمة</button>
+      <button type="button" data-f="today">مواعيد اليوم</button>
+      <button type="button" data-f="done">المنتهية</button>
+    </div>
+    <div id="bkList"></div>
+  </section>
+</div>
+
+<!-- DEBTS -->
+<div class="view" id="v-debts" style="display:none">
+  <section class="panel">
+    <h2>⏳ الآجل وغير المدفوع</h2>
+    <div class="big">الإجمالي: <b id="debtTot">0.000</b> د.ب</div>
+    <div id="debtList"></div>
+  </section>
+</div>
+
+<!-- CUSTOMERS (ORGANIZED & FILTERABLE) -->
+<div class="view" id="v-cust" style="display:none">
+  <div class="sum" id="custStats">
+    <div><b id="csTot">0</b><span>إجمالي العملاء</span></div>
+    <div><b id="csSub">0</b><span>مشتركين نشطين</span></div>
+    <div><b id="csVip">0</b><span>عملاء VIP</span></div>
+  </div>
+  <section class="panel">
+    <h2>👥 سجل العملاء المرتب</h2>
+    <div class="row" style="margin-bottom:8px">
+      <div><input id="custQ" placeholder="🔍 بحث بالاسم أو الرقم أو اللوحة..."></div>
+      <div>
+        <select id="custSort">
+          <option value="visits">ترتيب: الأكثر زيارات</option>
+          <option value="spend">ترتيب: الأعلى إنفاقاً</option>
+          <option value="recent">ترتيب: الأحدث زيارة</option>
+          <option value="oldest">ترتيب: الأقدم زيارة</option>
+          <option value="loyal">ترتيب: الأقرب للمجانية</option>
+        </select>
+      </div>
+    </div>
+    <div class="pills" id="custFilter">
+      <button type="button" data-f="all" class="on">الكل</button>
+      <button type="button" data-f="sub">⭐ مشتركين</button>
+      <button type="button" data-f="free">🎁 قربت المجانية</button>
+      <button type="button" data-f="debt">⏳ عليهم آجل</button>
+      <button type="button" data-f="vip">👑 VIP (+5 زيارات)</button>
+      <button type="button" data-f="idle">💤 غائبين (+30 يوم)</button>
+    </div>
+    <div id="custList" style="margin-top:6px"></div>
+  </section>
+</div>
+
+<!-- SUBSCRIPTIONS -->
+<div class="view" id="v-subs" style="display:none">
+  <section class="panel" id="subFormPanel">
+    <h2 id="sbTitle">⭐ اشتراك جديد</h2>
+    <div style="margin-bottom:8px"><label for="sbName">اسم العميل (اختياري)</label><input id="sbName" placeholder="مثال: محمد"></div>
+    <div class="row">
+      <div><label for="sbPhone">رقم هاتف العميل</label><input id="sbPhone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
+      <div><label for="sbPlate">رقم المركبة</label><input id="sbPlate" dir="ltr" style="text-align:right"></div>
+    </div>
+    <div class="row">
+      <div><label for="sbVeh">نوع المركبة</label><select id="sbVeh"></select></div>
+      <div><label for="sbPlan">الباقة</label><input id="sbPlan" list="plansDl" placeholder="مثال: اشتراك شهري"><datalist id="plansDl"></datalist></div>
+    </div>
+    <div class="row">
+      <div><label for="sbPrice">السعر (د.ب)</label><input id="sbPrice" type="number" inputmode="decimal" step="0.001" min="0"></div>
+      <div><label for="sbDays">المدة (أيام)</label><input id="sbDays" type="number" inputmode="numeric" min="1" value="30"></div>
+    </div>
+    <div class="row">
+      <div><label for="sbStart">تاريخ البداية</label><input id="sbStart" type="date"></div>
+      <div><label for="sbWashes">عدد الغسلات (0 = غير محدود)</label><input id="sbWashes" type="number" inputmode="numeric" min="0" value="0"></div>
+    </div>
+    <label for="sbBen">المزايا (كل ميزة في سطر)</label>
+    <textarea id="sbBen" placeholder="مثال:&#10;غسيل سريع كل أسبوع&#10;أولوية في الحجز"></textarea>
+    <div class="row" style="margin-top:8px">
+      <div><label for="sbPay">الدفع</label>
+        <select id="sbPay"><option>كاش</option><option>بنفت باي</option><option>آجل</option></select>
+        <label class="chk"><input id="sbPaid" type="checkbox" checked> تم الدفع</label></div>
+      <div><label for="sbNote">ملاحظة</label><input id="sbNote"></div>
+    </div>
+    <div class="tools">
+      <button class="save" id="sbSave" type="button" style="flex:1;margin:0;width:auto">حفظ الاشتراك</button>
+      <button id="sbCancel" type="button" style="display:none">إلغاء التعديل</button>
+    </div>
+  </section>
+  <section class="panel">
+    <h2>📆 الاشتراكات</h2>
+    <input id="subQ" placeholder="ابحث برقم الهاتف أو المركبة أو الباقة">
+    <div id="subList" style="margin-top:8px"></div>
+  </section>
+</div>
+
+<!-- REPORTS -->
+<div class="view" id="v-rep" style="display:none">
+  <section class="panel">
+    <h2>📊 تقرير الشهر</h2>
+    <input id="mon" type="month">
+    <div id="monOut" style="margin-top:10px"></div>
+    <button id="monExp" type="button" style="margin-top:8px">حفظ عمليات الشهر في ملف</button>
+  </section>
+  <section class="panel">
+    <h2>🗓️ آخر ٧ أيام</h2>
+    <div id="days"></div>
+  </section>
+  <section class="panel">
+    <h2>💾 حفظ السجل في جهازك</h2>
+    <label for="expDate">اليوم</label>
+    <input id="expDate" type="date">
+    <div class="tools">
+      <button id="expDay" type="button">حفظ ملف هذا اليوم</button>
+      <button id="expAll" type="button">حفظ كل السجل</button>
+    </div>
+  </section>
+  <section class="panel">
+    <button id="rep" type="button">تقرير اليوم للنسخ</button>
+    <textarea id="report" readonly></textarea>
+  </section>
+</div>
+
+<!-- OWNER EXCLUSIVE DASHBOARD -->
+<div class="view" id="v-owner" style="display:none">
+  <div class="tabs" id="owTabs">
+    <button type="button" data-ot="ow-team" class="on">👷 العمال والرتب</button>
+    <button type="button" data-ot="ow-logs">📜 سجل الرقابة</button>
+    <button type="button" data-ot="ow-ideas">💡 أدوات المالك</button>
+    <button type="button" data-ot="ow-guard">🛡️ حماية الموقع</button>
+  </div>
+
+  <!-- Owner Subtab 1: Team, Ranks & Worker Files -->
+  <div class="owSub" id="ow-team">
+    <section class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px">
+        <h2 style="margin:0">👑 إدارة الفريق والرتب</h2>
+        <button id="openNewWorker" type="button" class="sm" style="background:var(--red);color:#fff;border-color:var(--red);font-weight:700">+ عامل جديد</button>
+      </div>
+      <div class="empty" style="padding-top:0">اضغط على <b>📁 ملف العامل</b> لمشاهدة كل عملياته وسجلاته، أو <b>🔐 الصلاحيات</b> للتحكم برتبته وحسابه.</div>
+      <div id="owStaffList"></div>
+    </section>
+  </div>
+
+  <!-- Owner Subtab 2: Full Audit Log -->
+  <div class="owSub" id="ow-logs" style="display:none">
+    <section class="panel">
+      <h2>📜 سجل رقابة العمال (كل حركة في الموقع)</h2>
+      <div class="row" style="margin-bottom:8px">
+        <div><select id="logWorkerFilter"><option value="">كل العمال</option></select></div>
+        <div>
+          <select id="logActFilter">
+            <option value="">كل الحركات</option>
+            <option value="entry">عمليات الدخل والمصروف</option>
+            <option value="del">عمليات الحذف والتعديل</option>
+            <option value="sub">الاشتراكات والتمديد</option>
+            <option value="bk">الحجوزات والانتظار</option>
+            <option value="cfg">الإعدادات والصلاحيات</option>
+          </select>
+        </div>
+      </div>
+      <div id="owLogsList"></div>
+    </section>
+  </div>
+
+  <!-- Owner Subtab 3: Smart Owner Ideas & Tools -->
+  <div class="owSub" id="ow-ideas" style="display:none">
+    <section class="panel">
+      <h2>🎯 أهداف الدخل (اليومي والشهري)</h2>
+      <div class="row">
+        <div><label for="owGoalDay">هدف اليوم (د.ب)</label><input id="owGoalDay" type="number" step="1" min="0" placeholder="50"></div>
+        <div><label for="owGoalMon">هدف الشهر (د.ب)</label><input id="owGoalMon" type="number" step="10" min="0" placeholder="1200"></div>
+      </div>
+      <div id="owGoalOut"></div>
+    </section>
+
+    <section class="panel">
+      <h2>🏆 صدارة العمال وحاسبة العمولات</h2>
+      <div class="row">
+        <div><label for="owCommMon">الشهر</label><input id="owCommMon" type="month"></div>
+        <div><label for="owCommPct">نسبة العمولة % من الغسيل</label><input id="owCommPct" type="number" step="1" min="0" max="100" placeholder="10"></div>
+      </div>
+      <div id="owCommOut"></div>
+    </section>
+
+    <section class="panel">
+      <h2>💵 جرد الصندوق اليومي (مطابقة الكاش)</h2>
+      <div class="empty" style="padding-top:0">اكتب مبلغ الكاش الفعلي الموجود في يدك/الدرج اليوم لمقارنته بكاش النظام:</div>
+      <div class="row">
+        <div><label for="owCashActual">الكاش الفعلي (د.ب)</label><input id="owCashActual" type="number" step="0.001" min="0" placeholder="0.000"></div>
+        <div style="display:flex;align-items:flex-end"><button id="owCashCheck" type="button" style="width:100%;background:var(--red);color:#fff;border-color:var(--red);font-weight:700">مطابقة الآن</button></div>
+      </div>
+      <div id="owCashOut"></div>
+    </section>
+
+    <section class="panel">
+      <h2>⏰ تحليل أوقات الذروة وأيام الزحمة</h2>
+      <div id="owPeakOut"></div>
+    </section>
+
+    <section class="panel">
+      <h2>📲 حملة استرجاع العملاء الغائبين (+30 يوم)</h2>
+      <label for="owWinMsg">رسالة العرض الترويجي</label>
+      <input id="owWinMsg" placeholder="اشتقنالك في 2jz wash! لك خصم خاص في زيارتك الجاية 🧽✨">
+      <div id="owWinList" style="margin-top:8px"></div>
+    </section>
+  </div>
+
+  <!-- Owner Subtab 4: Site Protection & Rules -->
+  <div class="owSub" id="ow-guard" style="display:none">
+    <section class="panel">
+      <h2>🛡️ قواعد حماية الموقع ومنع العبث</h2>
+      <div class="permGrid">
+        <label class="permItem"><span>إخفاء إجمالي الدخل والأرباح عن العمال</span><input id="gdHideRev" type="checkbox"></label>
+        <label class="permItem"><span>إجبار إدخال رقم هاتف العميل في كل غسلة</span><input id="gdReqPhone" type="checkbox"></label>
+        <label class="permItem"><span>إجبار اختيار عامل واحد على الأقل لكل غسلة</span><input id="gdReqWorker" type="checkbox"></label>
+        <label class="permItem"><span>منع تعديل أو حذف العمليات التي مر عليها 24 ساعة (غير المالك)</span><input id="gdLockOld" type="checkbox"></label>
+      </div>
+      <h3 style="margin-top:14px">🎖️ مسميات رتب العمال</h3>
+      <div class="empty" style="padding-top:0">تقدر تغير مسميات الرتب حسب نظام مغسلتك:</div>
+      <div id="owRanksEd"></div>
+    </section>
+  </div>
+</div>
+
+<!-- SETTINGS -->
+<div class="view" id="v-set" style="display:none">
+  <section class="panel">
+    <h2>👷 الفريق المتصل</h2>
+    <div id="team"></div>
+    <label for="myName2" style="margin-top:10px">اسمي (يظهر على العمليات)</label>
+    <input id="myName2" placeholder="اسمك">
+  </section>
+
+  <section class="panel">
+    <h2>🔐 تغيير كلمة المرور الخاصة بي</h2>
+    <label for="pwCur">كلمة المرور الحالية</label>
+    <input id="pwCur" type="password" dir="ltr" style="text-align:right">
+    <label for="pwNew" style="margin-top:8px">كلمة المرور الجديدة (٦ أحرف+)</label>
+    <input id="pwNew" type="password" dir="ltr" style="text-align:right">
+    <button id="pwChangeBtn" type="button" style="margin-top:8px">تحديث كلمة المرور</button>
+  </section>
+
+  <div id="bizSettingsBox">
+    <section class="panel">
+      <h2>⚙️ إعدادات المغسلة والأسعار</h2>
+      <label for="biz">اسم المغسلة (يظهر في الإيصال)</label>
+      <input id="biz" placeholder="2jz wash">
+      <div class="row" style="margin-top:8px">
+        <div>
+          <label for="shopPhone">رقم الاتصال وواتساب المحل</label>
+          <input id="shopPhone" dir="ltr" style="text-align:right" placeholder="+973 3897 4280">
+        </div>
+        <div>
+          <label for="shopInsta">معرف الإنستقرام (بدون رابط)</label>
+          <input id="shopInsta" dir="ltr" style="text-align:right" placeholder="2jz.bh">
+        </div>
+      </div>
+      <label for="loyN" style="margin-top:8px">غسلة مجانية لكل (عدد الزيارات)</label>
+      <input id="loyN" type="number" inputmode="numeric" min="2" placeholder="10">
+      <h2 style="margin-top:16px">الخدمات الأساسية</h2>
+      <div id="edV"></div>
+      <button id="addV" type="button">+ خدمة أساسية</button>
+      <h2 style="margin-top:16px">الإضافات (تنزاد على السعر)</h2>
+      <div id="edA"></div>
+      <button id="addA" type="button">+ إضافة</button>
+    </section>
+    <section class="panel">
+      <h2>⭐ قوالب الاشتراك</h2>
+      <div class="empty" style="padding-top:0">تسهّل عليك تعبئة الاشتراك. وتقدر تعدّل المزايا لكل عميل لحاله وقت التسجيل.</div>
+      <div id="edP"></div>
+      <button id="addP" type="button">+ قالب اشتراك</button>
+    </section>
+  </div>
+
+  <section class="panel">
+    <h2>الحساب</h2>
+    <button id="logout" type="button">تسجيل الخروج</button>
+  </section>
+</div>
+<footer class="contactFoot" id="contactFoot">
+  <img id="ftLogo" src="icon.png" alt="2jz wash">
+  <div class="ftTxt"><b id="ftName">2jz wash</b><span>للحجز والاستفسار تواصل معنا</span></div>
+  <div class="ftBtns">
+    <a class="shopPill" id="ftCall" href="tel:+97338974280">📞 <span dir="ltr">+973 3897 4280</span></a>
+    <a class="shopPill wa" id="ftWa" href="https://wa.me/97338974280" target="_blank" rel="noopener">💬 واتساب</a>
+    <span class="shopPill ig" id="ftIg">📸 2jz.bh</span>
+  </div>
+</footer>
+</main>
+
+<!-- SHEET: ALERTS CENTER -->
+<div class="sheet" id="alertSheet"><div>
+  <h2>🔔 التنبيهات الذكية</h2>
+  <div id="alertList"></div>
+  <div class="tools"><button id="closeAlerts" type="button" style="width:100%">إغلاق</button></div>
+</div></div>
+
+<!-- SHEET: EDIT ORDER -->
+<div class="sheet" id="editSheet"><div>
+  <h2>✏️ تعديل العملية</h2>
+  <div class="row">
+    <div><label for="edLabel">الخدمة / البند</label><input id="edLabel"></div>
+    <div><label for="edAmount">المبلغ (د.ب)</label><input id="edAmount" type="number" inputmode="decimal" step="0.001" min="0"></div>
+  </div>
+  <div id="edCust">
+    <div style="margin-bottom:8px"><label for="edName">اسم العميل (اختياري)</label><input id="edName" placeholder="مثال: محمد"></div>
+    <div class="row">
+      <div><label for="edPhone">رقم هاتف العميل</label><input id="edPhone" type="tel" inputmode="tel" dir="ltr" style="text-align:right"></div>
+      <div><label for="edPlate">رقم المركبة</label><input id="edPlate" dir="ltr" style="text-align:right"></div>
+    </div>
+    <label for="edVtype">نوع المركبة</label><input id="edVtype">
+    <label style="margin-top:8px">👷 العمال</label>
+    <div class="wbox" id="edWBox"></div>
+    <label for="edPay">الدفع</label>
+    <select id="edPay"><option>كاش</option><option>بنفت باي</option><option>آجل</option></select>
+    <label class="chk"><input id="edPaid" type="checkbox"> تم الدفع</label>
+  </div>
+  <label for="edNote" style="margin-top:8px">ملاحظة</label><input id="edNote">
+  <div class="tools">
+    <button id="edSave" class="save" type="button" style="width:auto;flex:1;margin:0">حفظ التعديل</button>
+    <button id="edCancel" type="button">إلغاء</button>
+  </div>
+</div></div>
+
+<!-- SHEET: EXTEND SUBSCRIPTION -->
+<div class="sheet" id="extSheet"><div>
+  <h2 id="extTitle">⏳ تمديد الاشتراك</h2>
+  <div id="extInfo" class="empty" style="padding-top:0"></div>
+  <div class="pills" id="extPresets">
+    <button type="button" data-d="7">+7 أيام</button>
+    <button type="button" data-d="15">+15 يوم</button>
+    <button type="button" data-d="30">+30 يوم</button>
+    <button type="button" data-d="60">+60 يوم</button>
+  </div>
+  <div class="row">
+    <div><label for="extDays">أيام إضافية</label><input id="extDays" type="number" inputmode="numeric" min="0" value="7"></div>
+    <div><label for="extWashes">غسلات إضافية</label><input id="extWashes" type="number" inputmode="numeric" min="0" value="0"></div>
+  </div>
+  <div id="extPreview" style="background:var(--tint);border:1px solid var(--bd);border-radius:10px;padding:8px 10px;margin-bottom:8px;font-weight:700;font-size:14px"></div>
+  <div class="row">
+    <div><label for="extFee">رسوم التمديد (د.ب)</label><input id="extFee" type="number" inputmode="decimal" step="0.001" min="0" value="0"></div>
+    <div><label for="extPay">الدفع</label>
+      <select id="extPay"><option>كاش</option><option>بنفت باي</option><option>آجل</option></select>
+      <label class="chk"><input id="extPaid" type="checkbox" checked> تم الدفع</label>
+    </div>
+  </div>
+  <label for="extNote">ملاحظة التمديد</label>
+  <input id="extNote" placeholder="مثال: تعويض أو تمديد أسبوع إضافي">
+  <div class="tools">
+    <button id="extSave" class="save" type="button" style="width:auto;flex:1;margin:0">تأكيد التمديد</button>
+    <button id="extCancel" type="button">إلغاء</button>
+  </div>
+</div></div>
+
+<!-- SHEET: RECEIPT -->
+<div class="sheet" id="rcptSheet"><div>
+  <h2>🧾 الإيصال</h2>
+  <textarea id="rcptText" readonly></textarea>
+  <div class="tools">
+    <button id="rcCopy" type="button">نسخ</button>
+    <a id="rcWa" class="btnlink" target="_blank" rel="noopener" href="#">إرسال واتساب</a>
+    <button id="rcPdf" type="button">حفظ PDF</button>
+    <button id="rcClose" type="button">إغلاق</button>
+  </div>
+</div></div>
+
+<!-- SHEET: OWNER EDIT WORKER PERMISSIONS & ACCOUNT -->
+<div class="sheet" id="workerPermSheet"><div>
+  <h2 id="wpTitle">🔐 إدارة حساب وصلاحيات العامل</h2>
+  <label for="wpName">اسم العامل (يظهر في الموقع والعمليات)</label>
+  <input id="wpName">
+  <label for="wpRank" style="margin-top:8px">الرتبة</label>
+  <select id="wpRank"></select>
+  <label class="chk" style="margin:10px 0;color:var(--out);font-weight:700"><input id="wpDisabled" type="checkbox"> إيقاف الحساب ومنعه من الدخول للموقع</label>
+
+  <h3 style="margin-top:10px">الصلاحيات المسموحة للعامل</h3>
+  <div class="permGrid" id="wpPermsBox"></div>
+
+  <h3 style="margin-top:12px">إدارة كلمة المرور</h3>
+  <div class="tools" style="margin-bottom:10px">
+    <button id="wpResetEmail" type="button" class="sm">📧 إرسال رابط تغيير الباسورد لإيميله</button>
+    <button id="wpForcePw" type="button" class="sm">🔑 إجباره يكتب باسورد جديد عند الدخول</button>
+  </div>
+
+  <div class="tools">
+    <button id="wpSave" class="save" type="button" style="width:auto;flex:1;margin:0">حفظ التغييرات</button>
+    <button id="wpCancel" type="button">إغلاق</button>
+  </div>
+</div></div>
+
+<!-- SHEET: OWNER CREATE NEW WORKER -->
+<div class="sheet" id="newWorkerSheet"><div>
+  <h2>➕ إضافة عامل جديد</h2>
+  <div class="empty" style="padding-top:0">ينشئ حساب دخول جديد للعامل مباشرة ويحفظ رتبته وصلاحياته بدون ما يطلعك من حسابك.</div>
+  <label for="nwName">اسم العامل</label>
+  <input id="nwName" placeholder="مثال: علي حسين">
+  <label for="nwEmail" style="margin-top:8px">البريد الإلكتروني للدخول</label>
+  <input id="nwEmail" type="email" dir="ltr" style="text-align:right" placeholder="ali@2jzwash.com">
+  <label for="nwPass" style="margin-top:8px">كلمة المرور الأولية (٦ أحرف+)</label>
+  <input id="nwPass" type="text" dir="ltr" style="text-align:right" placeholder="123456">
+  <label for="nwRank" style="margin-top:8px">الرتبة</label>
+  <select id="nwRank"></select>
+  <label class="chk" style="margin-top:8px"><input id="nwForcePw" type="checkbox" checked> إجبار العامل على تغيير كلمة المرور أول ما يدخل</label>
+  <div class="tools" style="margin-top:12px">
+    <button id="nwCreate" class="save" type="button" style="width:auto;flex:1;margin:0">إنشاء الحساب</button>
+    <button id="nwCancel" type="button">إلغاء</button>
+  </div>
+</div></div>
+
+<!-- SHEET: WORKER FULL PROFILE / FILE -->
+<div class="sheet" id="workerFileSheet"><div>
+  <div id="wfBody"></div>
+  <div class="tools"><button id="wfClose" type="button" style="width:100%">إغلاق الملف</button></div>
+</div></div>
+
+<!-- SHEET: CUSTOMER FULL DETAIL -->
+<div class="sheet" id="custDetailSheet"><div>
+  <div id="cdBody"></div>
+  <div class="tools"><button id="cdClose" type="button" style="width:100%">إغلاق</button></div>
+</div></div>
+
+<!-- BOTTOM NAV -->
+<nav id="nav" style="display:none">
+  <button type="button" data-v="v-main" class="on"><i>🧾</i>التسجيل</button>
+  <button type="button" data-v="v-queue"><i>🕒</i>الانتظار<span class="navBadge" id="queueBadge"></span></button>
+  <button type="button" data-v="v-debts"><i>⏳</i>الآجل</button>
+  <button type="button" data-v="v-cust"><i>👥</i>العملاء</button>
+  <button type="button" data-v="v-subs"><i>⭐</i>الاشتراكات<span class="navBadge" id="subBadge"></span></button>
+  <button type="button" data-v="v-rep" id="repNavBtn"><i>📊</i>التقارير</button>
+  <button type="button" data-v="v-owner" id="ownerNavBtn" style="display:none"><i>👑</i>المالك</button>
+  <button type="button" data-v="v-set"><i>⚙️</i>الإعدادات</button>
+</nav>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="config.js"></script>
+<script>
+(function(){
+var LOGO_URI='data:image/jpeg;base64,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';
+var DEF={
+  biz:'2jz wash',
+  shopPhone:'+973 3897 4280',
+  shopInsta:'2jz.bh',
+  vehicles:[{id:'car',name:'سيارة',price:6},{id:'bike',name:'دراجة نارية',price:3}],
+  addons:[{id:'cust',name:'عند العميل',price:1.5,only:''},{id:'chain',name:'غسيل جنزير',price:1.5,only:'bike'}],
+  plans:[],
+  ownerUid:'',
+  ranks:{owner:'👑 مالك',supervisor:'🛡️ مشرف',senior:'⭐ عامل خبير',worker:'👷 عامل',trainee:'🌱 متدرب'},
+  guard:{hideRev:false,reqPhone:false,reqWorker:false,lockOld:false},
+  goals:{day:50,month:1200,commPct:10,winMsg:'اشتقنالك في 2jz wash! لك خصم خاص في زيارتك الجاية 🧽✨'}
+};
+var RANK_KEYS=['owner','supervisor','senior','worker','trainee'];
+var PERM_DEFS=[
+  {k:'addEntry',t:'تسجيل عمليات دخل (غسيل)'},
+  {k:'addExpense',t:'تسجيل مصروفات'},
+  {k:'editEntry',t:'تعديل العمليات المسجلة'},
+  {k:'deleteEntry',t:'حذف العمليات المسجلة'},
+  {k:'manageSubs',t:'إضافة وتعديل وتمديد الاشتراكات'},
+  {k:'deleteSub',t:'حذف الاشتراكات'},
+  {k:'manageQueue',t:'إدارة قائمة الانتظار والمواعيد'},
+  {k:'viewReports',t:'الاطلاع على التقارير المالية'},
+  {k:'editSettings',t:'تعديل الأسعار والخدمات وإعدادات الموقع'}
+];
+var RANK_PRESETS={
+  owner:{addEntry:true,addExpense:true,editEntry:true,deleteEntry:true,manageSubs:true,deleteSub:true,manageQueue:true,viewReports:true,editSettings:true},
+  supervisor:{addEntry:true,addExpense:true,editEntry:true,deleteEntry:false,manageSubs:true,deleteSub:false,manageQueue:true,viewReports:true,editSettings:false},
+  senior:{addEntry:true,addExpense:false,editEntry:true,deleteEntry:false,manageSubs:false,deleteSub:false,manageQueue:true,viewReports:false,editSettings:false},
+  worker:{addEntry:true,addExpense:false,editEntry:false,deleteEntry:false,manageSubs:false,deleteSub:false,manageQueue:true,viewReports:false,editSettings:false},
+  trainee:{addEntry:true,addExpense:false,editEntry:false,deleteEntry:false,manageSubs:false,deleteSub:false,manageQueue:false,viewReports:false,editSettings:false}
+};
+var EXP=['صابون','ماء','كهرباء','راتب','أخرى'];
+var VIEWS=['v-main','v-queue','v-debts','v-cust','v-subs','v-rep','v-owner','v-set'];
+
+var cfg=JSON.parse(JSON.stringify(DEF)),data=[],subs=[],bookings=[],logs=[],staff=[],pres=[],
+ me={uid:'',name:'',email:'',role:'worker',perms:Object.assign({},RANK_PRESETS.worker),disabled:false,forcePwReset:false},
+ type='in',veh=null,sel={},selW=[],edSelW=[],
+ col=null,subCol=null,bkCol=null,logCol=null,staffCol=null,presCol=null,cfgRef=null,FDB=null,auth=null,unsubs=[],unsubE=null,
+ freeNext=false,subUse=null,editing=null,editingSub=null,editingBk=null,extendingSub=null,wpTarget=null,wfTarget=null,wfPeriod='month',
+ custF='all',bkF='active',curR=null,LIMIT=5000,curView='v-main',state='login',timer=null,ownerBooted=false;
+
+function $(id){return document.getElementById(id)}
+function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n}
+function kv(box,k,v,cls){var r=el('div','kv');r.appendChild(el('span',null,k));r.appendChild(el('b',cls,v));box.appendChild(r)}
+function btn(text,cls,fn){var b=el('button',cls,text);b.type='button';b.onclick=fn;return b}
+function toast(m){var t=$('toast');t.textContent=m;t.className='toast show';setTimeout(function(){t.className='toast'},2400)}
+function f(n){return (Math.round((Number(n)||0)*1000)/1000).toFixed(3)}
+function dkey(t){var d=new Date(t);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function tnow(){var d=new Date();return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')}
+function keyToDate(k){var p=k.split('-');return new Date(+p[0],+p[1]-1,+p[2],12)}
+function addDays(k,n){var d=keyToDate(k);d.setDate(d.getDate()+n);return dkey(d.getTime())}
+function daysBetween(a,b){return Math.round((keyToDate(b)-keyToDate(a))/864e5)}
+function status(m,bad){var s=$('status');s.textContent=m;s.className=bad?'bad':''}
+function saveCfg(){if(cfgRef)cfgRef.set(cfg).catch(function(){toast('تعذر حفظ الإعدادات')})}
+function LOY(){var n=parseInt(cfg.loyal,10);return n>1?n:10}
+function paidOf(e){return e.paid===undefined?e.pay!=='آجل':!!e.paid}
+function vtypeOf(e){if(e.vtype)return e.vtype;var m=/^غسيل سريع - ([^+(]+)/.exec(e.label||'');return m?m[1].trim():''}
+function rno(e){return e.no?String(e.no):String(e.ts).slice(-6)}
+function workersOf(e){return e.workers&&e.workers.length?e.workers:(e.worker?[e.worker]:[])}
+function totals(list){var i=0,o=0;list.forEach(function(e){if(e.type==='in')i+=e.amount;else o+=e.amount});return{i:i,o:o,n:i-o}}
+function waNum(p){var d=(p||'').replace(/\D/g,'');if(d.length===8)d='973'+d;return d}
+function ltr(s){return '\u2066'+s+'\u2069'}
+function nph(p){var d=String(p||'').replace(/\D/g,'');if(d.length===11&&d.indexOf('973')===0)d=d.slice(3);return d}
+function fph(p){var d=nph(p);return d.length===8?d.slice(0,4)+' '+d.slice(4):String(p||'').trim()}
+function ph(p){return p?ltr(fph(p)):''}
+function pl(p){return p?ltr(p):''}
+function nextNo(){var mx=1000;data.forEach(function(e){if(e.no>mx)mx=e.no});subs.forEach(function(s){if(s.no>mx)mx=s.no});return mx+1}
+function rid(p){return p+Date.now()+Math.floor(Math.random()*1000)}
+
+/* permissions & roles */
+function isOwner(){return me.role==='owner'||(cfg.ownerUid&&cfg.ownerUid===me.uid)}
+function can(perm){
+  if(isOwner())return true;
+  if(me.disabled)return false;
+  return !!(me.perms&&me.perms[perm]);
+}
+function canModifyEntry(e){
+  if(isOwner())return true;
+  if(!can('editEntry'))return false;
+  if(cfg.guard&&cfg.guard.lockOld&&(Date.now()-e.ts)>864e5)return false;
+  return true;
+}
+function canDeleteEntry(e){
+  if(isOwner())return true;
+  if(!can('deleteEntry'))return false;
+  if(cfg.guard&&cfg.guard.lockOld&&(Date.now()-e.ts)>864e5)return false;
+  return true;
+}
+function rankLabel(rk){return (cfg.ranks&&cfg.ranks[rk])||DEF.ranks[rk]||'👷 عامل'}
+function addLog(cat,action,target,details){
+  if(!logCol||!me.uid)return;
+  logCol.doc(rid('l')).set({
+    ts:Date.now(),uid:me.uid,name:me.name||me.email||'مستخدم',role:me.role||'worker',
+    cat:cat,action:action,target:target||'',details:details||''
+  }).catch(function(){});
+}
+function syncRoleUI(){
+  var ow=isOwner();
+  $('ownerNavBtn').style.display=ow?'flex':'none';
+  $('repNavBtn').style.display=can('viewReports')?'flex':'none';
+  $('bizSettingsBox').style.display=can('editSettings')?'block':'none';
+  $('entryFormPanel').style.display=(can('addEntry')||can('addExpense'))?'block':'none';
+  $('tabOut').style.display=can('addExpense')?'block':'none';
+  $('subFormPanel').style.display=can('manageSubs')?'block':'none';
+  $('bkFormPanel').style.display=can('manageQueue')?'block':'none';
+  var hideRev=!ow&&cfg.guard&&cfg.guard.hideRev;
+  $('todaySumBox').style.display=hideRev?'none':'grid';
+  if(curView==='v-owner'&&!ow)showView('v-main');
+  if(curView==='v-rep'&&!can('viewReports'))showView('v-main');
+}
+
+/* theme */
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='dark'?'#0A0C10':'#0B0E13';
+  $('themeBtn').textContent=t==='dark'?'☀️':'🌙';
+}
+function shopPhoneStr(){return String(cfg.shopPhone||'').trim()||'+973 3897 4280'}
+function shopInstaStr(){return String(cfg.shopInsta||'').trim().replace(/^@/,'')||'2jz.bh'}
+function initBrandLogo(){
+  if(!LOGO_URI)return;
+  if($('favIcon'))$('favIcon').href=LOGO_URI;
+  if($('appleIcon'))$('appleIcon').href=LOGO_URI;
+  if($('hdrLogo'))$('hdrLogo').src=LOGO_URI;
+  if($('loginLogo'))$('loginLogo').src=LOGO_URI;
+  if($('ftLogo'))$('ftLogo').src=LOGO_URI;
+}
+initBrandLogo();
+function applyBiz(){
+  var n=cfg.biz||'2jz wash';
+  var sp=shopPhoneStr();
+  var ig=shopInstaStr();
+  var digits=sp.replace(/\D/g,'');
+  $('appName').textContent=n;
+  document.title=n;
+  if($('hdrCall')){
+    $('hdrCall').href='tel:'+(sp.startsWith('+')?'+':'')+digits;
+    $('hdrCall').innerHTML='📞 <span dir="ltr">'+sp+'</span>';
+  }
+  if($('hdrWa'))$('hdrWa').href='https://wa.me/'+digits;
+  if($('hdrIg'))$('hdrIg').textContent='📸 '+ig;
+  var tel='tel:'+(sp.startsWith('+')?'+':'')+digits;
+  if($('ftCall')){$('ftCall').href=tel;$('ftCall').innerHTML='📞 <span dir="ltr">'+sp+'</span>'}
+  if($('ftWa'))$('ftWa').href='https://wa.me/'+digits;
+  if($('ftIg'))$('ftIg').textContent='📸 '+ig;
+  if($('ftName'))$('ftName').textContent=n;
+}
+function curTheme(){return document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light'}
+
+/* state and views */
+function showView(id){
+  if(id==='v-owner'&&!isOwner())id='v-main';
+  if(id==='v-rep'&&!can('viewReports'))id='v-main';
+  curView=id;
+  VIEWS.forEach(function(v){$(v).style.display=v===id?'block':'none'});
+  Array.prototype.forEach.call($('nav').children,function(b){b.className=b.getAttribute('data-v')===id?'on':''});
+  window.scrollTo(0,0);
+  if(id==='v-owner')renderOwner();
+}
+function setState(s){
+  state=s;
+  $('login').style.display=s==='login'?'block':'none';
+  $('nameBox').style.display=s==='name'?'block':'none';
+  $('forcePwBox').style.display=s==='forcePw'?'block':'none';
+  $('disabledBox').style.display=s==='disabled'?'block':'none';
+  $('nav').style.display=s==='app'?'flex':'none';
+  $('online').style.display=s==='app'?'block':'none';
+  $('alertBtn').style.display=s==='app'?'inline-flex':'none';
+  VIEWS.forEach(function(v){$(v).style.display='none'});
+  if(s==='app'){syncRoleUI();showView(curView);beat();setType('in')}
+  else{$('alertStrip').style.display='none'}
+}
+
+/* subscriptions helpers */
+function subState(s){
+  var t=dkey(Date.now());
+  if(t<s.start)return{k:'future',d:daysBetween(t,s.start)};
+  if(t>s.end)return{k:'expired',d:daysBetween(s.end,t)};
+  return{k:'active',d:daysBetween(t,s.end)};
+}
+function usedOf(s){return data.filter(function(e){return e.subId===s.id}).length}
+function activeSubOf(p){
+  var n=nph(p);if(!n)return null;
+  var l=subs.filter(function(s){return !s.cancelled&&nph(s.phone)===n&&subState(s).k==='active'}).sort(function(a,b){return a.end<b.end?1:-1});
+  return l[0]||null;
+}
+
+/* smart alerts engine */
+function computeAlerts(){
+  var alerts=[],tk=dkey(Date.now()),nowMs=Date.now();
+  bookings.forEach(function(b){
+    if(b.status==='done'||b.status==='cancelled')return;
+    if(b.kind==='walkin'){
+      var mins=Math.max(0,Math.round((nowMs-b.ts)/60000));
+      alerts.push({sev:mins>30?'bad':'info',icon:'🚗',title:'انتظار مباشر: '+(b.plate||fph(b.phone)||'مركبة'),
+        sub:(b.svc||'غسيل')+' · ينتظر منذ '+mins+' دقيقة',actText:'فتح الانتظار',fn:function(){closeSheet('alertSheet');showView('v-queue')}});
+      return;
+    }
+    if(!b.date)return;
+    var bMs=new Date(b.date+'T'+(b.time||'12:00')+':00').getTime();
+    var diffMin=Math.round((bMs-nowMs)/60000);
+    if(diffMin<0&&b.date<=tk){
+      var late=Math.abs(diffMin);
+      alerts.push({sev:'bad',icon:'⏰',title:'موعد متأخر: '+(b.plate||fph(b.phone)||'عميل'),
+        sub:'الموعد كان '+ltr(b.date)+' الساعة '+ltr(b.time||'')+' (متأخر '+(late>=60?Math.round(late/60)+' ساعة':late+' دقيقة')+')',
+        actText:'إدارة الموعد',fn:function(){closeSheet('alertSheet');showView('v-queue')}});
+    }else if(diffMin>=0&&diffMin<=180){
+      alerts.push({sev:diffMin<=45?'warn':'info',icon:'📅',title:'موعد قريب: '+(b.plate||fph(b.phone)||'عميل'),
+        sub:'الساعة '+ltr(b.time||'')+' · باقي '+(diffMin===0?'الآن!':diffMin+' دقيقة'),
+        actText:'إدارة الموعد',fn:function(){closeSheet('alertSheet');showView('v-queue')}});
+    }
+  });
+  subs.forEach(function(s){
+    if(s.cancelled)return;
+    var st=subState(s),u=usedOf(s),outWashes=s.washes>0&&u>=s.washes;
+    if(outWashes){
+      alerts.push({sev:'bad',icon:'⭐',title:'نفدت غسلات الاشتراك: '+fph(s.phone),
+        sub:'باقة '+s.plan+' ('+u+'/'+s.washes+' غسلة) · '+(s.plate||''),
+        actText:'تجديد / تمديد',fn:function(){closeSheet('alertSheet');showView('v-subs');$('subQ').value=fph(s.phone);renderSubs()}});
+    }else if(st.k==='expired'&&st.d<=14){
+      alerts.push({sev:'bad',icon:'⛔',title:'انتهى اشتراك: '+fph(s.phone),
+        sub:'باقة '+s.plan+' انتهت منذ '+(st.d===0?'اليوم':st.d+' يوم'),
+        actText:'تجديد / تمديد',fn:function(){closeSheet('alertSheet');showView('v-subs');$('subQ').value=fph(s.phone);renderSubs()}});
+    }else if(st.k==='active'&&st.d<=5){
+      alerts.push({sev:'warn',icon:'⚠️',title:'اشتراك ينتهي قريباً: '+fph(s.phone),
+        sub:'باقة '+s.plan+' · '+(st.d===0?'ينتهي اليوم!':'باقي '+st.d+' يوم'),
+        actText:'تمديد',fn:function(){closeSheet('alertSheet');openExtSheet(s)}});
+    }
+  });
+  return alerts;
+}
+function renderAlerts(){
+  var list=computeAlerts(),badge=$('alertBadge'),strip=$('alertStrip'),box=$('alertList');
+  badge.textContent=list.length;
+  badge.style.display=list.length?'block':'none';
+  if(list.length&&state==='app'){
+    strip.style.display='flex';
+    $('alertStripTxt').innerHTML='🔔 لديك <b>'+list.length+'</b> تنبيه مهم: '+list[0].title;
+  }else{
+    strip.style.display='none';
+  }
+  box.innerHTML='';
+  if(!list.length){box.appendChild(el('div','empty','لا توجد تنبيهات عاجلة حالياً 👌'));return}
+  list.forEach(function(a){
+    var c=el('div','card');
+    var h=el('b',null,a.icon+' '+a.title);
+    h.appendChild(el('span','badge '+a.sev,a.sev==='bad'?'عاجل':a.sev==='warn'?'قريباً':'معلومة'));
+    c.appendChild(h);
+    c.appendChild(el('small',null,a.sub));
+    var act=el('div','act');
+    act.appendChild(btn(a.actText,'sm',a.fn));
+    c.appendChild(act);
+    box.appendChild(c);
+  });
+}
+
+/* entry form */
+function vObj(){return cfg.vehicles.filter(function(v){return v.id===veh})[0]}
+function applies(a){return !a.only||a.only===veh}
+function zeroNext(){return freeNext||!!subUse}
+function calc(){
+  var v=vObj();if(!v)return;var p=v.price,l='غسيل سريع - '+v.name;
+  cfg.addons.forEach(function(a){if(sel[a.id]&&applies(a)){p+=a.price;l+=' + '+a.name}});
+  if(freeNext){p=0;l+=' (غسلة مجانية)'}
+  if(subUse){p=0;l+=' (ضمن الاشتراك)'}
+  $('label').value=l;$('amount').value=p;
+}
+function mk(g,text,on,fn){var b=el('button',on?'on':'',text);b.type='button';b.onclick=fn;g.appendChild(b)}
+function grp(box){var g=el('div','grp');box.appendChild(g);return g}
+function chips(){
+  var box=$('chips');box.innerHTML='';
+  if(type==='out'){var ge=grp(box);EXP.forEach(function(s){mk(ge,s,false,function(){$('label').value=s;$('amount').focus()})});return}
+  var g1=grp(box);
+  cfg.vehicles.forEach(function(v){mk(g1,v.name+' · '+v.price,veh===v.id,function(){veh=v.id;calc();chips()})});
+  var ad=cfg.addons.filter(applies);
+  if(ad.length){var g2=grp(box);ad.forEach(function(a){mk(g2,a.name+' · +'+a.price,!!sel[a.id],function(){sel[a.id]=!sel[a.id];calc();chips()})})}
+}
+function visitsOf(p){var n=nph(p);return data.filter(function(e){return e.type==='in'&&!e.subFee&&e.phone&&nph(e.phone)===n}).length}
+function stripTags(){$('label').value=$('label').value.replace(/ \((غسلة مجانية|ضمن الاشتراك)\)/g,'')}
+function applyZero(kind,s){
+  if(kind==='free'){freeNext=true;subUse=null}else{subUse=s;freeNext=false}
+  stripTags();var l=$('label').value.trim()||'غسيل سريع';
+  $('label').value=l+(kind==='free'?' (غسلة مجانية)':' (ضمن الاشتراك)');
+  $('amount').value=0;$('paid').checked=true;loyal();
+  toast(kind==='free'?'تم تطبيق الغسلة المجانية':'تم تطبيق الاشتراك');
+}
+function cancelZero(){freeNext=false;subUse=null;stripTags();$('amount').value='';if(veh)calc();loyal()}
+function loyal(){
+  var p=$('phone').value.trim(),box=$('loyal');box.innerHTML='';
+  if(type!=='in'||!p){box.style.display='none';return}
+  var k=visitsOf(p),n=LOY(),due=(k+1)%n===0,as=activeSubOf(p);
+  var r1=el('div','lrow'),s=el('span');
+  if(!k)s.textContent='عميل جديد';
+  else if(due)s.textContent='عميل متكرر: '+k+' زيارة. هذي الغسلة المجانية 🎁';
+  else s.textContent='عميل متكرر: '+k+' زيارة. باقي '+(n*Math.ceil((k+1)/n)-(k+1))+' زيارة وتجي الغسلة المجانية';
+  r1.appendChild(s);
+  if(!freeNext&&!subUse&&due)r1.appendChild(btn('تطبيق الغسلة المجانية','sm',function(){applyZero('free')}));
+  box.appendChild(r1);
+  if(as){
+    var u=usedOf(as),r2=el('div','lrow'),left=as.washes?as.washes-u:null;
+    r2.appendChild(el('span',null,'⭐ مشترك ('+as.plan+') حتى '+ltr(as.end)+' · '+(as.washes?('استخدم '+u+' من '+as.washes):('استخدم '+u+' غسلة'))));
+    if(!freeNext&&!subUse){
+      if(left===null||left>0)r2.appendChild(btn('غسلة ضمن الاشتراك','sm',function(){applyZero('sub',as)}));
+      else r2.appendChild(el('b',null,'انتهت غسلات الاشتراك'));
+    }
+    box.appendChild(r2);
+  }
+  if(freeNext||subUse){
+    var r3=el('div','lrow');r3.appendChild(el('b',null,freeNext?'✓ تم تطبيق الغسلة المجانية':'✓ تم تطبيق الاشتراك'));
+    r3.appendChild(btn('إلغاء','sm',cancelZero));box.appendChild(r3);
+  }
+  box.style.display='flex';
+}
+function setType(t){
+  if(t==='out'&&!can('addExpense'))t='in';
+  type=t;$('tabIn').className=t==='in'?'on':'';$('tabOut').className=t==='out'?'on':'';
+  $('payBox').style.visibility=t==='in'?'visible':'hidden';
+  $('custRow').style.display=t==='in'?'grid':'none';
+  $('workerRow').style.display=t==='in'?'block':'none';
+  $('label').value='';$('amount').value='';veh=null;sel={};freeNext=false;subUse=null;
+  selW=me.name?[me.name]:[];chips();loyal();renderWorkers();
+}
+function save(){
+  if(type==='in'&&!can('addEntry')){toast('ليس لديك صلاحية تسجيل عمليات');return}
+  if(type==='out'&&!can('addExpense')){toast('ليس لديك صلاحية تسجيل مصروفات');return}
+  var label=$('label').value.trim(),amt=parseFloat($('amount').value);
+  if(!col){toast('السجل المشترك غير متصل');return}
+  if(!label){toast('اكتب الخدمة أو اختر من الأزرار');return}
+  if(isNaN(amt)||amt<0||(amt===0&&!zeroNext())){toast('اكتب المبلغ');return}
+  var isIn=type==='in',phoneVal=isIn?(nph($('phone').value)||$('phone').value.trim()):'';
+  var workers=selW.length?selW.slice():(me.name?[me.name]:[]);
+  if(isIn&&!isOwner()&&cfg.guard){
+    if(cfg.guard.reqPhone&&!phoneVal){toast('المالك فرض إدخال رقم هاتف العميل');return}
+    if(cfg.guard.reqWorker&&!workers.length){toast('اختر عاملاً واحداً على الأقل');return}
+  }
+  var ts=Date.now(),no=isIn?nextNo():0,id=rid('e');
+  col.doc(id).set({ts:ts,type:type,label:label,amount:amt,
+    pay:isIn?$('pay').value:'',paid:isIn?$('paid').checked:true,phone:phoneVal,plate:isIn?$('plate').value.trim():'',cname:isIn?$('cname').value.trim():'',
+    vtype:isIn&&vObj()?vObj().name:'',workers:isIn?workers:[],worker:isIn?workers.join('، '):'',free:isIn&&freeNext,subId:isIn&&subUse?subUse.id:'',
+    no:no,note:$('note').value.trim(),by:me.name||'',byUid:me.uid||''})
+   .then(function(){
+     addLog('entry',isIn?'تسجيل دخل':'تسجيل مصروف',label,f(amt)+' د.ب'+(phoneVal?' · عميل '+fph(phoneVal):''));
+     toast(isIn?'تم الحفظ، رقم الإيصال '+no:'تم الحفظ');
+   }).catch(function(){toast('تعذر الحفظ، تأكد من صلاحيتك')});
+  $('label').value='';$('amount').value='';$('note').value='';$('phone').value='';$('plate').value='';$('cname').value='';
+  $('paid').checked=$('pay').value!=='آجل';veh=null;sel={};freeNext=false;subUse=null;selW=me.name?[me.name]:[];chips();loyal();renderWorkers();
+}
+function del(e){
+  if(!col||!canDeleteEntry(e)){toast('ليس لديك صلاحية حذف هذه العملية');return}
+  data=data.filter(function(x){return x.id!==e.id});render();
+  col.doc(e.id).delete().then(function(){
+    addLog('del','حذف عملية',e.label,'المبلغ: '+f(e.amount)+' د.ب'+(e.phone?' · عميل '+fph(e.phone):''));
+    toast('انحذفت العملية');
+  }).catch(function(err){status('تعذر الحذف: '+((err&&(err.code||err.message))||'خطأ غير معروف'),true)});
+}
+function markPaid(e){
+  if(!col)return;
+  col.doc(e.id).update({paid:true}).then(function(){
+    addLog('entry','تأكيد استلام مبلغ آجل',e.label,f(e.amount)+' د.ب'+(e.phone?' · '+fph(e.phone):''));
+    toast('تم تسجيل الدفع');
+  }).catch(function(){toast('تعذر التحديث')});
+}
+
+/* workers */
+function allNames(sel0){
+  var s={},out=[];staff.forEach(function(x){if(x.name&&!x.disabled&&!s[x.name]){s[x.name]=1;out.push(x.name)}});
+  sel0.forEach(function(n){if(!s[n]){s[n]=1;out.push(n)}});
+  return out;
+}
+function wChips(box,selArr,again){
+  box.innerHTML='';
+  allNames(selArr).forEach(function(n){
+    var on=selArr.indexOf(n)>-1;
+    var b=el('button',on?'on':'',(on?'✓ ':'')+n+(n===me.name?' (أنا)':''));b.type='button';
+    b.onclick=function(){var i=selArr.indexOf(n);if(i>-1)selArr.splice(i,1);else selArr.push(n);again()};
+    box.appendChild(b);
+  });
+}
+function renderWorkers(){
+  wChips($('wBox'),selW,renderWorkers);
+  if($('editSheet').style.display==='flex')drawEdW();
+}
+
+/* queue & appointments */
+function renderBkVeh(){
+  var s=$('bkVeh'),cur=s.value;s.innerHTML='';
+  var o0=el('option',null,'— اختر —');o0.value='';s.appendChild(o0);
+  cfg.vehicles.forEach(function(v){var o=el('option',null,v.name);o.value=v.name;s.appendChild(o)});
+  s.value=cur;
+}
+function clearBkForm(){
+  editingBk=null;
+  $('bkKind').value='appt';$('bkTimeRow').style.display='grid';
+  $('bkDate').value=dkey(Date.now());$('bkTime').value=tnow();
+  ['bkName','bkPhone','bkPlate','bkSvc','bkPrice','bkNote'].forEach(function(i){$(i).value=''});
+  $('bkVeh').value='';$('bkTitle').textContent='🕒 حجز موعد / إضافة للانتظار';$('bkSave').textContent='إضافة للقائمة';$('bkCancel').style.display='none';
+}
+function loadBkForm(b){
+  editingBk=b;$('bkKind').value=b.kind||'appt';$('bkTimeRow').style.display=(b.kind||'appt')==='appt'?'grid':'none';
+  $('bkDate').value=b.date||dkey(Date.now());$('bkTime').value=b.time||tnow();
+  $('bkName').value=b.cname||'';$('bkPhone').value=fph(b.phone||'');$('bkPlate').value=b.plate||'';$('bkVeh').value=b.vtype||'';
+  $('bkSvc').value=b.svc||'';$('bkPrice').value=b.price||'';$('bkNote').value=b.note||'';
+  $('bkTitle').textContent='✏️ تعديل الموعد';$('bkSave').textContent='حفظ التعديل';$('bkCancel').style.display='inline-block';
+  showView('v-queue');$('bkTitle').scrollIntoView({behavior:'smooth'});
+}
+function saveBk(){
+  if(!bkCol||!can('manageQueue')){toast('ليس لديك صلاحية إدارة المواعيد');return}
+  var kind=$('bkKind').value,date=kind==='appt'?$('bkDate').value:dkey(Date.now()),time=kind==='appt'?$('bkTime').value:tnow();
+  var phone=nph($('bkPhone').value)||$('bkPhone').value.trim(),plate=$('bkPlate').value.trim(),svc=$('bkSvc').value.trim()||'غسيل سريع';
+  var price=parseFloat($('bkPrice').value)||0;
+  if(!phone&&!plate){toast('اكتب رقم العميل أو رقم المركبة');return}
+  if(kind==='appt'&&(!date||!time)){toast('حدد تاريخ ووقت الموعد');return}
+  var obj={kind:kind,date:date,time:time,phone:phone,plate:plate,cname:$('bkName').value.trim(),vtype:$('bkVeh').value,svc:svc,price:price,note:$('bkNote').value.trim()};
+  if(editingBk){
+    bkCol.doc(editingBk.id).update(obj).then(function(){
+      addLog('bk','تعديل موعد',plate||fph(phone),date+' '+time);
+      toast('تم تعديل الموعد');clearBkForm();
+    }).catch(function(){toast('تعذر التعديل')});
+  }else{
+    obj.ts=Date.now();obj.status='waiting';obj.by=me.name||'';obj.byUid=me.uid||'';
+    bkCol.doc(rid('b')).set(obj).then(function(){
+      addLog('bk',kind==='appt'?'حجز موعد جديد':'إضافة لقائمة الانتظار',plate||fph(phone),svc+' · '+date+' '+time);
+      toast('تمت الإضافة لقائمة الانتظار');clearBkForm();
+    }).catch(function(){toast('تعذر الحفظ')});
+  }
+}
+function completeBkToEntry(b){
+  if(!col||!bkCol)return;
+  var as=b.phone?activeSubOf(b.phone):null;
+  var useSub=as&&(!as.washes||usedOf(as)<as.washes);
+  var amt=useSub?0:(Number(b.price)||0);
+  var lbl=(b.svc||'غسيل سريع')+(b.vtype?' - '+b.vtype:'')+(useSub?' (ضمن الاشتراك)':'');
+  var ws=me.name?[me.name]:[],eid=rid('e'),no=nextNo();
+  var batch=FDB.batch();
+  batch.set(col.doc(eid),{ts:Date.now(),type:'in',label:lbl,amount:amt,pay:'كاش',paid:true,
+    phone:b.phone||'',plate:b.plate||'',cname:b.cname||'',vtype:b.vtype||'',workers:ws,worker:ws.join('، '),
+    free:false,subId:useSub?as.id:'',no:no,note:b.note||'',by:me.name||'',byUid:me.uid||''});
+  batch.update(bkCol.doc(b.id),{status:'done',doneTs:Date.now(),entryId:eid,doneBy:me.name||''});
+  batch.commit().then(function(){
+    addLog('bk','إنهاء موعد وتحويله لدخل',b.plate||fph(b.phone),lbl+' · '+f(amt)+' د.ب');
+    toast('تم إنهاء الغسلة وتسجيل الإيصال #'+no);
+  }).catch(function(){toast('تعذر إتمام العملية')});
+}
+function renderQueue(){
+  var box=$('bkList');box.innerHTML='';
+  var tk=dkey(Date.now()),nowMs=Date.now();
+  var activeCount=bookings.filter(function(b){return b.status!=='done'&&b.status!=='cancelled'}).length;
+  var qb=$('queueBadge');qb.textContent=activeCount;qb.style.display=activeCount?'block':'none';
+  var arr=bookings.filter(function(b){
+    if(bkF==='done')return b.status==='done'||b.status==='cancelled';
+    if(bkF==='today')return b.status!=='done'&&b.status!=='cancelled'&&b.date===tk;
+    return b.status!=='done'&&b.status!=='cancelled';
+  }).sort(function(a,b){
+    if(a.status==='washing'&&b.status!=='washing')return -1;
+    if(b.status==='washing'&&a.status!=='washing')return 1;
+    var ta=(a.date||'9999')+' '+(a.time||'99:99'),tb=(b.date||'9999')+' '+(b.time||'99:99');
+    return bkF==='done'?(b.ts-a.ts):(ta<tb?-1:ta>tb?1:0);
+  });
+  if(!arr.length){box.appendChild(el('div','empty','لا توجد سيارات في هذه القائمة حالياً.'));return}
+  arr.forEach(function(b){
+    var c=el('div','card'),head=el('div','cardHead');
+    var title=(b.plate?pl(b.plate)+' · ':'')+(b.phone?ph(b.phone):'بدون رقم');
+    var h=el('b',null,title);
+    if(b.status==='done')h.appendChild(el('span','badge ok','✅ تم الإنجاز'));
+    else if(b.status==='cancelled')h.appendChild(el('span','badge bad','❌ ملغي'));
+    else if(b.status==='washing')h.appendChild(el('span','badge info','🧼 قيد الغسيل الآن'));
+    else if(b.kind==='walkin'){
+      var wm=Math.max(0,Math.round((nowMs-b.ts)/60000));
+      h.appendChild(el('span','badge warn','🚗 انتظار مباشر ('+wm+' د)'));
+    }else{
+      var bMs=new Date(b.date+'T'+(b.time||'12:00')+':00').getTime();
+      var diff=Math.round((bMs-nowMs)/60000);
+      if(diff<0)h.appendChild(el('span','badge bad','⏰ متأخر '+Math.abs(diff)+' د'));
+      else if(diff<=60)h.appendChild(el('span','badge warn','🔥 باقي '+diff+' دقيقة'));
+      else h.appendChild(el('span','badge ok','📅 '+ltr(b.date)+' · '+ltr(b.time)));
+    }
+    head.appendChild(h);
+    if(b.price>0)head.appendChild(el('span','amt in',f(b.price)+' د.ب'));
+    c.appendChild(head);
+    c.appendChild(el('small',null,(b.svc||'غسيل')+(b.vtype?' · '+b.vtype:'')+(b.kind==='appt'?' · الموعد: '+ltr(b.date)+' '+ltr(b.time):'')));
+    if(b.note)c.appendChild(el('small',null,'ملاحظة: '+b.note));
+    if(b.phone&&activeSubOf(b.phone))c.appendChild(el('small',null,'⭐ العميل لديه اشتراك نشط'));
+    if(b.status!=='done'&&b.status!=='cancelled'&&can('manageQueue')){
+      var act=el('div','act');
+      if(b.status!=='washing')act.appendChild(btn('🧼 بدء الغسيل','sm',function(){bkCol.doc(b.id).update({status:'washing'}).then(function(){toast('بدأت عملية الغسيل')})}));
+      act.appendChild(btn('✅ إنهاء وتسجيل دخل','sm',function(){completeBkToEntry(b)}));
+      act.appendChild(btn('تعديل','sm',function(){loadBkForm(b)}));
+      if(b.phone){
+        var a=el('a','btnlink','واتساب');a.target='_blank';a.rel='noopener';
+        a.href='https://wa.me/'+waNum(b.phone)+'?text='+encodeURIComponent('السلام عليكم، تذكير بموعد غسيل مركبتك لدى '+(cfg.biz||'2jz wash')+(b.kind==='appt'?' بتاريخ '+b.date+' الساعة '+b.time:'')+'. حياك الله 🙏');
+        act.appendChild(a);
+      }
+      var x=btn('إلغاء','sm del',function(){
+        if(x.dataset.ok){bkCol.doc(b.id).update({status:'cancelled'}).then(function(){toast('تم إلغاء الموعد')})}
+        else{x.dataset.ok='1';x.textContent='تأكيد الإلغاء؟';setTimeout(function(){x.dataset.ok='';x.textContent='إلغاء'},3000)}
+      });
+      act.appendChild(x);
+      c.appendChild(act);
+    }
+    box.appendChild(c);
+  });
+}
+
+/* lists */
+function renderToday(){
+  var tk=dkey(Date.now()),today=data.filter(function(e){return dkey(e.ts)===tk}),t=totals(today);
+  $('sIn').textContent=f(t.i);$('sOut').textContent=f(t.o);$('sNet').textContent=f(t.n);
+  var w=today.filter(function(e){return e.type==='in'&&!e.subFee}).length,
+      as=subs.filter(function(s){return !s.cancelled&&subState(s).k==='active'}).length,
+      un=data.filter(function(e){return e.type==='in'&&!paidOf(e)}).reduce(function(s,e){return s+e.amount},0);
+  $('todayInfo').textContent='🚗 غسلات اليوم: '+w+'  ·  ⭐ اشتراكات نشطة: '+as+'  ·  ⏳ غير مدفوع: '+f(un)+' د.ب';
+  var L=$('list');L.innerHTML='';
+  if(!today.length)L.appendChild(el('div','empty','ما في عمليات اليوم. اختر خدمة من فوق وسجّل أول عملية.'));
+  today.forEach(function(e){
+    var d=el('div','item'),info=el('div'),time=new Date(e.ts).toLocaleTimeString('ar-BH',{hour:'2-digit',minute:'2-digit'});
+    info.appendChild(el('b',null,(e.subFee?'⭐ ':'')+e.label));
+    info.appendChild(el('small',null,time+(e.pay?' · '+e.pay:'')+(e.type==='in'?(paidOf(e)?' · تم الدفع':' · غير مدفوع'):'')+(e.by?' · سجلها: '+e.by:'')));
+    var l2=[];if(e.phone)l2.push(ph(e.phone));if(e.plate)l2.push(pl(e.plate));
+    var ws=workersOf(e);if(ws.length)l2.push('👷 '+ws.join('، '));if(e.note)l2.push(e.note);
+    if(l2.length){var s2=el('small',null,l2.join(' · '));s2.style.fontWeight='700';s2.style.color='var(--ink)';info.appendChild(s2)}
+    var a=el('span','amt '+e.type,(e.type==='in'?'+':'−')+f(e.amount)),act=el('div','act');
+    if(e.type==='in')act.appendChild(btn('إيصال','sm',function(){
+      var s0=e.subFee?subs.filter(function(x){return x.id===e.subFee})[0]:null;showRcpt(s0?subRcpt(s0):entryRcpt(e));
+    }));
+    if(!e.subFee){
+      if(canModifyEntry(e))act.appendChild(btn('تعديل','sm',function(){showEdit(e)}));
+      if(canDeleteEntry(e)){
+        var x=btn('حذف','sm del',function(){
+          if(x.dataset.ok){del(e)}else{x.dataset.ok='1';x.textContent='تأكيد الحذف؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف'},3000)}
+        });
+        act.appendChild(x);
+      }
+    }
+    d.appendChild(info);d.appendChild(a);d.appendChild(act);L.appendChild(d);
+  });
+}
+function renderDays(){
+  var D=$('days');D.innerHTML='';
+  for(var k=0;k<7;k++){
+    var dt=new Date();dt.setDate(dt.getDate()-k);var key=dkey(dt.getTime());
+    var tt=totals(data.filter(function(e){return dkey(e.ts)===key}));
+    kv(D,k===0?'اليوم':k===1?'أمس':dt.toLocaleDateString('ar-BH',{weekday:'long',day:'numeric',month:'numeric'}),'دخل '+f(tt.i)+' | صافي '+f(tt.n));
+  }
+}
+function renderDebts(){
+  var box=$('debtList');box.innerHTML='';
+  var un=data.filter(function(e){return e.type==='in'&&!paidOf(e)});
+  $('debtTot').textContent=f(un.reduce(function(s,e){return s+e.amount},0));
+  if(!un.length){box.appendChild(el('div','empty','ما في مبالغ غير مدفوعة 👌'));return}
+  var g={},order=[];
+  un.forEach(function(e){var k=e.phone?nph(e.phone):('بدون رقم '+e.id);if(!g[k]){g[k]=[];order.push(k)}g[k].push(e)});
+  order.forEach(function(k){
+    var list=g[k],tot=list.reduce(function(s,e){return s+e.amount},0),c=el('div','card');
+    c.appendChild(el('b',null,(list[0].phone?ph(list[0].phone):'بدون رقم هاتف')+' · '+f(tot)+' د.ب'));
+    list.forEach(function(e){
+      var r=el('div','item'),info=el('div');
+      info.appendChild(el('span',null,e.label));
+      info.appendChild(el('small',null,ltr(dkey(e.ts))+(vtypeOf(e)?' · '+vtypeOf(e):'')+(e.plate?' · '+pl(e.plate):'')+' · '+f(e.amount)+' د.ب'));
+      r.appendChild(info);r.appendChild(btn('تم الدفع','sm',function(){markPaid(e)}));c.appendChild(r);
+    });
+    if(list[0].phone){
+      var a=el('a','btnlink','تذكير واتساب');a.target='_blank';a.rel='noopener';
+      a.href='https://wa.me/'+waNum(list[0].phone)+'?text='+encodeURIComponent('السلام عليكم، تذكير لطيف بمبلغ '+f(tot)+' د.ب المستحق لـ '+(cfg.biz||'2jz wash')+'. شكراً لك 🙏');
+      c.appendChild(a);
+    }
+    box.appendChild(c);
+  });
+}
+
+/* organized customers list & detail sheet */
+function nmSet(c,n,ts){if(n&&ts>=(c.nameTs||0)){c.name=n;c.nameTs=ts}}
+function custNameOf(phone){var k=nph(phone);if(!k)return '';var c=buildCustMap().filter(function(x){return nph(x.phone)===k})[0];return c&&c.name||''}
+function buildCustMap(){
+  var map={},n=LOY(),nowMs=Date.now();
+  data.forEach(function(e){
+    if(e.type!=='in'||!e.phone)return;
+    var k=nph(e.phone)||e.phone;
+    var c=map[k]||(map[k]={key:k,phone:e.phone,n:0,sum:0,debt:0,last:0,plate:'',vt:'',entries:[]});
+    c.entries.push(e);
+    if(e.cname)nmSet(c,e.cname,e.ts||0);
+    if(!e.subFee)c.n++;
+    c.sum+=e.amount;
+    if(!paidOf(e))c.debt+=e.amount;
+    if(e.ts>c.last){c.last=e.ts;c.plate=e.plate||c.plate;c.vt=vtypeOf(e)||c.vt}
+  });
+  subs.forEach(function(s){
+    if(s.cancelled||!s.phone)return;
+    var k=nph(s.phone)||s.phone;
+    var c=map[k]||(map[k]={key:k,phone:s.phone,n:0,sum:0,debt:0,last:s.ts||0,plate:s.plate||'',vt:s.vtype||'',entries:[]});
+    if(!c.plate&&s.plate)c.plate=s.plate;
+    if(s.cname)nmSet(c,s.cname,s.ts||0);
+    if(!c.vt&&s.vtype)c.vt=s.vtype;
+  });
+  return Object.keys(map).map(function(k){
+    var c=map[k];
+    c.sub=activeSubOf(c.phone);
+    c.idleDays=c.last?Math.floor((nowMs-c.last)/864e5):999;
+    c.rem=(n*Math.ceil((c.n+1)/n)-(c.n+1));
+    c.due=(c.n>0&&(c.n+1)%n===0);
+    c.vip=c.n>=5||c.sum>=30;
+    return c;
+  });
+}
+function saveCustName(c,val,ttl){
+  if(!col){toast('السجل المشترك غير متصل');return}
+  var list=c.entries.slice().sort(function(a,b){return b.ts-a.ts}),jobs=[];
+  if(val){
+    if(list.length)jobs.push(col.doc(list[0].id).update({cname:val}));
+    else{
+      var k=nph(c.phone),ss=subs.filter(function(s){return !s.cancelled&&nph(s.phone)===k}).sort(function(a,b){return (b.ts||0)-(a.ts||0)});
+      if(ss.length&&subCol)jobs.push(subCol.doc(ss[0].id).update({cname:val}));
+    }
+  }else{
+    list.forEach(function(e){if(e.cname)jobs.push(col.doc(e.id).update({cname:''}))});
+    var k2=nph(c.phone);subs.forEach(function(s){if(s.cname&&nph(s.phone)===k2&&subCol)jobs.push(subCol.doc(s.id).update({cname:''}))});
+  }
+  if(!jobs.length){toast(val?'ما في سجل نربط الاسم فيه':'ما في اسم محفوظ');return}
+  Promise.all(jobs).then(function(){
+    c.name=val;ttl.textContent='👤 '+(val?val+' · ':'')+ltr(fph(c.phone));
+    addLog('cust','تحديث اسم عميل',fph(c.phone),val||'حذف الاسم');
+    toast(val?'تم حفظ الاسم':'تم حذف الاسم');
+  }).catch(function(){toast('تعذر حفظ الاسم، تأكد من صلاحيتك')});
+}
+function openCustDetail(c){
+  var box=$('cdBody');box.innerHTML='';
+  var ttl=el('h2',null,'👤 '+(c.name?c.name+' · ':'')+ltr(fph(c.phone)));box.appendChild(ttl);
+  var nrow=el('div','lrow');nrow.style.marginBottom='8px';
+  var nin=document.createElement('input');nin.placeholder='اسم العميل (اختياري)';nin.value=c.name||'';nin.style.flex='1';nin.style.minWidth='140px';
+  nrow.appendChild(nin);
+  nrow.appendChild(btn('💾 حفظ الاسم','sm',function(){saveCustName(c,nin.value.trim(),ttl)}));
+  box.appendChild(nrow);
+  var meta=[];if(c.vt)meta.push(c.vt);if(c.plate)meta.push('لوحة: '+c.plate);
+  box.appendChild(el('div','empty',meta.length?meta.join(' · '):'لا توجد تفاصيل مركبة مسجلة'));
+  var g=el('div','row3');
+  [['الزيارات',String(c.n)],['إجمالي الدفع',f(c.sum)+' د.ب'],['الآجل',f(c.debt)+' د.ب']].forEach(function(p){
+    var d=el('div','miniStat');d.appendChild(el('b',null,p[1]));d.appendChild(el('span',null,p[0]));g.appendChild(d);
+  });
+  box.appendChild(g);
+  var act=el('div','tools');
+  act.appendChild(btn('🧾 تسجيل غسلة','sm',function(){
+    closeSheet('custDetailSheet');showView('v-main');setType('in');$('phone').value=fph(c.phone);$('plate').value=c.plate||'';$('cname').value=c.name||'';loyal();
+  }));
+  act.appendChild(btn('🕒 حجز موعد','sm',function(){
+    closeSheet('custDetailSheet');showView('v-queue');$('bkName').value=c.name||'';$('bkPhone').value=fph(c.phone);$('bkPlate').value=c.plate||'';$('bkVeh').value=c.vt||'';
+  }));
+  var wa=el('a','btnlink','واتساب');wa.target='_blank';wa.rel='noopener';wa.href='https://wa.me/'+waNum(c.phone);
+  act.appendChild(wa);
+  box.appendChild(act);
+  box.appendChild(el('h3',null,'سجل العمليات ('+c.entries.length+')'));
+  c.entries.slice().sort(function(a,b){return b.ts-a.ts}).forEach(function(e){
+    var r=el('div','item'),inf=el('div');
+    inf.appendChild(el('b',null,e.label));
+    inf.appendChild(el('small',null,ltr(dkey(e.ts))+' · '+(e.pay||'')+(paidOf(e)?'':' · غير مدفوع')));
+    r.appendChild(inf);r.appendChild(el('span','amt in',f(e.amount)+' د.ب'));
+    box.appendChild(r);
+  });
+  openSheet('custDetailSheet');
+}
+function renderCust(){
+  var box=$('custList');box.innerHTML='';
+  var all=buildCustMap(),q=$('custQ').value.trim().toLowerCase(),sortBy=$('custSort').value;
+  $('csTot').textContent=all.length;
+  $('csSub').textContent=all.filter(function(c){return !!c.sub}).length;
+  $('csVip').textContent=all.filter(function(c){return c.vip}).length;
+
+  var arr=all.filter(function(c){
+    if(custF==='sub'&&!c.sub)return false;
+    if(custF==='free'&&!c.due&&c.rem>2)return false;
+    if(custF==='debt'&&!(c.debt>0))return false;
+    if(custF==='vip'&&!c.vip)return false;
+    if(custF==='idle'&&c.idleDays<30)return false;
+    if(!q)return true;
+    var qd=q.replace(/\D/g,'');
+    return (c.name||'').toLowerCase().indexOf(q)>-1||c.phone.toLowerCase().indexOf(q)>-1||(qd&&nph(c.phone).indexOf(qd)>-1)||(c.plate||'').toLowerCase().indexOf(q)>-1||(c.vt||'').toLowerCase().indexOf(q)>-1;
+  }).sort(function(a,b){
+    if(sortBy==='spend')return b.sum-a.sum;
+    if(sortBy==='recent')return b.last-a.last;
+    if(sortBy==='oldest')return a.last-b.last;
+    if(sortBy==='loyal')return (a.due?-1:a.rem)-(b.due?-1:b.rem);
+    return b.n-a.n;
+  });
+
+  if(!arr.length){box.appendChild(el('div','empty','لا يوجد عملاء يطابقون هذا البحث أو الفلتر.'));return}
+  var n=LOY();
+  arr.slice(0,120).forEach(function(c){
+    var d=el('div','card'),head=el('div','cardHead');
+    var h=el('b',null,(c.name?'👤 '+c.name+' · ':'')+ph(c.phone)+(c.vt?' · '+c.vt:'')+(c.plate?' · '+pl(c.plate):''));
+    if(c.sub)h.appendChild(el('span','badge ok','⭐ مشترك'));
+    if(c.vip)h.appendChild(el('span','badge vip','👑 VIP'));
+    if(c.due)h.appendChild(el('span','badge warn','🎁 مجانية جاهزة'));
+    if(c.debt>0)h.appendChild(el('span','badge bad','⏳ آجل '+f(c.debt)));
+    head.appendChild(h);
+    d.appendChild(head);
+
+    var g=el('div','row3');
+    var m1=el('div','miniStat');m1.appendChild(el('b',null,String(c.n)));m1.appendChild(el('span',null,'الزيارات'));g.appendChild(m1);
+    var m2=el('div','miniStat');m2.appendChild(el('b',null,f(c.sum)));m2.appendChild(el('span',null,'الإجمالي (د.ب)'));g.appendChild(m2);
+    var m3=el('div','miniStat');m3.appendChild(el('b',null,c.last?(c.idleDays===0?'اليوم':'منذ '+c.idleDays+' يوم'):'—'));m3.appendChild(el('span',null,'آخر زيارة'));g.appendChild(m3);
+    d.appendChild(g);
+
+    var mod=c.n%n,pct=c.due?100:Math.round((mod/n)*100);
+    var pr=el('div','prog'+(c.due?' ok':'')),bar=el('i');bar.style.width=pct+'%';pr.appendChild(bar);d.appendChild(pr);
+    d.appendChild(el('small',null,c.due?'🎁 الزيارة القادمة مجانية!':'الولاء: '+mod+' من '+n+' (باقي '+c.rem+' زيارة للمجانية)'));
+
+    var act=el('div','act');
+    act.appendChild(btn('📋 السجل والتفاصيل','sm',function(){openCustDetail(c)}));
+    act.appendChild(btn('🧾 غسلة سريعة','sm',function(){
+      showView('v-main');setType('in');$('phone').value=fph(c.phone);$('plate').value=c.plate||'';$('cname').value=c.name||'';loyal();
+    }));
+    var a=el('a','btnlink','واتساب');a.target='_blank';a.rel='noopener';a.href='https://wa.me/'+waNum(c.phone);
+    act.appendChild(a);
+    d.appendChild(act);
+    box.appendChild(d);
+  });
+}
+
+/* subscriptions: add, edit, renew, extend */
+function planByName(n){return cfg.plans.filter(function(p){return p.name===n})[0]}
+function renderSubForm(){
+  var s=$('sbVeh'),cur=s.value;s.innerHTML='';
+  var o0=el('option',null,'— اختر —');o0.value='';s.appendChild(o0);
+  cfg.vehicles.forEach(function(v){var o=el('option',null,v.name);o.value=v.name;s.appendChild(o)});
+  s.value=cur;
+  var dl=$('plansDl');dl.innerHTML='';cfg.plans.forEach(function(p){var o=document.createElement('option');o.value=p.name;dl.appendChild(o)});
+}
+function clearSubForm(){
+  editingSub=null;
+  ['sbName','sbPhone','sbPlate','sbPlan','sbPrice','sbBen','sbNote'].forEach(function(i){$(i).value=''});
+  $('sbVeh').value='';$('sbDays').value=30;$('sbWashes').value=0;$('sbStart').value=dkey(Date.now());
+  $('sbPay').value='كاش';$('sbPaid').checked=true;
+  $('sbTitle').textContent='⭐ اشتراك جديد';$('sbSave').textContent='حفظ الاشتراك';$('sbCancel').style.display='none';
+}
+function loadSubForm(s,asNew){
+  if(!can('manageSubs')){toast('ليس لديك صلاحية إدارة الاشتراكات');return}
+  $('sbName').value=s.cname||'';$('sbPhone').value=fph(s.phone);$('sbPlate').value=s.plate||'';$('sbVeh').value=s.vtype||'';$('sbPlan').value=s.plan;
+  $('sbPrice').value=s.price;$('sbDays').value=s.days;$('sbWashes').value=s.washes||0;$('sbStart').value=asNew?addDays(s.end,1)>dkey(Date.now())?addDays(s.end,1):dkey(Date.now()):s.start;
+  $('sbBen').value=s.benefits||'';$('sbPay').value=s.pay||'كاش';$('sbPaid').checked=asNew?true:!!s.paid;$('sbNote').value=asNew?'':(s.note||'');
+  editingSub=asNew?null:s;
+  $('sbTitle').textContent=asNew?'🔄 تجديد اشتراك':'✏️ تعديل اشتراك';
+  $('sbSave').textContent=asNew?'حفظ التجديد':'حفظ التعديل';$('sbCancel').style.display='inline-block';
+  showView('v-subs');$('sbTitle').scrollIntoView({behavior:'smooth'});
+}
+function openExtSheet(s){
+  if(!can('manageSubs')){toast('ليس لديك صلاحية تمديد الاشتراكات');return}
+  extendingSub=s;
+  $('extTitle').textContent='⏳ تمديد اشتراك: '+fph(s.phone);
+  $('extInfo').textContent='الباقة: '+s.plan+' · ينتهي حالياً بتاريخ '+ltr(s.end)+(s.washes?' · الغسلات: '+usedOf(s)+'/'+s.washes:'');
+  $('extDays').value=7;$('extWashes').value=0;$('extFee').value=0;$('extPay').value='كاش';$('extPaid').checked=true;$('extNote').value='';
+  updateExtPreview();
+  openSheet('extSheet');
+}
+function updateExtPreview(){
+  if(!extendingSub)return;
+  var addD=parseInt($('extDays').value,10)||0,addW=parseInt($('extWashes').value,10)||0;
+  var baseEnd=extendingSub.end<dkey(Date.now())?dkey(Date.now()):extendingSub.end;
+  var newEnd=addD>0?addDays(baseEnd,addD):extendingSub.end;
+  var txt='📅 تاريخ الانتهاء الجديد: '+ltr(newEnd);
+  if(extendingSub.washes>0||addW>0)txt+=' · إجمالي الغسلات: '+((extendingSub.washes||0)+addW);
+  $('extPreview').textContent=txt;
+}
+function saveExtend(){
+  if(!extendingSub||!subCol||!FDB)return;
+  var addD=parseInt($('extDays').value,10)||0,addW=parseInt($('extWashes').value,10)||0,fee=parseFloat($('extFee').value)||0;
+  if(addD<=0&&addW<=0){toast('حدد عدد الأيام أو الغسلات الإضافية');return}
+  var s=extendingSub,baseEnd=s.end<dkey(Date.now())?dkey(Date.now()):s.end;
+  var newEnd=addD>0?addDays(baseEnd,addD):s.end;
+  var newDays=(s.days||30)+addD,newWashes=(s.washes||0)+addW;
+  var b=FDB.batch();
+  b.update(subCol.doc(s.id),{end:newEnd,days:newDays,washes:newWashes});
+  if(fee>0){
+    var eid=rid('e'),no=nextNo(),ws=me.name?[me.name]:[];
+    b.set(col.doc(eid),{ts:Date.now(),type:'in',label:'تمديد اشتراك - '+s.plan,amount:fee,
+      pay:$('extPay').value,paid:$('extPaid').checked,phone:s.phone,plate:s.plate||'',cname:s.cname||'',vtype:s.vtype||'',
+      workers:ws,worker:ws.join('، '),free:false,no:no,note:$('extNote').value.trim(),subFee:s.id,by:me.name||'',byUid:me.uid||''});
+  }
+  b.commit().then(function(){
+    addLog('sub','تمديد اشتراك',fph(s.phone),'+'+addD+' يوم'+(addW?' و +'+addW+' غسلة':'')+' · ينتهي '+newEnd+(fee>0?' · رسوم '+f(fee):''));
+    toast('تم تمديد الاشتراك بنجاح حتى '+newEnd);
+    closeSheet('extSheet');extendingSub=null;
+  }).catch(function(){toast('تعذر تمديد الاشتراك')});
+}
+function saveSub(){
+  if(!subCol||!FDB||!can('manageSubs')){toast('ليس لديك صلاحية إدارة الاشتراكات');return}
+  var phone=nph($('sbPhone').value)||$('sbPhone').value.trim(),plan=$('sbPlan').value.trim(),
+      price=parseFloat($('sbPrice').value),days=parseInt($('sbDays').value,10),start=$('sbStart').value;
+  if(!phone){toast('اكتب رقم العميل');return}
+  if(!plan){toast('اكتب اسم الباقة');return}
+  if(isNaN(price)||price<0){toast('اكتب سعر الاشتراك');return}
+  if(!(days>0)){toast('اكتب مدة الاشتراك بالأيام');return}
+  if(!start){toast('اختر تاريخ البداية');return}
+  var o={phone:phone,cname:$('sbName').value.trim(),plate:$('sbPlate').value.trim(),vtype:$('sbVeh').value,plan:plan,price:price,days:days,start:start,end:addDays(start,days-1),
+    washes:parseInt($('sbWashes').value,10)||0,benefits:$('sbBen').value.trim(),pay:$('sbPay').value,paid:$('sbPaid').checked,note:$('sbNote').value.trim()};
+  var b=FDB.batch(),lbl='اشتراك شهري - '+plan;
+  if(editingSub){
+    var s=editingSub;
+    if(s.entryId){b.update(col.doc(s.entryId),{label:lbl,amount:price,pay:o.pay,paid:o.paid,phone:phone,plate:o.plate,cname:o.cname,vtype:o.vtype})}
+    else if(price>0){
+      var eid0=rid('e');o.entryId=eid0;
+      b.set(col.doc(eid0),{ts:s.ts,type:'in',label:lbl,amount:price,pay:o.pay,paid:o.paid,phone:phone,plate:o.plate,cname:o.cname,vtype:o.vtype,workers:s.workers||[],worker:(s.workers||[]).join('، '),free:false,no:s.no,note:'',subFee:s.id,by:me.name||'',byUid:me.uid||''});
+    }
+    b.update(subCol.doc(s.id),o);
+  }else{
+    var ts=Date.now(),sid=rid('s'),eid=rid('e'),no=nextNo(),ws=me.name?[me.name]:[];
+    o.ts=ts;o.no=no;o.workers=ws;o.entryId=price>0?eid:'';o.cancelled=false;
+    b.set(subCol.doc(sid),o);
+    if(price>0)b.set(col.doc(eid),{ts:ts,type:'in',label:lbl,amount:price,pay:o.pay,paid:o.paid,phone:phone,plate:o.plate,cname:o.cname,vtype:o.vtype,workers:ws,worker:ws.join('، '),free:false,no:no,note:'',subFee:sid,by:me.name||'',byUid:me.uid||''});
+  }
+  b.commit().then(function(){
+    addLog('sub',editingSub?'تعديل اشتراك':'تسجيل اشتراك جديد',fph(phone),plan+' · '+f(price)+' د.ب');
+    toast(editingSub?'تم تعديل الاشتراك':'تم حفظ الاشتراك');clearSubForm();
+  }).catch(function(){toast('تعذر الحفظ، تأكد من صلاحيتك')});
+}
+function delSub(s){
+  if(!subCol||!FDB||!can('deleteSub')){toast('ليس لديك صلاحية حذف الاشتراكات');return}
+  var b=FDB.batch();b.delete(subCol.doc(s.id));if(s.entryId)b.delete(col.doc(s.entryId));
+  b.commit().then(function(){
+    addLog('del','حذف اشتراك',fph(s.phone),s.plan);
+    toast('تم حذف الاشتراك');
+  }).catch(function(){toast('تعذر الحذف')});
+}
+function subCard(x){
+  var s=x.s,st=x.st,c=el('div','card'),h=el('b',null,s.plan+' · '+ph(s.phone));
+  var bt=st.k==='active'?(st.d<=5?['warn',st.d===0?'ينتهي اليوم':'باقي '+st.d+' يوم']:['ok','نشط · باقي '+st.d+' يوم']):st.k==='future'?['warn','يبدأ بعد '+st.d+' يوم']:['bad','منتهي منذ '+st.d+' يوم'];
+  h.appendChild(el('span','badge '+bt[0],bt[1]));c.appendChild(h);
+  c.appendChild(el('small',null,(s.vtype?s.vtype+' · ':'')+(s.plate?pl(s.plate)+' · ':'')+'من '+ltr(s.start)+' إلى '+ltr(s.end)+' ('+s.days+' يوم)'));
+  var u=usedOf(s);
+  c.appendChild(el('small',null,(s.washes?'استخدم '+u+' من '+s.washes+' غسلة':'استخدم '+u+' غسلة (غير محدود)')+' · '+f(s.price)+' د.ب · '+(s.paid?'مدفوع':'غير مدفوع')));
+  var ben=(s.benefits||'').split('\n').map(function(t){return t.trim()}).filter(Boolean);
+  if(ben.length){var ul=el('ul','ben');ben.forEach(function(t){ul.appendChild(el('li',null,t))});c.appendChild(ul)}
+  var act=el('div','act');
+  act.appendChild(btn('إيصال','sm',function(){showRcpt(subRcpt(s))}));
+  if(can('manageSubs')){
+    act.appendChild(btn('⏳ تمديد','sm',function(){openExtSheet(s)}));
+    act.appendChild(btn('🔄 تجديد','sm',function(){loadSubForm(s,true)}));
+    act.appendChild(btn('تعديل','sm',function(){loadSubForm(s,false)}));
+  }
+  if(st.k!=='future'&&(st.k==='expired'||st.d<=5)){
+    var a=el('a','btnlink','تذكير واتساب');a.target='_blank';a.rel='noopener';
+    a.href='https://wa.me/'+waNum(s.phone)+'?text='+encodeURIComponent('السلام عليكم، نذكّرك بأن اشتراكك ('+s.plan+') '+(st.k==='expired'?'انتهى':'ينتهي')+' بتاريخ '+s.end+'. يسعدنا نجدده أو نمدده لك 🙏 '+(cfg.biz||''));
+    act.appendChild(a);
+  }
+  if(can('deleteSub')){
+    var x2=btn('حذف','sm del',function(){
+      if(x2.dataset.ok){delSub(s)}else{x2.dataset.ok='1';x2.textContent='تأكيد الحذف؟';setTimeout(function(){x2.dataset.ok='';x2.textContent='حذف'},3000)}
+    });
+    act.appendChild(x2);
+  }
+  c.appendChild(act);return c;
+}
+function renderSubs(){
+  var box=$('subList');box.innerHTML='';var q=$('subQ').value.trim().toLowerCase();
+  var arr=subs.filter(function(s){
+    if(s.cancelled)return false;
+    return !q||(s.plan||'').toLowerCase().indexOf(q)>-1||(s.plate||'').toLowerCase().indexOf(q)>-1||nph(s.phone).indexOf(q.replace(/\D/g,'')||'x')>-1||s.phone.toLowerCase().indexOf(q)>-1;
+  }).map(function(s){return{s:s,st:subState(s)}});
+  var soon=arr.filter(function(x){return x.st.k==='active'&&x.st.d<=5}).sort(function(a,b){return a.st.d-b.st.d}),
+      act=arr.filter(function(x){return x.st.k==='active'&&x.st.d>5}).sort(function(a,b){return a.st.d-b.st.d}),
+      fut=arr.filter(function(x){return x.st.k==='future'}),
+      exp=arr.filter(function(x){return x.st.k==='expired'}).sort(function(a,b){return a.st.d-b.st.d}).slice(0,30);
+  var bd=subs.filter(function(s){return !s.cancelled&&(subState(s).k==='expired'?subState(s).d<=7:(subState(s).k==='active'&&subState(s).d<=5))}).length;
+  var B=$('subBadge');B.textContent=bd;B.style.display=bd?'block':'none';
+  if(!arr.length){box.appendChild(el('div','empty','ما في اشتراكات بعد. سجّل أول اشتراك من الفورم فوق.'));return}
+  [['⚠️ تنتهي قريباً',soon],['✅ نشطة',act],['🕒 قادمة',fut],['⛔ منتهية',exp]].forEach(function(g){
+    if(!g[1].length)return;box.appendChild(el('h3',null,g[0]+' ('+g[1].length+')'));
+    g[1].forEach(function(x){box.appendChild(subCard(x))});
+  });
+}
+
+/* reports */
+function groupRows(out,title,list,keyFn){
+  var g={};
+  list.forEach(function(e){var ks=[].concat(keyFn(e));var part=e.amount/ks.length;ks.forEach(function(k){g[k]=g[k]||{n:0,s:0};g[k].n++;g[k].s+=part})});
+  var ks=Object.keys(g);if(!ks.length)return;
+  out.appendChild(el('h3',null,title));
+  ks.sort(function(a,b){return g[b].n-g[a].n}).forEach(function(k){kv(out,k,g[k].n+' · '+f(g[k].s)+' د.ب')});
+}
+function renderMonth(){
+  var m=$('mon').value||dkey(Date.now()).slice(0,7),out=$('monOut');out.innerHTML='';
+  var L=data.filter(function(e){return dkey(e.ts).slice(0,7)===m}),t=totals(L),ins=L.filter(function(e){return e.type==='in'}),
+      fees=ins.filter(function(e){return e.subFee}),wash=ins.filter(function(e){return !e.subFee});
+  var g=el('div','sum');
+  [['الدخل',t.i],['المصروف',t.o],['الصافي',t.n]].forEach(function(p){var d=el('div');d.appendChild(el('b',null,f(p[1])));d.appendChild(el('span',null,p[0]));g.appendChild(d)});
+  out.appendChild(g);
+  kv(out,'عدد الغسلات',String(wash.length));
+  kv(out,'غسلات ضمن الاشتراكات',String(wash.filter(function(e){return e.subId}).length));
+  kv(out,'الغسلات المجانية',String(wash.filter(function(e){return e.free}).length));
+  kv(out,'اشتراكات جديدة / مجددة',fees.length+' · '+f(fees.reduce(function(s,e){return s+e.amount},0))+' د.ب');
+  kv(out,'غير مدفوع',f(ins.filter(function(e){return !paidOf(e)}).reduce(function(s,e){return s+e.amount},0))+' د.ب');
+  groupRows(out,'حسب نوع المركبة',wash,function(e){return vtypeOf(e)||'غير محدد'});
+  groupRows(out,'حسب طريقة الدفع',ins,function(e){return e.pay||'غير محدد'});
+  groupRows(out,'حسب العامل (المبلغ موزّع بالتساوي إذا اشتغل أكثر من عامل)',wash,function(e){var w=workersOf(e);return w.length?w:'بدون اسم'});
+}
+function render(){
+  renderToday();renderQueue();renderDays();renderDebts();renderCust();renderSubs();renderMonth();loyal();renderAlerts();
+  if(curView==='v-owner'&&isOwner())renderOwner();
+}
+function report(){
+  var tk=dkey(Date.now()),today=data.filter(function(e){return dkey(e.ts)===tk});
+  var t=totals(today),n=today.filter(function(e){return e.type==='in'&&!e.subFee}).length,by={};
+  today.forEach(function(e){if(e.type==='in')by[e.pay]=(by[e.pay]||0)+e.amount});
+  var s='تقرير '+new Date().toLocaleDateString('ar-BH')+'\nعدد الغسلات: '+n+'\nالدخل: '+f(t.i)+' د.ب\n';
+  Object.keys(by).forEach(function(p){s+='  - '+p+': '+f(by[p])+'\n'});
+  s+='المصروف: '+f(t.o)+' د.ب\nالصافي: '+f(t.n)+' د.ب';
+  var r=$('report');r.style.display='block';r.value=s;r.focus();r.select();
+  try{document.execCommand('copy');toast('تم النسخ')}catch(e){}
+}
+
+/* OWNER EXCLUSIVE SUITE */
+function openWorkerPermSheet(s){
+  wpTarget=s;
+  $('wpTitle').textContent='🔐 إدارة حساب: '+(s.name||s.email);
+  $('wpName').value=s.name||'';
+  var rkSel=$('wpRank');rkSel.innerHTML='';
+  RANK_KEYS.forEach(function(k){var o=el('option',null,rankLabel(k));o.value=k;rkSel.appendChild(o)});
+  rkSel.value=s.role||'worker';
+  $('wpDisabled').checked=!!s.disabled;
+  $('wpDisabled').disabled=(s.id===me.uid||s.id===cfg.ownerUid);
+
+  var box=$('wpPermsBox');box.innerHTML='';
+  var curP=Object.assign({},RANK_PRESETS[s.role||'worker'],s.perms||{});
+  PERM_DEFS.forEach(function(pd){
+    var lbl=el('label','permItem');
+    lbl.appendChild(el('span',null,pd.t));
+    var cb=document.createElement('input');cb.type='checkbox';cb.dataset.pk=pd.k;cb.checked=!!curP[pd.k];
+    lbl.appendChild(cb);box.appendChild(lbl);
+  });
+  openSheet('workerPermSheet');
+}
+function openWorkerFile(s){
+  wfTarget=s;
+  var box=$('wfBody');box.innerHTML='';
+  var name=s.name||s.email||'عامل';
+  box.appendChild(el('h2',null,'📁 ملف العامل: '+name));
+  var p=pres.filter(function(x){return x.id===s.id})[0],on=p&&isOnline(p);
+  box.appendChild(el('div','empty',rankLabel(s.role||'worker')+' · '+(s.email||'بدون إيميل')+' · '+(on?'🟢 متصل الآن':'⚪ غير متصل')));
+
+  var tabs=el('div','pills');
+  [['today','اليوم'],['month','هذا الشهر'],['all','كل الأوقات']].forEach(function(t){
+    var b=el('button',wfPeriod===t[0]?'on':'',t[1]);b.type='button';
+    b.onclick=function(){wfPeriod=t[0];openWorkerFile(s)};
+    tabs.appendChild(b);
+  });
+  box.appendChild(tabs);
+
+  var tk=dkey(Date.now()),mk0=tk.slice(0,7);
+  var wEntries=data.filter(function(e){
+    var ws=workersOf(e);
+    var involved=ws.indexOf(name)>-1||e.byUid===s.id||e.by===name;
+    if(!involved)return false;
+    if(wfPeriod==='today')return dkey(e.ts)===tk;
+    if(wfPeriod==='month')return dkey(e.ts).slice(0,7)===mk0;
+    return true;
+  });
+  var wLogs=logs.filter(function(l){
+    if(l.uid!==s.id&&l.name!==name)return false;
+    if(wfPeriod==='today')return dkey(l.ts)===tk;
+    if(wfPeriod==='month')return dkey(l.ts).slice(0,7)===mk0;
+    return true;
+  });
+
+  var washes=wEntries.filter(function(e){return e.type==='in'&&!e.subFee});
+  var solo=washes.filter(function(e){return workersOf(e).length<=1}).length;
+  var revShare=washes.reduce(function(sum,e){var c=Math.max(1,workersOf(e).length);return sum+(e.amount/c)},0);
+  var subsSold=wEntries.filter(function(e){return e.subFee}).length;
+  var delCount=wLogs.filter(function(l){return l.cat==='del'}).length;
+
+  var g=el('div','row3');
+  [['الغسلات',washes.length+' ('+solo+' منفرد)'],['حصة الدخل',f(revShare)+' د.ب'],['اشتراكات / حذف',subsSold+' اشتراك · '+delCount+' حذف']].forEach(function(k){
+    var d=el('div','miniStat');d.appendChild(el('b',null,k[1]));d.appendChild(el('span',null,k[0]));g.appendChild(d);
+  });
+  box.appendChild(g);
+
+  var act=el('div','tools');
+  act.appendChild(btn('🔐 الصلاحيات والرتبة','sm',function(){closeSheet('workerFileSheet');openWorkerPermSheet(s)}));
+  act.appendChild(btn('💾 تصدير عمليات العامل CSV','sm',function(){exportCsv(wEntries,'worker-'+name+'.csv')}));
+  box.appendChild(act);
+
+  box.appendChild(el('h3',null,'🧾 العمليات المسجلة أو المنفذة ('+wEntries.length+')'));
+  if(!wEntries.length)box.appendChild(el('div','empty','لا توجد عمليات في هذه الفترة.'));
+  wEntries.slice(0,40).forEach(function(e){
+    var r=el('div','item'),inf=el('div');
+    inf.appendChild(el('b',null,e.label));
+    inf.appendChild(el('small',null,ltr(dkey(e.ts))+' · '+(e.phone?fph(e.phone)+' · ':'')+'الطاقم: '+(workersOf(e).join('، ')||name)));
+    r.appendChild(inf);r.appendChild(el('span','amt '+e.type,f(e.amount)+' د.ب'));
+    box.appendChild(r);
+  });
+
+  box.appendChild(el('h3',null,'📜 سجل النشاط والرقابة ('+wLogs.length+')'));
+  if(!wLogs.length)box.appendChild(el('div','empty','لا توجد حركات مسجلة في سجل الرقابة.'));
+  wLogs.slice(0,40).forEach(function(l){
+    var r=el('div','logRow');
+    r.innerHTML='<b>'+l.action+'</b>'+(l.target?' · '+l.target:'')+'<br><small style="color:var(--mute)">'+ltr(dkey(l.ts))+' '+new Date(l.ts).toLocaleTimeString('ar-BH',{hour:'2-digit',minute:'2-digit'})+(l.details?' · '+l.details:'')+'</small>';
+    box.appendChild(r);
+  });
+
+  openSheet('workerFileSheet');
+}
+
+function renderOwner(){
+  if(!isOwner())return;
+  var sBox=$('owStaffList');sBox.innerHTML='';
+  if(!staff.length)sBox.appendChild(el('div','empty','لا يوجد أعضاء مسجلون بعد.'));
+  staff.forEach(function(s){
+    var c=el('div','card'),head=el('div','cardHead');
+    var p=pres.filter(function(x){return x.id===s.id})[0],on=p&&isOnline(p);
+    var h=el('b',null,(on?'🟢 ':'⚪ ')+(s.name||s.email||'بدون اسم'));
+    h.appendChild(el('span','badge info',rankLabel(s.role||'worker')));
+    if(s.disabled)h.appendChild(el('span','badge bad','موقوف'));
+    if(s.forcePwReset)h.appendChild(el('span','badge warn','مطلوب تغيير الباسورد'));
+    head.appendChild(h);
+    c.appendChild(head);
+    c.appendChild(el('small',null,(s.email||'')+(p&&p.ts?' · آخر تواجد: '+new Date(p.ts).toLocaleString('ar-BH',{day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}):'')));
+    var wCount=data.filter(function(e){return e.type==='in'&&!e.subFee&&(workersOf(e).indexOf(s.name)>-1||e.byUid===s.id)}).length;
+    c.appendChild(el('small',null,'إجمالي الغسلات المشارك فيها: '+wCount+' غسلة'));
+    var act=el('div','act');
+    act.appendChild(btn('📁 ملف العامل','sm',function(){openWorkerFile(s)}));
+    act.appendChild(btn('🔐 الصلاحيات والرتبة','sm',function(){openWorkerPermSheet(s)}));
+    c.appendChild(act);
+    sBox.appendChild(c);
+  });
+
+  var wf=$('logWorkerFilter'),curWf=wf.value;wf.innerHTML='<option value="">كل العمال</option>';
+  staff.forEach(function(s){var o=el('option',null,s.name||s.email);o.value=s.id;wf.appendChild(o)});
+  wf.value=curWf;
+  var af=$('logActFilter').value,lBox=$('owLogsList');lBox.innerHTML='';
+  var fLogs=logs.filter(function(l){
+    if(curWf&&l.uid!==curWf)return false;
+    if(af&&l.cat!==af)return false;
+    return true;
+  }).slice(0,100);
+  if(!fLogs.length)lBox.appendChild(el('div','empty','لا توجد حركات مسجلة تطابق الفلتر.'));
+  fLogs.forEach(function(l){
+    var r=el('div','logRow');
+    var badgeCls=l.cat==='del'?'bad':l.cat==='sub'?'ok':'info';
+    r.innerHTML='<span class="badge '+badgeCls+'">'+l.name+'</span> <b>'+l.action+'</b>'+(l.target?' · '+l.target:'')+
+      '<br><small style="color:var(--mute)">'+ltr(dkey(l.ts))+' '+new Date(l.ts).toLocaleTimeString('ar-BH',{hour:'2-digit',minute:'2-digit'})+(l.details?' · '+l.details:'')+'</small>';
+    lBox.appendChild(r);
+  });
+
+  var goals=cfg.goals||DEF.goals;
+  if(document.activeElement!==$('owGoalDay'))$('owGoalDay').value=goals.day||50;
+  if(document.activeElement!==$('owGoalMon'))$('owGoalMon').value=goals.month||1200;
+  if(document.activeElement!==$('owCommPct'))$('owCommPct').value=goals.commPct!=null?goals.commPct:10;
+  if(document.activeElement!==$('owWinMsg'))$('owWinMsg').value=goals.winMsg||DEF.goals.winMsg;
+
+  var tk=dkey(Date.now()),mk0=tk.slice(0,7);
+  var dayIn=totals(data.filter(function(e){return dkey(e.ts)===tk})).i;
+  var monIn=totals(data.filter(function(e){return dkey(e.ts).slice(0,7)===mk0})).i;
+  var gDay=Number(goals.day)||50,gMon=Number(goals.month)||1200;
+  var pDay=Math.min(100,Math.round((dayIn/Math.max(1,gDay))*100));
+  var pMon=Math.min(100,Math.round((monIn/Math.max(1,gMon))*100));
+  $('owGoalOut').innerHTML=
+    '<div style="margin-top:8px"><b>هدف اليوم:</b> '+f(dayIn)+' / '+f(gDay)+' د.ب ('+pDay+'%)'+
+    '<div class="prog'+(pDay>=100?' ok':'')+'"><i style="width:'+pDay+'%"></i></div></div>'+
+    '<div style="margin-top:8px"><b>هدف الشهر:</b> '+f(monIn)+' / '+f(gMon)+' د.ب ('+pMon+'%)'+
+    '<div class="prog'+(pMon>=100?' ok':'')+'"><i style="width:'+pMon+'%"></i></div></div>';
+
+  var cm=$('owCommMon').value||mk0,pct=(Number(goals.commPct)||0)/100;
+  var cBox=$('owCommOut');cBox.innerHTML='';
+  var wStats={};
+  data.filter(function(e){return e.type==='in'&&!e.subFee&&dkey(e.ts).slice(0,7)===cm}).forEach(function(e){
+    var ws=workersOf(e);if(!ws.length)ws=['غير محدد'];
+    var share=e.amount/ws.length;
+    ws.forEach(function(w){wStats[w]=wStats[w]||{n:0,rev:0};wStats[w].n++;wStats[w].rev+=share});
+  });
+  var wKeys=Object.keys(wStats).sort(function(a,b){return wStats[b].rev-wStats[a].rev});
+  if(!wKeys.length)cBox.appendChild(el('div','empty','لا توجد غسلات مسجلة في هذا الشهر.'));
+  wKeys.forEach(function(w,idx){
+    var st=wStats[w],comm=st.rev*pct;
+    kv(cBox,(idx===0?'🥇 ':idx===1?'🥈 ':idx===2?'🥉 ':'')+w,st.n+' غسلة · دخل '+f(st.rev)+' · عمولة '+f(comm)+' د.ب','in');
+  });
+
+  var pkBox=$('owPeakOut');pkBox.innerHTML='';
+  var hrs={},dows={},dowNames=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+  data.filter(function(e){return e.type==='in'&&!e.subFee}).forEach(function(e){
+    var dt=new Date(e.ts),h=dt.getHours(),dw=dowNames[dt.getDay()];
+    hrs[h]=(hrs[h]||0)+1;dows[dw]=(dows[dw]||0)+1;
+  });
+  var topH=Object.keys(hrs).sort(function(a,b){return hrs[b]-hrs[a]})[0];
+  var topD=Object.keys(dows).sort(function(a,b){return dows[b]-dows[a]})[0];
+  if(topH!=null){
+    var hNum=parseInt(topH,10),hStr=(hNum===0?'12 ص':hNum<12?hNum+' ص':hNum===12?'12 م':(hNum-12)+' م');
+    kv(pkBox,'🔥 ساعة الذروة الأكثر ازدحاماً','حوالي الساعة '+hStr+' ('+hrs[topH]+' غسلة)');
+    kv(pkBox,'📅 أكثر يوم في الأسبوع زحمة',topD+' ('+dows[topD]+' غسلة)');
+  }else{
+    pkBox.appendChild(el('div','empty','ستظهر التحليلات تلقائياً مع تراكم الغسلات.'));
+  }
+
+  var winBox=$('owWinList');winBox.innerHTML='';
+  var idles=buildCustMap().filter(function(c){return c.idleDays>=30}).sort(function(a,b){return b.n-a.n}).slice(0,15);
+  if(!idles.length)winBox.appendChild(el('div','empty','ممتاز! لا يوجد عملاء غائبون أكثر من 30 يوم.'));
+  idles.forEach(function(c){
+    var r=el('div','item'),inf=el('div');
+    inf.appendChild(el('b',null,ph(c.phone)+(c.plate?' · '+pl(c.plate):'')));
+    inf.appendChild(el('small',null,'غائب منذ '+c.idleDays+' يوم · زياراته السابقة: '+c.n));
+    r.appendChild(inf);
+    var a=el('a','btnlink','إرسال عرض واتساب');a.target='_blank';a.rel='noopener';
+    a.href='https://wa.me/'+waNum(c.phone)+'?text='+encodeURIComponent('السلام عليكم، '+($('owWinMsg').value||DEF.goals.winMsg));
+    r.appendChild(a);
+    winBox.appendChild(r);
+  });
+
+  var gd=cfg.guard||DEF.guard;
+  $('gdHideRev').checked=!!gd.hideRev;
+  $('gdReqPhone').checked=!!gd.reqPhone;
+  $('gdReqWorker').checked=!!gd.reqWorker;
+  $('gdLockOld').checked=!!gd.lockOld;
+
+  var rEd=$('owRanksEd');rEd.innerHTML='';
+  RANK_KEYS.forEach(function(rk){
+    var row=el('div','kv');
+    row.appendChild(el('span',null,rk));
+    var inp0=document.createElement('input');inp0.style.maxWidth='220px';inp0.value=rankLabel(rk);
+    inp0.onchange=function(){cfg.ranks=cfg.ranks||Object.assign({},DEF.ranks);cfg.ranks[rk]=this.value.trim()||DEF.ranks[rk];saveCfg();renderOwner()};
+    row.appendChild(inp0);
+    rEd.appendChild(row);
+  });
+}
+
+/* edit order */
+function openSheet(id){$(id).style.display='flex'}
+function closeSheet(id){$(id).style.display='none'}
+function showEdit(e){
+  if(!canModifyEntry(e)){toast('ليس لديك صلاحية تعديل هذه العملية');return}
+  editing=e;$('edLabel').value=e.label;$('edAmount').value=e.amount;$('edName').value=e.cname||'';$('edPhone').value=e.phone?fph(e.phone):'';$('edPlate').value=e.plate||'';
+  $('edVtype').value=vtypeOf(e);$('edNote').value=e.note||'';
+  if(e.pay)$('edPay').value=e.pay;$('edPaid').checked=paidOf(e);
+  edSelW=workersOf(e).slice();
+  $('edCust').style.display=e.type==='in'?'block':'none';
+  openSheet('editSheet');drawEdW();
+}
+function drawEdW(){wChips($('edWBox'),edSelW,drawEdW)}
+function saveEdit(){
+  if(!editing||!col)return;
+  var label=$('edLabel').value.trim(),amt=parseFloat($('edAmount').value);
+  if(!label){toast('اكتب الخدمة');return}
+  if(isNaN(amt)||amt<0){toast('اكتب المبلغ');return}
+  var u={label:label,amount:amt,note:$('edNote').value.trim()};
+  if(editing.type==='in'){u.pay=$('edPay').value;u.paid=$('edPaid').checked;u.cname=$('edName').value.trim();u.phone=nph($('edPhone').value)||$('edPhone').value.trim();u.plate=$('edPlate').value.trim();u.vtype=$('edVtype').value.trim();u.workers=edSelW.slice();u.worker=edSelW.join('، ')}
+  var oldLbl=editing.label,oldAmt=editing.amount;
+  col.doc(editing.id).update(u).then(function(){
+    addLog('del','تعديل عملية',label,'من ('+oldLbl+' '+f(oldAmt)+') إلى ('+label+' '+f(amt)+')');
+    toast('تم التعديل');closeSheet('editSheet');editing=null;
+  }).catch(function(){toast('تعذر التعديل، تأكد من صلاحيتك')});
+}
+
+/* export */
+function csvCell(v){v=v==null?'':String(v);return '"'+v.replace(/"/g,'""')+'"'}
+function saveFile(name,d){
+  try{
+    var blob=d instanceof Blob?d:new Blob([d],{type:'text/csv;charset=utf-8'});
+    var u=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=u;a.download=name;document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(u);a.remove()},4000);
+    toast('تم حفظ الملف');
+  }catch(err){toast('تعذر حفظ الملف')}
+}
+function exportCsv(list,name){
+  if(!list.length){toast('ما في عمليات للحفظ');return}
+  var rows=[['التاريخ','الوقت','النوع','الخدمة / البند','المبلغ (د.ب)','الدفع','حالة الدفع','رقم العميل','نوع المركبة','رقم المركبة','العمال','ملاحظة','رقم الإيصال']];
+  list.slice().sort(function(a,b){return a.ts-b.ts}).forEach(function(e){
+    var d=new Date(e.ts);
+    rows.push([dkey(e.ts),String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0'),e.type==='in'?'دخل':'مصروف',e.label,f(e.amount),e.pay||'',e.type==='in'?(paidOf(e)?'تم الدفع':'غير مدفوع'):'',e.phone||'',vtypeOf(e),e.plate||'',workersOf(e).join(' + '),e.note||'',e.type==='in'?rno(e):'']);
+  });
+  saveFile(name,'\ufeff'+rows.map(function(r){return r.map(csvCell).join(',')}).join('\r\n'));
+}
+
+/* receipts */
+var logoImg=new Image();
+if(LOGO_URI)logoImg.src=LOGO_URI;else logoImg.src='icon.png';
+
+function entryRcpt(e){
+  var d=new Date(e.ts),L=[],vt=vtypeOf(e),pd=paidOf(e),rows=[];
+  var sp=shopPhoneStr(),ig=shopInstaStr();
+  L.push('👑 '+(cfg.biz||'2jz wash'));
+  L.push('📞 اتصال / واتساب: '+ltr(sp));
+  L.push('📸 انستقرام: '+ig);
+  L.push('──────────────');
+  L.push('إيصال رقم: '+rno(e));rows.push(['رقم الإيصال',rno(e)]);
+  var dt=d.toLocaleDateString('ar-BH')+' '+d.toLocaleTimeString('ar-BH',{hour:'2-digit',minute:'2-digit'});
+  L.push('التاريخ: '+dt);rows.push(['التاريخ',dt]);
+  var cn=e.cname||custNameOf(e.phone);
+  if(cn){L.push('اسم العميل: '+cn);rows.push(['اسم العميل',cn])}
+  if(e.phone){L.push('رقم العميل: '+ph(e.phone));rows.push(['رقم العميل',ph(e.phone)])}
+  if(vt){L.push('نوع المركبة: '+vt);rows.push(['نوع المركبة',vt])}
+  if(e.plate){L.push('رقم المركبة: '+pl(e.plate));rows.push(['رقم المركبة',pl(e.plate)])}
+  L.push('الخدمة: '+e.label);rows.push(['الخدمة',e.label]);
+  if(e.note){L.push('ملاحظة: '+e.note);rows.push(['ملاحظة',e.note])}
+  L.push('المبلغ: '+f(e.amount)+' د.ب');
+  if(e.pay){L.push('الدفع: '+e.pay);rows.push(['الدفع',e.pay])}
+  L.push(pd?'الحالة: تم الدفع ✅':'الحالة: غير مدفوع');rows.push(['حالة الدفع',pd?'تم الدفع':'غير مدفوع']);
+  if(e.free)L.push('🎁 غسلة مجانية (مكافأة ولاء)');
+  if(e.subId)L.push('⭐ غسلة ضمن الاشتراك');
+  L.push('شكراً لتعاملكم 🙏');
+  return{no:rno(e),phone:e.phone,text:L.join('\n'),rows:rows,amount:e.amount,paid:pd,title:'إيصال',footer:e.free?'🎁 غسلة مجانية · شكراً لتعاملكم':(e.subId?'⭐ ضمن الاشتراك · شكراً لتعاملكم':'شكراً لتعاملكم')};
+}
+function subRcpt(s){
+  var L=[],rows=[],ben=(s.benefits||'').split('\n').map(function(t){return t.trim()}).filter(Boolean),
+      dt=new Date(s.ts).toLocaleDateString('ar-BH'),wsh=s.washes?String(s.washes):'غير محدود';
+  var sp=shopPhoneStr(),ig=shopInstaStr();
+  L.push('👑 '+(cfg.biz||'2jz wash'));
+  L.push('📞 اتصال / واتساب: '+ltr(sp));
+  L.push('📸 انستقرام: '+ig);
+  L.push('──────────────');
+  L.push('⭐ إيصال اشتراك شهري');
+  L.push('إيصال رقم: '+rno(s));rows.push(['رقم الإيصال',rno(s)]);
+  L.push('تاريخ الإصدار: '+dt);rows.push(['تاريخ الإصدار',dt]);
+  var cn2=s.cname||custNameOf(s.phone);
+  if(cn2){L.push('اسم العميل: '+cn2);rows.push(['اسم العميل',cn2])}
+  L.push('رقم العميل: '+ph(s.phone));rows.push(['رقم العميل',ph(s.phone)]);
+  if(s.vtype){L.push('نوع المركبة: '+s.vtype);rows.push(['نوع المركبة',s.vtype])}
+  if(s.plate){L.push('رقم المركبة: '+pl(s.plate));rows.push(['رقم المركبة',pl(s.plate)])}
+  L.push('الباقة: '+s.plan);rows.push(['الباقة',s.plan]);
+  L.push('مدة الاشتراك: '+s.days+' يوم');
+  L.push('من: '+ltr(s.start)+'   إلى: '+ltr(s.end));
+  rows.push(['مدة الاشتراك',s.days+' يوم']);rows.push(['الفترة','من '+ltr(s.start)+' إلى '+ltr(s.end)]);
+  L.push('عدد الغسلات: '+wsh);rows.push(['عدد الغسلات',wsh]);
+  if(ben.length){L.push('المزايا:');ben.forEach(function(b){L.push('• '+b)});rows.push(['المزايا',ben.map(function(b){return '• '+b})])}
+  L.push('المبلغ: '+f(s.price)+' د.ب');
+  if(s.pay){L.push('الدفع: '+s.pay);rows.push(['الدفع',s.pay])}
+  L.push(s.paid?'الحالة: تم الدفع ✅':'الحالة: غير مدفوع');rows.push(['حالة الدفع',s.paid?'تم الدفع':'غير مدفوع']);
+  if(s.note){L.push('ملاحظة: '+s.note);rows.push(['ملاحظة',s.note])}
+  L.push('شكراً لثقتكم 🙏');
+  return{no:rno(s),phone:s.phone,text:L.join('\n'),rows:rows,amount:s.price,paid:!!s.paid,title:'إيصال اشتراك شهري ⭐',footer:'شكراً لثقتكم'};
+}
+function showRcpt(r){
+  curR=r;$('rcptText').value=r.text;
+  $('rcWa').href='https://wa.me/'+waNum(r.phone)+'?text='+encodeURIComponent(r.text);
+  openSheet('rcptSheet');
+}
+function wrapText(ctx,text,maxW){var words=String(text).split(' '),lines=[],cur='';words.forEach(function(w){var t=cur?cur+' '+w:w;if(ctx.measureText(t).width>maxW&&cur){lines.push(cur);cur=w}else{cur=t}});if(cur)lines.push(cur);return lines}
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);
+  ctx.arcTo(x+w,y,x+w,y+h,r);
+  ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r);
+  ctx.arcTo(x,y,x+w,y,r);
+  ctx.closePath();
+}
+function drawReceipt(r){
+  var hasLogo=logoImg&&logoImg.complete&&logoImg.naturalWidth>0;
+  var W=900,P=60,HH=hasLogo?330:(r.title?175:135),pd=r.paid,c=document.createElement('canvas'),x=c.getContext('2d');
+  x.font='700 34px Tajawal, sans-serif';
+  var lay=r.rows.map(function(row){
+    var v=Array.isArray(row[1])?row[1]:[row[1]],lines=[];
+    v.forEach(function(t){lines=lines.concat(wrapText(x,t,W-2*P))});
+    return{l:row[0],lines:lines};
+  });
+  var sum=lay.reduce(function(s,q){return s+44+q.lines.length*46+22},0),y0=HH+50,H=y0+sum+10+110+185;
+  c.width=W;c.height=H;x=c.getContext('2d');x.direction='rtl';
+  x.fillStyle='#FFFFFF';x.fillRect(0,0,W,H);
+
+  var hg=x.createLinearGradient(0,0,W,HH);
+  hg.addColorStop(0,'#0B0E13');
+  hg.addColorStop(0.65,'#171A21');
+  hg.addColorStop(1,'#5E0F16');
+  x.fillStyle=hg;x.fillRect(0,0,W,HH);
+  var cg=x.createLinearGradient(0,0,W,0);
+  cg.addColorStop(0,'#C8202B');cg.addColorStop(0.35,'#F5F6F8');cg.addColorStop(0.55,'#9EA2AA');cg.addColorStop(1,'#C8202B');
+  x.fillStyle=cg;x.fillRect(0,0,W,10);
+  x.fillStyle='#C8202B';x.fillRect(0,HH-8,W,8);
+  x.fillStyle='#D2D4D9';x.fillRect(0,HH-12,W,3);
+
+  var titleY=82;
+  if(hasLogo){
+    var lw=160,lx=(W-lw)/2,ly=30;
+    x.save();
+    roundRect(x,lx,ly,lw,lw,30);
+    x.fillStyle='#FFFFFF';x.fill();
+    x.lineWidth=4;x.strokeStyle='#D2D4D9';x.stroke();
+    x.clip();
+    x.drawImage(logoImg,lx+2,ly+2,lw-4,lw-4);
+    x.restore();
+    titleY=252;
+  }
+
+  x.fillStyle='#FFFFFF';x.textAlign='center';x.font='800 48px Tajawal, sans-serif';
+  x.fillText(cfg.biz||'2jz wash',W/2,titleY);
+  if(r.title){
+    x.fillStyle='#D2D4D9';x.font='600 30px Tajawal, sans-serif';
+    x.fillText(r.title,W/2,titleY+44);
+  }
+
+  var y=y0;
+  lay.forEach(function(q){
+    x.textAlign='right';x.fillStyle='#5A606C';x.font='500 26px Tajawal, sans-serif';x.fillText(q.l,W-P,y+28);
+    x.fillStyle='#0B0E13';x.font='700 34px Tajawal, sans-serif';
+    q.lines.forEach(function(t,i){x.fillText(t,W-P,y+44+i*46+34)});
+    var rh=44+q.lines.length*46+22;
+    x.strokeStyle='#D9DCE2';x.lineWidth=2;x.beginPath();x.moveTo(P,y+rh-8);x.lineTo(W-P,y+rh-8);x.stroke();
+    y+=rh;
+  });
+
+  var by=y+10;
+  x.fillStyle=pd?'#C8202B':'#0B0E13';
+  roundRect(x,P,by,W-2*P,110,16);x.fill();
+  x.fillStyle='#FFFFFF';x.textAlign='right';x.font='700 36px Tajawal, sans-serif';x.fillText('المبلغ',W-P-30,by+70);
+  x.textAlign='left';x.font='800 50px Tajawal, sans-serif';x.fillText(f(r.amount)+' د.ب',P+30,by+72);
+  if(pd){x.textAlign='center';x.font='700 34px Tajawal, sans-serif';x.fillText('تم الدفع ✓',W/2,by+70)}
+
+  x.textAlign='center';x.fillStyle='#0B0E13';x.font='700 28px Tajawal, sans-serif';
+  x.fillText(r.footer||'شكراً لتعاملكم',W/2,by+162);
+
+  x.fillStyle='#F1F2F4';
+  roundRect(x,P,by+184,W-2*P,74,14);x.fill();
+  x.strokeStyle='#D9DCE2';x.lineWidth=1.5;x.stroke();
+
+  x.fillStyle='#0B0E13';x.font='700 25px Tajawal, sans-serif';
+  x.fillText('اتصال / واتساب: '+ltr(shopPhoneStr())+'   |   انستقرام: '+shopInstaStr(),W/2,by+230);
+  return c;
+}
+function makePdf(jpg,w,h){
+  var pw=Math.round(w/3*100)/100,pH=Math.round(h/3*100)/100,enc=new TextEncoder(),parts=[],offs=[],len=0;
+  function add(v){var b=typeof v==='string'?enc.encode(v):v;parts.push(b);len+=b.length}
+  function obj(n,body){offs[n]=len;add(n+' 0 obj\n'+body+'\nendobj\n')}
+  add('%PDF-1.4\n');
+  obj(1,'<< /Type /Catalog /Pages 2 0 R >>');
+  obj(2,'<< /Type /Pages /Kids [3 0 R] /Count 1 >>');
+  obj(3,'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 '+pw+' '+pH+'] /Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>');
+  var cs='q '+pw+' 0 0 '+pH+' 0 0 cm /Im0 Do Q';
+  obj(4,'<< /Length '+cs.length+' >>\nstream\n'+cs+'\nendstream');
+  offs[5]=len;add('5 0 obj\n<< /Type /XObject /Subtype /Image /Width '+w+' /Height '+h+' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '+jpg.length+' >>\nstream\n');
+  add(jpg);add('\nendstream\nendobj\n');
+  var xref=len,xs='xref\n0 6\n0000000000 65535 f \n';
+  for(var i=1;i<=5;i++)xs+=String(offs[i]).padStart(10,'0')+' 00000 n \n';
+  add(xs+'trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n'+xref+'\n%%EOF');
+  return new Blob(parts,{type:'application/pdf'});
+}
+function rcptPdf(r){
+  var go=function(){
+    try{
+      var c=drawReceipt(r),bin=atob(c.toDataURL('image/jpeg',0.92).split(',')[1]),u=new Uint8Array(bin.length);
+      for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);
+      saveFile('receipt-'+r.no+'.pdf',makePdf(u,c.width,c.height));
+    }catch(err){toast('تعذر إنشاء ملف PDF')}
+  };
+  var tasks=[];
+  if(document.fonts&&document.fonts.load){
+    var s='المغسلة الإيصال 123';
+    tasks.push(document.fonts.load('500 26px Tajawal',s),document.fonts.load('700 34px Tajawal',s),document.fonts.load('800 48px Tajawal',s));
+  }
+  if(logoImg&&logoImg.decode&&!logoImg.complete){tasks.push(logoImg.decode().catch(function(){}))}
+  if(tasks.length){Promise.all(tasks).then(go,go)}else{go()}
+}
+
+/* settings editor */
+function inp(val,tp,fn,pholder){var i=document.createElement('input');i.type=tp;i.value=val;if(pholder)i.placeholder=pholder;if(tp==='number'){i.step='0.001';i.inputMode='decimal'}i.onchange=fn;return i}
+function rowEd(box,list,i,isAddon){
+  var it=list[i],d=el('div','ed');
+  d.appendChild(inp(it.name,'text',function(){it.name=this.value.trim()||it.name;saveCfg();addLog('cfg','تعديل خدمة',it.name,'')},'الاسم'));
+  d.appendChild(inp(it.price,'number',function(){var p=parseFloat(this.value);if(p>=0){it.price=p;saveCfg();addLog('cfg','تعديل سعر',it.name,f(p)+' د.ب')}},'السعر'));
+  var x=btn('حذف','del',function(){
+    if(x.dataset.ok){list.splice(i,1);saveCfg();edRender();chips()}else{x.dataset.ok='1';x.textContent='تأكيد؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف'},3000)}
+  });
+  d.appendChild(x);
+  if(isAddon){
+    var s=document.createElement('select'),o=el('option',null,'تنطبق على كل المركبات');o.value='';s.appendChild(o);
+    cfg.vehicles.forEach(function(v){var q=el('option',null,'فقط: '+v.name);q.value=v.id;s.appendChild(q)});
+    s.value=it.only||'';s.onchange=function(){it.only=this.value;saveCfg()};d.appendChild(s);
+  }
+  box.appendChild(d);
+}
+function planRow(box,i){
+  var p=cfg.plans[i],d=el('div','plan');
+  var n=inp(p.name,'text',function(){p.name=this.value.trim()||p.name;saveCfg()},'اسم القالب');n.style.marginBottom='6px';d.appendChild(n);
+  var r1=el('div','row'),a=el('div'),b=el('div');
+  a.appendChild(el('label',null,'السعر (د.ب)'));a.appendChild(inp(p.price,'number',function(){var v=parseFloat(this.value);if(v>=0){p.price=v;saveCfg()}}));
+  b.appendChild(el('label',null,'المدة (أيام)'));b.appendChild(inp(p.days||30,'number',function(){var v=parseInt(this.value,10);if(v>0){p.days=v;saveCfg()}}));
+  r1.appendChild(a);r1.appendChild(b);d.appendChild(r1);
+  var w=el('div');w.appendChild(el('label',null,'عدد الغسلات (0 = غير محدود)'));w.appendChild(inp(p.washes||0,'number',function(){p.washes=parseInt(this.value,10)||0;saveCfg()}));d.appendChild(w);
+  var l=el('label',null,'المزايا (كل ميزة في سطر)');l.style.marginTop='6px';d.appendChild(l);
+  var t=document.createElement('textarea');t.value=p.benefits||'';t.onchange=function(){p.benefits=this.value.trim();saveCfg()};d.appendChild(t);
+  var x=btn('حذف القالب','del',function(){
+    if(x.dataset.ok){cfg.plans.splice(i,1);saveCfg();edRender()}else{x.dataset.ok='1';x.textContent='تأكيد الحذف؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف القالب'},3000)}
+  });
+  x.style.marginTop='6px';d.appendChild(x);box.appendChild(d);
+}
+function edRender(){
+  var V=$('edV'),A=$('edA'),P=$('edP');V.innerHTML='';A.innerHTML='';P.innerHTML='';
+  cfg.vehicles.forEach(function(_,i){rowEd(V,cfg.vehicles,i,false)});
+  cfg.addons.forEach(function(_,i){rowEd(A,cfg.addons,i,true)});
+  (cfg.plans||[]).forEach(function(_,i){planRow(P,i)});
+  renderSubForm();renderBkVeh();
+}
+
+/* team and presence */
+function beat(){
+  if(!presCol||!me.uid||state!=='app'||!me.name)return;
+  presCol.doc(me.uid).set({name:me.name,ts:Date.now()}).catch(function(){});
+}
+function isOnline(p){return p.ts>Date.now()-100000}
+function renderOnline(){
+  var on=pres.filter(isOnline),box=$('online');
+  if(!on.length){box.textContent='';return}
+  box.textContent='🟢 متصل الآن ('+on.length+'): '+on.map(function(p){return p.name+(p.id===me.uid?' (أنت)':'')}).join('، ');
+}
+function renderTeam(){
+  var box=$('team');box.innerHTML='';
+  if(!staff.length){box.appendChild(el('div','empty','ما في أعضاء بعد.'));return}
+  staff.forEach(function(s){
+    var p=pres.filter(function(x){return x.id===s.id})[0],on=p&&isOnline(p),r=el('div','kv');
+    var left=el('span',null,(on?'🟢 ':'⚪ ')+s.name+(s.id===me.uid?' (أنت)':''));
+    left.appendChild(el('span','badge info',rankLabel(s.role||'worker')));
+    r.appendChild(left);
+    r.appendChild(el('small',null,on?'متصل الآن':(p&&p.ts?'آخر ظهور '+new Date(p.ts).toLocaleString('ar-BH',{day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}):'لم يدخل بعد')));
+    box.appendChild(r);
+  });
+}
+
+/* wiring */
+Array.prototype.forEach.call($('nav').children,function(b){b.onclick=function(){showView(b.getAttribute('data-v'))}});
+$('themeBtn').onclick=function(){var t=curTheme()==='dark'?'light':'dark';try{localStorage.setItem('washlog.theme',t)}catch(e){}applyTheme(t)};
+$('alertBtn').onclick=function(){renderAlerts();openSheet('alertSheet')};
+$('alertStrip').onclick=function(){renderAlerts();openSheet('alertSheet')};
+$('closeAlerts').onclick=function(){closeSheet('alertSheet')};
+$('tabIn').onclick=function(){setType('in')};
+$('tabOut').onclick=function(){setType('out')};
+$('save').onclick=save;$('rep').onclick=report;
+$('pay').onchange=function(){$('paid').checked=this.value!=='آجل'};
+$('sbPay').onchange=function(){$('sbPaid').checked=this.value!=='آجل'};
+$('phone').oninput=function(){if(freeNext||subUse){freeNext=false;subUse=null;stripTags();$('amount').value='';if(veh)calc()}loyal()};
+$('phone').onchange=function(){var p=this.value.trim();if(!p)return;this.value=fph(p);if($('plate').value)return;var n=nph(p),m=data.filter(function(e){return e.phone&&nph(e.phone)===n&&e.plate})[0];if(m)$('plate').value=m.plate};
+$('sbPhone').onchange=function(){var p=this.value.trim();if(!p)return;this.value=fph(p);if($('sbPlate').value)return;var n=nph(p),m=data.filter(function(e){return e.phone&&nph(e.phone)===n&&e.plate})[0];if(m)$('sbPlate').value=m.plate};
+$('sbPlan').onchange=function(){var p=planByName(this.value.trim());if(p){$('sbPrice').value=p.price;$('sbDays').value=p.days||30;$('sbWashes').value=p.washes||0;$('sbBen').value=p.benefits||''}};
+$('sbSave').onclick=saveSub;$('sbCancel').onclick=clearSubForm;$('subQ').oninput=renderSubs;
+
+/* queue wiring */
+$('bkKind').onchange=function(){$('bkTimeRow').style.display=this.value==='appt'?'grid':'none'};
+[['phone','cname'],['bkPhone','bkName'],['sbPhone','sbName']].forEach(function(p){
+  $(p[0]).addEventListener('change',function(){if($(p[1]).value.trim())return;var nm=custNameOf(this.value);if(nm)$(p[1]).value=nm});
+});
+$('bkPhone').onchange=function(){var p=this.value.trim();if(!p)return;this.value=fph(p);var n=nph(p),m=data.filter(function(e){return e.phone&&nph(e.phone)===n})[0];if(m){if(!$('bkPlate').value&&m.plate)$('bkPlate').value=m.plate;if(!$('bkVeh').value&&vtypeOf(m))$('bkVeh').value=vtypeOf(m)}};
+$('bkVeh').onchange=function(){var v=cfg.vehicles.filter(function(x){return x.name===this.value}.bind(this))[0];if(v&&!$('bkPrice').value)$('bkPrice').value=v.price};
+$('bkSave').onclick=saveBk;$('bkCancel').onclick=clearBkForm;
+Array.prototype.forEach.call($('bkFilter').children,function(b){b.onclick=function(){
+  bkF=b.getAttribute('data-f');
+  Array.prototype.forEach.call($('bkFilter').children,function(x){x.className=x===b?'on':''});
+  renderQueue();
+}});
+
+/* customer filters wiring */
+$('custQ').oninput=renderCust;$('custSort').onchange=renderCust;
+Array.prototype.forEach.call($('custFilter').children,function(b){b.onclick=function(){
+  custF=b.getAttribute('data-f');
+  Array.prototype.forEach.call($('custFilter').children,function(x){x.className=x===b?'on':''});
+  renderCust();
+}});
+
+/* extend subscription wiring */
+Array.prototype.forEach.call($('extPresets').children,function(b){b.onclick=function(){$('extDays').value=b.getAttribute('data-d');updateExtPreview()}});
+$('extDays').oninput=updateExtPreview;$('extWashes').oninput=updateExtPreview;
+$('extSave').onclick=saveExtend;$('extCancel').onclick=function(){closeSheet('extSheet');extendingSub=null};
+
+/* owner tabs & actions wiring */
+Array.prototype.forEach.call($('owTabs').children,function(b){b.onclick=function(){
+  var t=b.getAttribute('data-ot');
+  Array.prototype.forEach.call($('owTabs').children,function(x){x.className=x===b?'on':''});
+  ['ow-team','ow-logs','ow-ideas','ow-guard'].forEach(function(id){$(id).style.display=id===t?'block':'none'});
+  renderOwner();
+}});
+$('logWorkerFilter').onchange=renderOwner;$('logActFilter').onchange=renderOwner;
+$('owCommMon').value=dkey(Date.now()).slice(0,7);$('owCommMon').onchange=renderOwner;
+$('owGoalDay').onchange=function(){cfg.goals=cfg.goals||Object.assign({},DEF.goals);cfg.goals.day=parseFloat(this.value)||0;saveCfg();renderOwner()};
+$('owGoalMon').onchange=function(){cfg.goals=cfg.goals||Object.assign({},DEF.goals);cfg.goals.month=parseFloat(this.value)||0;saveCfg();renderOwner()};
+$('owCommPct').onchange=function(){cfg.goals=cfg.goals||Object.assign({},DEF.goals);cfg.goals.commPct=parseFloat(this.value)||0;saveCfg();renderOwner()};
+$('owWinMsg').onchange=function(){cfg.goals=cfg.goals||Object.assign({},DEF.goals);cfg.goals.winMsg=this.value.trim();saveCfg()};
+$('owCashCheck').onclick=function(){
+  var actual=parseFloat($('owCashActual').value);
+  if(isNaN(actual)){toast('اكتب مبلغ الكاش الفعلي');return}
+  var tk=dkey(Date.now()),sysCash=data.filter(function(e){return dkey(e.ts)===tk&&e.type==='in'&&e.pay==='كاش'&&paidOf(e)}).reduce(function(s,e){return s+e.amount},0);
+  var diff=actual-sysCash,box=$('owCashOut');box.innerHTML='';
+  kv(box,'كاش النظام المسجل اليوم',f(sysCash)+' د.ب');
+  kv(box,'الكاش الفعلي بالدرج',f(actual)+' د.ب');
+  kv(box,'النتيجة',Math.abs(diff)<0.001?'✅ مطابق تماماً (0.000 د.ب)':(diff>0?'➕ زيادة +'+f(diff)+' د.ب':'⚠️ عجز '+f(diff)+' د.ب'),Math.abs(diff)<0.001?'in':'out');
+};
+['gdHideRev','gdReqPhone','gdReqWorker','gdLockOld'].forEach(function(id){
+  $(id).onchange=function(){
+    cfg.guard=cfg.guard||Object.assign({},DEF.guard);
+    cfg.guard.hideRev=$('gdHideRev').checked;
+    cfg.guard.reqPhone=$('gdReqPhone').checked;
+    cfg.guard.reqWorker=$('gdReqWorker').checked;
+    cfg.guard.lockOld=$('gdLockOld').checked;
+    saveCfg();syncRoleUI();addLog('cfg','تحديث قواعد حماية الموقع','','');toast('تم حفظ قواعد الحماية');
+  };
+});
+
+/* owner worker permission modal wiring */
+$('wpRank').onchange=function(){
+  var pr=RANK_PRESETS[this.value]||RANK_PRESETS.worker;
+  Array.prototype.forEach.call($('wpPermsBox').querySelectorAll('input[type=checkbox]'),function(cb){cb.checked=!!pr[cb.dataset.pk]});
+};
+$('wpResetEmail').onclick=function(){
+  if(!wpTarget||!wpTarget.email||!auth){toast('هذا العامل ليس لديه إيميل مسجل');return}
+  auth.sendPasswordResetEmail(wpTarget.email).then(function(){
+    addLog('cfg','إرسال رابط إعادة تعيين باسورد',wpTarget.name,wpTarget.email);
+    toast('تم إرسال رابط تغيير الباسورد إلى '+wpTarget.email);
+  }).catch(function(){toast('تعذر إرسال الرابط')});
+};
+$('wpForcePw').onclick=function(){
+  if(!wpTarget||!staffCol)return;
+  staffCol.doc(wpTarget.id).update({forcePwReset:true}).then(function(){
+    addLog('cfg','تفعيل إجبار تغيير الباسورد',wpTarget.name,'');
+    toast('سيُطلب من العامل كتابة باسورد جديد فور دخوله');
+  }).catch(function(){toast('تعذر التحديث')});
+};
+$('wpSave').onclick=function(){
+  if(!wpTarget||!staffCol)return;
+  var newName=$('wpName').value.trim()||wpTarget.name,newRole=$('wpRank').value,dis=$('wpDisabled').checked,perms={};
+  Array.prototype.forEach.call($('wpPermsBox').querySelectorAll('input[type=checkbox]'),function(cb){perms[cb.dataset.pk]=cb.checked});
+  if(newRole==='owner'&&!cfg.ownerUid){cfg.ownerUid=wpTarget.id;saveCfg()}
+  staffCol.doc(wpTarget.id).update({name:newName,role:newRole,disabled:dis,perms:perms}).then(function(){
+    addLog('cfg','تعديل صلاحيات/رتبة عامل',newName,'الرتبة: '+rankLabel(newRole)+(dis?' (حساب موقوف)':''));
+    toast('تم حفظ صلاحيات العامل');closeSheet('workerPermSheet');wpTarget=null;
+  }).catch(function(){toast('تعذر حفظ الصلاحيات')});
+};
+$('wpCancel').onclick=function(){closeSheet('workerPermSheet');wpTarget=null};
+
+/* owner create new worker account */
+$('openNewWorker').onclick=function(){
+  $('nwName').value='';$('nwEmail').value='';$('nwPass').value='';$('nwForcePw').checked=true;
+  var selR=$('nwRank');selR.innerHTML='';
+  RANK_KEYS.forEach(function(k){var o=el('option',null,rankLabel(k));o.value=k;selR.appendChild(o)});
+  selR.value='worker';
+  openSheet('newWorkerSheet');
+};
+$('nwCancel').onclick=function(){closeSheet('newWorkerSheet')};
+$('nwCreate').onclick=function(){
+  var name=$('nwName').value.trim(),email=$('nwEmail').value.trim(),pass=$('nwPass').value,role=$('nwRank').value,fp=$('nwForcePw').checked;
+  if(!name){toast('اكتب اسم العامل');return}
+  if(!email){toast('اكتب الإيميل');return}
+  if(!pass||pass.length<6){toast('كلمة المرور يجب أن تكون ٦ أحرف على الأقل');return}
+  var appName='secApp_'+Date.now(),secApp=null;
+  try{
+    secApp=firebase.initializeApp(FIREBASE_CONFIG,appName);
+    secApp.auth().createUserWithEmailAndPassword(email,pass).then(function(cred){
+      var uid=cred.user.uid;
+      return staffCol.doc(uid).set({
+        name:name,email:email,role:role,perms:Object.assign({},RANK_PRESETS[role]||RANK_PRESETS.worker),
+        disabled:false,forcePwReset:fp,ts:Date.now()
+      }).then(function(){
+        addLog('cfg','إنشاء حساب عامل جديد',name,email+' · '+rankLabel(role));
+        toast('تم إنشاء حساب العامل بنجاح');
+        closeSheet('newWorkerSheet');
+        secApp.auth().signOut().then(function(){secApp.delete()},function(){secApp.delete()});
+      });
+    }).catch(function(err){
+      if(secApp)secApp.delete();
+      toast('تعذر إنشاء الحساب: '+((err&&err.message)||'تأكد من صيغة الإيميل وأنه غير مستخدم'));
+    });
+  }catch(e){if(secApp)secApp.delete();toast('تعذر إنشاء الحساب')}
+};
+
+$('wfClose').onclick=function(){closeSheet('workerFileSheet');wfTarget=null};
+$('cdClose').onclick=function(){closeSheet('custDetailSheet')};
+
+/* sheets & misc wiring */
+$('rcCopy').onclick=function(){var r=$('rcptText');r.focus();r.select();try{document.execCommand('copy');toast('تم النسخ')}catch(e){}};
+$('rcClose').onclick=function(){closeSheet('rcptSheet')};
+$('rcPdf').onclick=function(){if(curR)rcptPdf(curR)};
+$('edSave').onclick=saveEdit;$('edCancel').onclick=function(){closeSheet('editSheet');editing=null};
+['alertSheet','editSheet','extSheet','rcptSheet','workerPermSheet','newWorkerSheet','workerFileSheet','custDetailSheet'].forEach(function(id){
+  $(id).onclick=function(ev){if(ev.target===$(id))closeSheet(id)};
+});
+$('mon').value=dkey(Date.now()).slice(0,7);$('mon').onchange=renderMonth;
+$('monExp').onclick=function(){var m=$('mon').value;exportCsv(data.filter(function(e){return dkey(e.ts).slice(0,7)===m}),'wash-log-'+m+'.csv')};
+$('expDate').value=dkey(Date.now());
+$('expDay').onclick=function(){var k=$('expDate').value;exportCsv(data.filter(function(e){return dkey(e.ts)===k}),'wash-log-'+k+'.csv')};
+$('expAll').onclick=function(){exportCsv(data,'wash-log-all.csv')};
+$('biz').onchange=function(){if(!can('editSettings'))return;cfg.biz=this.value.trim();saveCfg();applyBiz()};
+$('shopPhone').onchange=function(){if(!can('editSettings'))return;cfg.shopPhone=this.value.trim()||'+973 3897 4280';saveCfg();applyBiz()};
+$('shopInsta').onchange=function(){if(!can('editSettings'))return;cfg.shopInsta=this.value.trim().replace(/^@/,'')||'2jz.bh';saveCfg();applyBiz()};
+$('loyN').onchange=function(){if(!can('editSettings'))return;var n=parseInt(this.value,10);cfg.loyal=n>1?n:10;saveCfg();render()};
+$('addV').onclick=function(){if(!can('editSettings'))return;cfg.vehicles.push({id:'v'+Date.now(),name:'خدمة جديدة',price:0});saveCfg();edRender();chips()};
+$('addA').onclick=function(){if(!can('editSettings'))return;cfg.addons.push({id:'a'+Date.now(),name:'إضافة جديدة',price:0,only:''});saveCfg();edRender();chips()};
+$('addP').onclick=function(){if(!can('editSettings'))return;cfg.plans=cfg.plans||[];cfg.plans.push({id:'p'+Date.now(),name:'اشتراك شهري',price:0,days:30,washes:0,benefits:''});saveCfg();edRender()};
+$('myName2').onchange=function(){
+  var n=this.value.trim();
+  if(n&&staffCol&&me.uid){staffCol.doc(me.uid).set({name:n,email:me.email||'',ts:Date.now()},{merge:true}).then(function(){toast('تم حفظ الاسم');beat()})}
+};
+$('nameSave').onclick=function(){
+  var n=$('myName').value.trim();if(!n){toast('اكتب اسمك');return}
+  if(!staffCol||!me.uid)return;
+  var makeOwner=(!cfg.ownerUid&&!staff.some(function(s){return s.role==='owner'}));
+  var role=makeOwner?'owner':'worker';
+  if(makeOwner){cfg.ownerUid=me.uid;saveCfg()}
+  staffCol.doc(me.uid).set({name:n,email:me.email||'',role:role,perms:Object.assign({},RANK_PRESETS[role]),disabled:false,forcePwReset:false,ts:Date.now()},{merge:true}).catch(function(){toast('تعذر حفظ الاسم')});
+};
+$('today').textContent=new Date().toLocaleDateString('ar-BH',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+applyTheme(curTheme());
+clearSubForm();clearBkForm();edRender();setType('in');render();
+setInterval(function(){if(document.visibilityState!=='hidden')beat()},40000);
+setInterval(function(){renderOnline();renderTeam();renderSubs();renderQueue();renderAlerts()},20000);
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')beat()});
+
+/* database */
+function sub(limit){
+  LIMIT=limit;if(unsubE)unsubE();
+  unsubE=col.orderBy('ts','desc').limit(limit).onSnapshot(function(snap){
+    clearTimeout(timer);
+    data=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});
+    status('متصل: أي تسجيل يظهر عند الكل مباشرة');render();
+  },function(){
+    if(limit>1000){sub(1000)}else{clearTimeout(timer);status('تعذر قراءة السجل المشترك.',true)}
+  });
+}
+function rulesErr(what){return function(){status('تعذر قراءة '+what+'. حدّث قواعد Firestore.',true)}}
+function startDb(fdb,u){
+  FDB=fdb;me.uid=u.uid;me.email=u.email||'';ownerBooted=false;
+  col=fdb.collection('entries');subCol=fdb.collection('subs');bkCol=fdb.collection('bookings');
+  logCol=fdb.collection('logs');staffCol=fdb.collection('staff');presCol=fdb.collection('presence');cfgRef=fdb.doc('config/prices');
+
+  unsubs.push(cfgRef.onSnapshot(function(s){
+    var d=s.exists&&s.data();
+    cfg=d&&d.vehicles?{
+      vehicles:d.vehicles,addons:d.addons||[],plans:d.plans||[],biz:d.biz||'',loyal:d.loyal||10,
+      shopPhone:d.shopPhone||DEF.shopPhone,shopInsta:d.shopInsta||DEF.shopInsta,
+      ownerUid:d.ownerUid||'',ranks:Object.assign({},DEF.ranks,d.ranks||{}),
+      guard:Object.assign({},DEF.guard,d.guard||{}),goals:Object.assign({},DEF.goals,d.goals||{})
+    }:JSON.parse(JSON.stringify(DEF));
+    if(document.activeElement!==$('biz'))$('biz').value=cfg.biz||'';
+    if(document.activeElement!==$('shopPhone')&&$('shopPhone'))$('shopPhone').value=shopPhoneStr();
+    if(document.activeElement!==$('shopInsta')&&$('shopInsta'))$('shopInsta').value=shopInstaStr();
+    applyBiz();
+    if(document.activeElement!==$('loyN'))$('loyN').value=cfg.loyal||10;
+    if(!$('v-set').contains(document.activeElement))edRender();else{renderSubForm();renderBkVeh()}
+    syncRoleUI();chips();loyal();if(curView==='v-owner'&&isOwner())renderOwner();
+  },function(){}));
+
+  unsubs.push(subCol.onSnapshot(function(snap){
+    subs=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});render();
+  },rulesErr('الاشتراكات')));
+
+  unsubs.push(bkCol.onSnapshot(function(snap){
+    bookings=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});renderQueue();renderAlerts();
+  },function(){}));
+
+  unsubs.push(logCol.orderBy('ts','desc').limit(300).onSnapshot(function(snap){
+    logs=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});
+    if(curView==='v-owner'&&isOwner())renderOwner();
+  },function(){}));
+
+  var staffReady=false;
+  unsubs.push(staffCol.onSnapshot(function(snap){
+    staff=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});
+    var m=staff.filter(function(s){return s.id===me.uid})[0];
+    if(m&&!m.role&&!ownerBooted&&!snap.metadata.fromCache){
+      ownerBooted=true;
+      var hasOwner=staff.some(function(s){return s.role==='owner'})||(cfg.ownerUid&&cfg.ownerUid!==me.uid);
+      var r0=hasOwner?'worker':'owner';
+      if(r0==='owner'&&!cfg.ownerUid){cfg.ownerUid=me.uid;saveCfg()}
+      staffCol.doc(me.uid).set({role:r0,perms:Object.assign({},RANK_PRESETS[r0]),email:me.email||m.email||''},{merge:true});
+    }
+    me.name=m?m.name:'';
+    me.role=(m&&m.role)?m.role:((cfg.ownerUid===me.uid)?'owner':'worker');
+    me.perms=Object.assign({},RANK_PRESETS[me.role]||RANK_PRESETS.worker,(m&&m.perms)||{});
+    me.disabled=!!(m&&m.disabled);
+    me.forcePwReset=!!(m&&m.forcePwReset);
+
+    if(document.activeElement!==$('myName2'))$('myName2').value=me.name;
+
+    if(me.disabled&&!isOwner()){
+      setState('disabled');
+    }else if(me.forcePwReset){
+      setState('forcePw');
+    }else if(me.name){
+      if(state!=='app')setState('app');
+      else{syncRoleUI();if(!editing&&(selW.length===0))selW=[me.name]}
+    }else if(!snap.metadata.fromCache||staffReady){
+      if(state!=='app')setState('name');
+    }else{
+      setTimeout(function(){if(!me.name&&state!=='app')setState('name')},4000);
+    }
+    staffReady=true;renderWorkers();renderTeam();renderOnline();
+    if(curView==='v-owner'&&isOwner())renderOwner();
+  },function(){
+    me.name=me.name||String(u.email||'').split('@')[0];
+    if(state!=='app')setState('app');
+    status('تعذر قراءة الفريق. حدّث قواعد Firestore.',true);
+  }));
+
+  unsubs.push(presCol.onSnapshot(function(snap){
+    pres=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});renderOnline();renderTeam();
+  },function(){}));
+
+  sub(5000);
+}
+function stopDb(){
+  unsubs.forEach(function(fn){try{fn()}catch(e){}});unsubs=[];
+  if(unsubE){try{unsubE()}catch(e){}}unsubE=null;
+  col=subCol=bkCol=logCol=staffCol=presCol=cfgRef=null;data=[];subs=[];bookings=[];logs=[];staff=[];pres=[];
+  me={uid:'',name:'',email:'',role:'worker',perms:Object.assign({},RANK_PRESETS.worker),disabled:false,forcePwReset:false};render();
+}
+timer=setTimeout(function(){status('ما قدرنا نوصل للسجل المشترك. تأكد من الإنترنت.',true)},10000);
+setState('login');
+try{
+  if(!window.firebase||!window.FIREBASE_CONFIG||String(FIREBASE_CONFIG.apiKey).indexOf('PASTE')===0)throw new Error('config');
+  firebase.initializeApp(FIREBASE_CONFIG);
+  auth=firebase.auth();var fdb=firebase.firestore();
+  try{fdb.enablePersistence({synchronizeTabs:true}).catch(function(){})}catch(e){}
+  $('lg').onclick=function(){
+    $('lgErr').textContent='';
+    auth.signInWithEmailAndPassword($('em').value.trim(),$('pw').value).then(function(){$('pw').value=''}).catch(function(){$('lgErr').textContent='البريد أو كلمة المرور غير صحيحة'});
+  };
+  $('forgotPw').onclick=function(){
+    var em=$('em').value.trim();
+    if(!em){$('lgErr').textContent='اكتب بريدك الإلكتروني أولاً ثم اضغط على نسيت كلمة المرور';return}
+    auth.sendPasswordResetEmail(em).then(function(){$('lgErr').textContent='';toast('تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك')}).catch(function(){$('lgErr').textContent='تعذر إرسال الرابط، تأكد من صحة البريد الإلكتروني'});
+  };
+  $('fpSave').onclick=function(){
+    var p1=$('fpNew').value,p2=$('fpConf').value;$('fpErr').textContent='';
+    if(!p1||p1.length<6){$('fpErr').textContent='كلمة المرور يجب أن تكون ٦ أحرف على الأقل';return}
+    if(p1!==p2){$('fpErr').textContent='كلمتا المرور غير متطابقتين';return}
+    auth.currentUser.updatePassword(p1).then(function(){
+      $('fpNew').value='';$('fpConf').value='';
+      if(staffCol&&me.uid)staffCol.doc(me.uid).update({forcePwReset:false});
+      addLog('cfg','تحديث كلمة المرور الإجباري',me.name,'');
+      toast('تم تحديث كلمة المرور بنجاح');
+    }).catch(function(){$('fpErr').textContent='يرجى تسجيل الخروج والدخول مجدداً لإتمام تغيير كلمة المرور'});
+  };
+  $('pwChangeBtn').onclick=function(){
+    var cur=$('pwCur').value,nw=$('pwNew').value;
+    if(!cur||!nw||nw.length<6){toast('اكتب كلمة المرور الحالية والجديدة (٦ أحرف+)');return}
+    var cred=firebase.auth.EmailAuthProvider.credential(auth.currentUser.email,cur);
+    auth.currentUser.reauthenticateWithCredential(cred).then(function(){
+      return auth.currentUser.updatePassword(nw);
+    }).then(function(){
+      $('pwCur').value='';$('pwNew').value='';
+      toast('تم تغيير كلمة المرور بنجاح');
+    }).catch(function(){toast('كلمة المرور الحالية غير صحيحة')});
+  };
+  $('pw').addEventListener('keydown',function(ev){if(ev.key==='Enter')$('lg').click()});
+  var doLogout=function(){
+    var done=function(){auth.signOut()};
+    if(presCol&&me.uid)presCol.doc(me.uid).set({name:me.name,ts:0}).then(done,done);else done();
+  };
+  $('logout').onclick=doLogout;$('disLogout').onclick=doLogout;
+  auth.onAuthStateChanged(function(u){
+    if(u){startDb(fdb,u);status('جاري التحميل…')}
+    else{stopDb();setState('login');clearTimeout(timer);status('سجّل الدخول للمتابعة')}
+  });
+}catch(err){
+  clearTimeout(timer);status('لازم تعبّي إعدادات Firebase في ملف config.js.',true);
+}
+})();
+</script>
+</body>
+</html>
