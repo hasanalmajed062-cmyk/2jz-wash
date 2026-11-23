@@ -250,8 +250,8 @@ textarea{min-height:90px}
       <div><label for="amount">المبلغ (د.ب)</label><input id="amount" type="number" inputmode="decimal" step="0.001" min="0" placeholder="0.000"></div>
     </div>
     <div class="row" id="custRow">
-      <div style="grid-column:1/-1"><label for="cname">اسم العميل (اختياري)</label><input id="cname" list="dlNames" autocomplete="off" placeholder="مثال: محمد"></div>
-      <div><label for="phone">رقم هاتف العميل</label><input id="phone" list="dlPhones" autocomplete="off" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
+      <div style="grid-column:1/-1"><label for="cname">اسم العميل (اختياري)</label><input id="cname" placeholder="مثال: محمد"></div>
+      <div><label for="phone">رقم هاتف العميل</label><input id="phone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
       <div><label for="plate">رقم المركبة</label><input id="plate" dir="ltr" style="text-align:right" placeholder="123456"></div>
     </div>
     <div class="row">
@@ -290,9 +290,9 @@ textarea{min-height:90px}
       <div><label for="bkDate">التاريخ</label><input id="bkDate" type="date"></div>
       <div><label for="bkTime">الوقت</label><input id="bkTime" type="time"></div>
     </div>
-    <div style="margin-bottom:8px"><label for="bkName">اسم العميل (اختياري)</label><input id="bkName" list="dlNames" autocomplete="off" placeholder="مثال: محمد"></div>
+    <div style="margin-bottom:8px"><label for="bkName">اسم العميل (اختياري)</label><input id="bkName" placeholder="مثال: محمد"></div>
     <div class="row">
-      <div><label for="bkPhone">رقم هاتف العميل</label><input id="bkPhone" list="dlPhones" autocomplete="off" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
+      <div><label for="bkPhone">رقم هاتف العميل</label><input id="bkPhone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
       <div><label for="bkPlate">رقم المركبة</label><input id="bkPlate" dir="ltr" style="text-align:right" placeholder="123456"></div>
     </div>
     <div class="row">
@@ -336,7 +336,6 @@ textarea{min-height:90px}
   </div>
   <section class="panel">
     <h2>👥 سجل العملاء المرتب</h2>
-    <button class="save" id="custAdd" type="button" style="margin:0 0 10px">➕ إضافة عميل جديد</button>
     <div class="row" style="margin-bottom:8px">
       <div><input id="custQ" placeholder="🔍 بحث بالاسم أو الرقم أو اللوحة..."></div>
       <div>
@@ -365,9 +364,9 @@ textarea{min-height:90px}
 <div class="view" id="v-subs" style="display:none">
   <section class="panel" id="subFormPanel">
     <h2 id="sbTitle">⭐ اشتراك جديد</h2>
-    <div style="margin-bottom:8px"><label for="sbName">اسم العميل (اختياري)</label><input id="sbName" list="dlNames" autocomplete="off" placeholder="مثال: محمد"></div>
+    <div style="margin-bottom:8px"><label for="sbName">اسم العميل (اختياري)</label><input id="sbName" placeholder="مثال: محمد"></div>
     <div class="row">
-      <div><label for="sbPhone">رقم هاتف العميل</label><input id="sbPhone" list="dlPhones" autocomplete="off" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
+      <div><label for="sbPhone">رقم هاتف العميل</label><input id="sbPhone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
       <div><label for="sbPlate">رقم المركبة</label><input id="sbPlate" dir="ltr" style="text-align:right"></div>
     </div>
     <div class="row">
@@ -728,28 +727,6 @@ textarea{min-height:90px}
   <div class="tools"><button id="cdClose" type="button" style="width:100%">إغلاق</button></div>
 </div></div>
 
-<!-- SHEET: ADD / EDIT CUSTOMER -->
-<div class="sheet" id="custEditSheet"><div>
-  <h2 id="ceTitle">➕ عميل جديد</h2>
-  <label for="ceName">اسم العميل (اختياري)</label>
-  <input id="ceName" placeholder="مثال: محمد">
-  <div class="row" style="margin-top:8px">
-    <div><label for="cePhone">رقم الهاتف</label><input id="cePhone" type="tel" inputmode="tel" dir="ltr" style="text-align:right" placeholder="3xxx xxxx"></div>
-    <div><label for="cePlate">رقم المركبة</label><input id="cePlate" dir="ltr" style="text-align:right"></div>
-  </div>
-  <label for="ceVeh">نوع المركبة</label>
-  <select id="ceVeh"></select>
-  <label for="ceNote" style="margin-top:8px">ملاحظة</label>
-  <input id="ceNote" placeholder="اختياري: مثال عميل مميز، يحب الغسيل الداخلي">
-  <div class="tools">
-    <button class="save" id="ceSave" type="button" style="flex:1;margin:0;width:auto">حفظ</button>
-    <button id="ceDel" type="button" class="del" style="display:none">🗑 حذف</button>
-    <button id="ceCancel" type="button">إلغاء</button>
-  </div>
-</div></div>
-<datalist id="dlNames"></datalist>
-<datalist id="dlPhones"></datalist>
-
 <!-- BOTTOM NAV -->
 <nav id="nav" style="display:none">
   <button type="button" data-v="v-main" class="on"><i>🧾</i>التسجيل</button>
@@ -807,7 +784,7 @@ var VIEWS=['v-main','v-queue','v-debts','v-cust','v-subs','v-rep','v-owner','v-s
 var cfg=JSON.parse(JSON.stringify(DEF)),data=[],subs=[],bookings=[],logs=[],staff=[],pres=[],
  me={uid:'',name:'',email:'',role:'worker',perms:Object.assign({},RANK_PRESETS.worker),disabled:false,forcePwReset:false},
  type='in',veh=null,sel={},selW=[],edSelW=[],
- col=null,custCol=null,profs=[],custDenied=false,subCol=null,bkCol=null,logCol=null,staffCol=null,presCol=null,cfgRef=null,FDB=null,auth=null,unsubs=[],unsubE=null,
+ col=null,subCol=null,bkCol=null,logCol=null,staffCol=null,presCol=null,cfgRef=null,FDB=null,auth=null,unsubs=[],unsubE=null,
  freeNext=false,subUse=null,editing=null,editingSub=null,editingBk=null,extendingSub=null,wpTarget=null,wfTarget=null,wfPeriod='month',
  custF='all',bkF='active',curR=null,LIMIT=5000,curView='v-main',state='login',timer=null,ownerBooted=false;
 
@@ -1363,77 +1340,44 @@ function buildCustMap(){
     if(s.cname)nmSet(c,s.cname,s.ts||0);
     if(!c.vt&&s.vtype)c.vt=s.vtype;
   });
-  profs.forEach(function(p){
-    var k=p.id;if(!k)return;
-    var c=map[k]||(map[k]={key:k,phone:p.phone||k,n:0,sum:0,debt:0,last:0,plate:'',vt:'',entries:[]});
-    c.prof=p;c.note=p.note||'';
-    if(p.name){c.name=p.name;c.nameTs=Infinity}
-    if(p.plate)c.plate=p.plate;
-    if(p.vtype)c.vt=p.vtype;
-  });
   return Object.keys(map).map(function(k){
     var c=map[k];
     c.sub=activeSubOf(c.phone);
-    c.idleDays=c.last?Math.floor((nowMs-c.last)/864e5):(c.prof?0:999);
+    c.idleDays=c.last?Math.floor((nowMs-c.last)/864e5):999;
     c.rem=(n*Math.ceil((c.n+1)/n)-(c.n+1));
     c.due=(c.n>0&&(c.n+1)%n===0);
     c.vip=c.n>=5||c.sum>=30;
     return c;
   });
 }
-function refreshCustLists(){
-  var all=buildCustMap(),dn=$('dlNames'),dp=$('dlPhones');dn.innerHTML='';dp.innerHTML='';
-  all.sort(function(a,b){return b.last-a.last}).slice(0,300).forEach(function(c){
-    if(c.name){var o=document.createElement('option');o.value=c.name;o.label=fph(c.phone);dn.appendChild(o)}
-    var o2=document.createElement('option');o2.value=fph(c.phone);o2.label=c.name||c.plate||'';dp.appendChild(o2);
-  });
-}
-var ceEdit=null;
-function openCustEdit(c){
-  ceEdit=c||null;
-  var s=$('ceVeh');s.innerHTML='';var o0=el('option',null,'— اختر —');o0.value='';s.appendChild(o0);
-  var names=cfg.vehicles.map(function(v){return v.name});
-  if(c&&c.vt&&names.indexOf(c.vt)<0)names.push(c.vt);
-  names.forEach(function(n){var o=el('option',null,n);o.value=n;s.appendChild(o)});
-  $('ceTitle').textContent=c?'✏️ تعديل العميل':'➕ عميل جديد';
-  $('ceName').value=c&&c.name||'';$('cePhone').value=c?fph(c.phone):'';
-  $('cePhone').readOnly=!!c;$('cePhone').style.opacity=c?'.6':'1';
-  $('cePlate').value=c&&c.plate||'';$('ceVeh').value=c&&c.vt||'';$('ceNote').value=c&&c.note||'';
-  $('ceDel').style.display=(c&&c.prof&&(isOwner()||!c.entries.length))?'inline-block':'none';
-  $('ceDel').textContent=(c&&!c.entries.length)?'🗑 حذف العميل':'🗑 مسح البيانات المضافة';
-  openSheet('custEditSheet');
-}
-function saveCustEdit(){
-  if(!custCol){toast('السجل المشترك غير متصل');return}
-  var k=ceEdit?ceEdit.key:nph($('cePhone').value);
-  if(!k||k.length<7){toast('اكتب رقم هاتف صحيح للعميل');return}
-  if(!ceEdit){
-    var ex=buildCustMap().filter(function(x){return x.key===k})[0];
-    if(ex){toast('هذا العميل موجود، عدّل بياناته');closeSheet('custEditSheet');openCustEdit(ex);return}
+function saveCustName(c,val,ttl){
+  if(!col){toast('السجل المشترك غير متصل');return}
+  var list=c.entries.slice().sort(function(a,b){return b.ts-a.ts}),jobs=[];
+  if(val){
+    if(list.length)jobs.push(col.doc(list[0].id).update({cname:val}));
+    else{
+      var k=nph(c.phone),ss=subs.filter(function(s){return !s.cancelled&&nph(s.phone)===k}).sort(function(a,b){return (b.ts||0)-(a.ts||0)});
+      if(ss.length&&subCol)jobs.push(subCol.doc(ss[0].id).update({cname:val}));
+    }
+  }else{
+    list.forEach(function(e){if(e.cname)jobs.push(col.doc(e.id).update({cname:''}))});
+    var k2=nph(c.phone);subs.forEach(function(s){if(s.cname&&nph(s.phone)===k2&&subCol)jobs.push(subCol.doc(s.id).update({cname:''}))});
   }
-  var obj={phone:k,name:$('ceName').value.trim(),plate:$('cePlate').value.trim(),vtype:$('ceVeh').value,note:$('ceNote').value.trim(),upd:Date.now(),by:me.name||''};
-  if(!ceEdit||!ceEdit.prof)obj.ts=Date.now();
-  custCol.doc(k).set(obj,{merge:true}).then(function(){
-    addLog('cust',ceEdit?'تعديل عميل':'إضافة عميل',fph(k),obj.name);
-    toast(ceEdit?'تم حفظ التعديل':'تمت إضافة العميل');closeSheet('custEditSheet');
-  }).catch(function(){
-    var c=ceEdit;
-    if(c&&c.entries.length&&col&&obj.name){
-      var last=c.entries.slice().sort(function(a,b){return b.ts-a.ts})[0];
-      col.doc(last.id).update({cname:obj.name}).then(function(){toast('تم حفظ الاسم فقط. باقي البيانات تحتاج تحديث قواعد Firestore');closeSheet('custEditSheet')}).catch(function(){toast('تعذر الحفظ')});
-    }else toast('تعذر الحفظ. حدّث قواعد Firestore لمجموعة customers');
-  });
-}
-function delCustProfile(){
-  if(!custCol||!ceEdit)return;
-  var k=ceEdit.key,sole=!ceEdit.entries.length;
-  if(!confirm(sole?'حذف هذا العميل نهائياً؟':'مسح الاسم والملاحظة المضافة لهذا العميل؟ (سجل عملياته يبقى)'))return;
-  custCol.doc(k).delete().then(function(){addLog('cust','حذف بيانات عميل',fph(k),'');toast('تم');closeSheet('custEditSheet');closeSheet('custDetailSheet')}).catch(function(){toast('تعذر الحذف')});
+  if(!jobs.length){toast(val?'ما في سجل نربط الاسم فيه':'ما في اسم محفوظ');return}
+  Promise.all(jobs).then(function(){
+    c.name=val;ttl.textContent='👤 '+(val?val+' · ':'')+ltr(fph(c.phone));
+    addLog('cust','تحديث اسم عميل',fph(c.phone),val||'حذف الاسم');
+    toast(val?'تم حفظ الاسم':'تم حذف الاسم');
+  }).catch(function(){toast('تعذر حفظ الاسم، تأكد من صلاحيتك')});
 }
 function openCustDetail(c){
   var box=$('cdBody');box.innerHTML='';
   var ttl=el('h2',null,'👤 '+(c.name?c.name+' · ':'')+ltr(fph(c.phone)));box.appendChild(ttl);
-  if(c.note)box.appendChild(el('div','empty','📝 '+c.note));
+  var nrow=el('div','lrow');nrow.style.marginBottom='8px';
+  var nin=document.createElement('input');nin.placeholder='اسم العميل (اختياري)';nin.value=c.name||'';nin.style.flex='1';nin.style.minWidth='140px';
+  nrow.appendChild(nin);
+  nrow.appendChild(btn('💾 حفظ الاسم','sm',function(){saveCustName(c,nin.value.trim(),ttl)}));
+  box.appendChild(nrow);
   var meta=[];if(c.vt)meta.push(c.vt);if(c.plate)meta.push('لوحة: '+c.plate);
   box.appendChild(el('div','empty',meta.length?meta.join(' · '):'لا توجد تفاصيل مركبة مسجلة'));
   var g=el('div','row3');
@@ -1448,7 +1392,6 @@ function openCustDetail(c){
   act.appendChild(btn('🕒 حجز موعد','sm',function(){
     closeSheet('custDetailSheet');showView('v-queue');$('bkName').value=c.name||'';$('bkPhone').value=fph(c.phone);$('bkPlate').value=c.plate||'';$('bkVeh').value=c.vt||'';
   }));
-  act.appendChild(btn('✏️ تعديل','sm',function(){closeSheet('custDetailSheet');openCustEdit(c)}));
   var wa=el('a','btnlink','واتساب');wa.target='_blank';wa.rel='noopener';wa.href='https://wa.me/'+waNum(c.phone);
   act.appendChild(wa);
   box.appendChild(act);
@@ -1508,10 +1451,8 @@ function renderCust(){
     var pr=el('div','prog'+(c.due?' ok':'')),bar=el('i');bar.style.width=pct+'%';pr.appendChild(bar);d.appendChild(pr);
     d.appendChild(el('small',null,c.due?'🎁 الزيارة القادمة مجانية!':'الولاء: '+mod+' من '+n+' (باقي '+c.rem+' زيارة للمجانية)'));
 
-    if(c.note)d.appendChild(el('small',null,'📝 '+c.note));
     var act=el('div','act');
     act.appendChild(btn('📋 السجل والتفاصيل','sm',function(){openCustDetail(c)}));
-    act.appendChild(btn('✏️ تعديل','sm',function(){openCustEdit(c)}));
     act.appendChild(btn('🧾 غسلة سريعة','sm',function(){
       showView('v-main');setType('in');$('phone').value=fph(c.phone);$('plate').value=c.plate||'';$('cname').value=c.name||'';loyal();
     }));
@@ -2248,19 +2189,6 @@ Array.prototype.forEach.call($('bkFilter').children,function(b){b.onclick=functi
 }});
 
 /* customer filters wiring */
-$('custAdd').onclick=function(){openCustEdit(null)};
-$('ceSave').onclick=saveCustEdit;$('ceCancel').onclick=function(){closeSheet('custEditSheet')};$('ceDel').onclick=delCustProfile;
-['cname','bkName','sbName','phone','bkPhone','sbPhone'].forEach(function(i){$(i).addEventListener('focus',refreshCustLists)});
-[['cname','phone','plate'],['bkName','bkPhone','bkPlate'],['sbName','sbPhone','sbPlate']].forEach(function(t){
-  $(t[0]).addEventListener('change',function(){
-    var v=this.value.trim().toLowerCase();if(!v)return;
-    var c=buildCustMap().filter(function(x){return (x.name||'').toLowerCase()===v}).sort(function(a,b){return b.last-a.last})[0];
-    if(!c)return;
-    if(!$(t[1]).value.trim())$(t[1]).value=fph(c.phone);
-    if(!$(t[2]).value.trim()&&c.plate)$(t[2]).value=c.plate;
-    if(t[0]==='cname')loyal();
-  });
-});
 $('custQ').oninput=renderCust;$('custSort').onchange=renderCust;
 Array.prototype.forEach.call($('custFilter').children,function(b){b.onclick=function(){
   custF=b.getAttribute('data-f');
@@ -2380,7 +2308,7 @@ $('rcCopy').onclick=function(){var r=$('rcptText');r.focus();r.select();try{docu
 $('rcClose').onclick=function(){closeSheet('rcptSheet')};
 $('rcPdf').onclick=function(){if(curR)rcptPdf(curR)};
 $('edSave').onclick=saveEdit;$('edCancel').onclick=function(){closeSheet('editSheet');editing=null};
-['alertSheet','editSheet','extSheet','rcptSheet','workerPermSheet','newWorkerSheet','workerFileSheet','custDetailSheet','custEditSheet'].forEach(function(id){
+['alertSheet','editSheet','extSheet','rcptSheet','workerPermSheet','newWorkerSheet','workerFileSheet','custDetailSheet'].forEach(function(id){
   $(id).onclick=function(ev){if(ev.target===$(id))closeSheet(id)};
 });
 $('mon').value=dkey(Date.now()).slice(0,7);$('mon').onchange=renderMonth;
@@ -2429,7 +2357,7 @@ function rulesErr(what){return function(){status('تعذر قراءة '+what+'. 
 function startDb(fdb,u){
   FDB=fdb;me.uid=u.uid;me.email=u.email||'';ownerBooted=false;
   col=fdb.collection('entries');subCol=fdb.collection('subs');bkCol=fdb.collection('bookings');
-  logCol=fdb.collection('logs');staffCol=fdb.collection('staff');presCol=fdb.collection('presence');custCol=fdb.collection('customers');cfgRef=fdb.doc('config/prices');
+  logCol=fdb.collection('logs');staffCol=fdb.collection('staff');presCol=fdb.collection('presence');cfgRef=fdb.doc('config/prices');
 
   unsubs.push(cfgRef.onSnapshot(function(s){
     var d=s.exists&&s.data();
@@ -2500,10 +2428,6 @@ function startDb(fdb,u){
     status('تعذر قراءة الفريق. حدّث قواعد Firestore.',true);
   }));
 
-  unsubs.push(custCol.onSnapshot(function(snap){
-    custDenied=false;profs=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});renderCust();
-  },function(){custDenied=true}));
-
   unsubs.push(presCol.onSnapshot(function(snap){
     pres=snap.docs.map(function(d){var x=Object.assign({},d.data());x.id=d.id;return x});renderOnline();renderTeam();
   },function(){}));
@@ -2513,7 +2437,7 @@ function startDb(fdb,u){
 function stopDb(){
   unsubs.forEach(function(fn){try{fn()}catch(e){}});unsubs=[];
   if(unsubE){try{unsubE()}catch(e){}}unsubE=null;
-  col=custCol=subCol=bkCol=logCol=staffCol=presCol=cfgRef=null;profs=[];data=[];subs=[];bookings=[];logs=[];staff=[];pres=[];
+  col=subCol=bkCol=logCol=staffCol=presCol=cfgRef=null;data=[];subs=[];bookings=[];logs=[];staff=[];pres=[];
   me={uid:'',name:'',email:'',role:'worker',perms:Object.assign({},RANK_PRESETS.worker),disabled:false,forcePwReset:false};render();
 }
 timer=setTimeout(function(){status('ما قدرنا نوصل للسجل المشترك. تأكد من الإنترنت.',true)},10000);
