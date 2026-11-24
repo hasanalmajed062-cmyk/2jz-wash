@@ -127,6 +127,9 @@ textarea{min-height:90px}
 .ed{display:grid;grid-template-columns:2fr 1fr auto;gap:6px;margin-bottom:6px}
 .ed select{grid-column:1/-1}
 .ed .del{min-height:46px}
+.qadd{display:grid;grid-template-columns:2fr 1fr;gap:6px;margin:10px 0 4px;padding:10px;border:1px dashed var(--bd);border-radius:12px;background:var(--tint)}
+.qadd select,.qadd button{grid-column:1/-1}
+.qadd button{min-height:46px;background:linear-gradient(180deg,#E0242F,#B3121C);border-color:#8E0F17;color:#fff;font-weight:800;box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
 .plan{border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:8px;background:var(--bg)}
 .plan .row{margin-bottom:6px}
 .permGrid{display:grid;grid-template-columns:1fr;gap:6px;margin:8px 0}
@@ -568,10 +571,19 @@ textarea{min-height:90px}
       <input id="loyN" type="number" inputmode="numeric" min="2" placeholder="10">
       <h2 style="margin-top:16px">الخدمات الأساسية</h2>
       <div id="edV"></div>
-      <button id="addV" type="button">+ خدمة أساسية</button>
+      <div class="qadd">
+        <input id="nvName" placeholder="اسم الخدمة (مثال: سيارة صالون)" autocomplete="off">
+        <input id="nvPrice" type="number" step="0.001" inputmode="decimal" placeholder="السعر">
+        <button id="addV" type="button">+ إضافة خدمة</button>
+      </div>
       <h2 style="margin-top:16px">الإضافات (تنزاد على السعر)</h2>
       <div id="edA"></div>
-      <button id="addA" type="button">+ إضافة</button>
+      <div class="qadd">
+        <input id="naName" placeholder="اسم الإضافة (مثال: تلميع)" autocomplete="off">
+        <input id="naPrice" type="number" step="0.001" inputmode="decimal" placeholder="السعر">
+        <select id="naOnly"></select>
+        <button id="addA" type="button">+ إضافة</button>
+      </div>
     </section>
     <section class="panel">
       <h2>⭐ قوالب الاشتراك</h2>
@@ -823,7 +835,8 @@ function keyToDate(k){var p=k.split('-');return new Date(+p[0],+p[1]-1,+p[2],12)
 function addDays(k,n){var d=keyToDate(k);d.setDate(d.getDate()+n);return dkey(d.getTime())}
 function daysBetween(a,b){return Math.round((keyToDate(b)-keyToDate(a))/864e5)}
 function status(m,bad){var s=$('status');s.textContent=m;s.className=bad?'bad':''}
-function saveCfg(){if(cfgRef)cfgRef.set(cfg).catch(function(){toast('تعذر حفظ الإعدادات')})}
+function saveCfg(msg){if(!cfgRef){toast('غير متصل بالسجل المشترك');return}cfgRef.set(cfg).then(function(){if(msg)toast(msg)}).catch(function(){toast('تعذر حفظ الإعدادات، تأكد من صلاحيتك واتصالك')})}
+function needEdit(){if(can('editSettings'))return true;toast('ما عندك صلاحية تعديل الخدمات والإعدادات');return false}
 function LOY(){var n=parseInt(cfg.loyal,10);return n>1?n:10}
 function paidOf(e){return e.paid===undefined?e.pay!=='آجل':!!e.paid}
 function vtypeOf(e){if(e.vtype)return e.vtype;var m=/^غسيل سريع - ([^+(]+)/.exec(e.label||'');return m?m[1].trim():''}
@@ -2155,32 +2168,56 @@ function rcptPdf(r){
 /* settings editor */
 function inp(val,tp,fn,pholder){var i=document.createElement('input');i.type=tp;i.value=val;if(pholder)i.placeholder=pholder;if(tp==='number'){i.step='0.001';i.inputMode='decimal'}i.onchange=fn;return i}
 function rowEd(box,list,i,isAddon){
-  var it=list[i],d=el('div','ed');
-  d.appendChild(inp(it.name,'text',function(){it.name=this.value.trim()||it.name;saveCfg();addLog('cfg','تعديل خدمة',it.name,'')},'الاسم'));
-  d.appendChild(inp(it.price,'number',function(){var p=parseFloat(this.value);if(p>=0){it.price=p;saveCfg();addLog('cfg','تعديل سعر',it.name,f(p)+' د.ب')}},'السعر'));
+  var kind=isAddon?'addons':'vehicles',it=list[i],id=it.id,d=el('div','ed');
+  function cur(){return (cfg[kind]||[]).filter(function(x){return x.id===id})[0]}
+  d.appendChild(inp(it.name,'text',function(){
+    var t=cur();if(!t)return;
+    if(!needEdit()){this.value=t.name;return}
+    var v=this.value.trim();if(!v){this.value=t.name;toast('الاسم لا يمكن أن يكون فارغاً');return}
+    t.name=v;saveCfg('تم الحفظ');addLog('cfg','تعديل خدمة',v,'');
+  },'الاسم'));
+  d.appendChild(inp(it.price,'number',function(){
+    var t=cur();if(!t)return;
+    if(!needEdit()){this.value=t.price;return}
+    var p=parseFloat(this.value);
+    if(!(p>=0)){this.value=t.price;toast('اكتب سعراً صحيحاً');return}
+    t.price=Math.round(p*1000)/1000;saveCfg('تم حفظ السعر');addLog('cfg','تعديل سعر',t.name,f(t.price)+' د.ب');
+  },'السعر'));
   var x=btn('حذف','del',function(){
-    if(x.dataset.ok){list.splice(i,1);saveCfg();edRender();chips()}else{x.dataset.ok='1';x.textContent='تأكيد؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف'},3000)}
+    if(x.dataset.ok){
+      if(!needEdit())return;
+      if(!isAddon&&cfg.vehicles.length<=1){toast('لازم تبقى خدمة أساسية وحدة على الأقل');return}
+      cfg[kind]=cfg[kind].filter(function(y){return y.id!==id});
+      if(!isAddon){cfg.addons.forEach(function(a){if(a.only===id)a.only=''});if(veh===id)veh=null}
+      else delete sel[id];
+      saveCfg('تم الحذف');addLog('cfg','حذف خدمة',it.name,'');edRender();chips();
+    }else{x.dataset.ok='1';x.textContent='تأكيد؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف'},3000)}
   });
   d.appendChild(x);
   if(isAddon){
     var s=document.createElement('select'),o=el('option',null,'تنطبق على كل المركبات');o.value='';s.appendChild(o);
     cfg.vehicles.forEach(function(v){var q=el('option',null,'فقط: '+v.name);q.value=v.id;s.appendChild(q)});
-    s.value=it.only||'';s.onchange=function(){it.only=this.value;saveCfg()};d.appendChild(s);
+    s.value=it.only||'';
+    s.onchange=function(){var t=cur();if(!t)return;if(!needEdit()){this.value=t.only||'';return}t.only=this.value;saveCfg('تم الحفظ')};
+    d.appendChild(s);
   }
   box.appendChild(d);
 }
 function planRow(box,i){
-  var p=cfg.plans[i],d=el('div','plan');
-  var n=inp(p.name,'text',function(){p.name=this.value.trim()||p.name;saveCfg()},'اسم القالب');n.style.marginBottom='6px';d.appendChild(n);
+  var p0=cfg.plans[i],id=p0.id,d=el('div','plan');
+  function cur(){return (cfg.plans||[]).filter(function(x){return x.id===id})[0]}
+  function upd(fn){var t=cur();if(!t)return;if(!needEdit())return false;fn(t);saveCfg('تم الحفظ')}
+  var n=inp(p0.name,'text',function(){var v=this.value.trim();if(!v){this.value=(cur()||p0).name;return}upd(function(t){t.name=v})},'اسم القالب');n.style.marginBottom='6px';d.appendChild(n);
   var r1=el('div','row'),a=el('div'),b=el('div');
-  a.appendChild(el('label',null,'السعر (د.ب)'));a.appendChild(inp(p.price,'number',function(){var v=parseFloat(this.value);if(v>=0){p.price=v;saveCfg()}}));
-  b.appendChild(el('label',null,'المدة (أيام)'));b.appendChild(inp(p.days||30,'number',function(){var v=parseInt(this.value,10);if(v>0){p.days=v;saveCfg()}}));
+  a.appendChild(el('label',null,'السعر (د.ب)'));a.appendChild(inp(p0.price,'number',function(){var v=parseFloat(this.value);if(!(v>=0)){this.value=(cur()||p0).price;toast('اكتب سعراً صحيحاً');return}upd(function(t){t.price=Math.round(v*1000)/1000})}));
+  b.appendChild(el('label',null,'المدة (أيام)'));b.appendChild(inp(p0.days||30,'number',function(){var v=parseInt(this.value,10);if(!(v>0)){this.value=(cur()||p0).days||30;return}upd(function(t){t.days=v})}));
   r1.appendChild(a);r1.appendChild(b);d.appendChild(r1);
-  var w=el('div');w.appendChild(el('label',null,'عدد الغسلات (0 = غير محدود)'));w.appendChild(inp(p.washes||0,'number',function(){p.washes=parseInt(this.value,10)||0;saveCfg()}));d.appendChild(w);
+  var w=el('div');w.appendChild(el('label',null,'عدد الغسلات (0 = غير محدود)'));w.appendChild(inp(p0.washes||0,'number',function(){var v=parseInt(this.value,10)||0;upd(function(t){t.washes=v})}));d.appendChild(w);
   var l=el('label',null,'المزايا (كل ميزة في سطر)');l.style.marginTop='6px';d.appendChild(l);
-  var t=document.createElement('textarea');t.value=p.benefits||'';t.onchange=function(){p.benefits=this.value.trim();saveCfg()};d.appendChild(t);
+  var t0=document.createElement('textarea');t0.value=p0.benefits||'';t0.onchange=function(){var v=this.value.trim();upd(function(t){t.benefits=v})};d.appendChild(t0);
   var x=btn('حذف القالب','del',function(){
-    if(x.dataset.ok){cfg.plans.splice(i,1);saveCfg();edRender()}else{x.dataset.ok='1';x.textContent='تأكيد الحذف؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف القالب'},3000)}
+    if(x.dataset.ok){if(!needEdit())return;cfg.plans=(cfg.plans||[]).filter(function(y){return y.id!==id});saveCfg('تم حذف القالب');edRender()}
+    else{x.dataset.ok='1';x.textContent='تأكيد الحذف؟';setTimeout(function(){x.dataset.ok='';x.textContent='حذف القالب'},3000)}
   });
   x.style.marginTop='6px';d.appendChild(x);box.appendChild(d);
 }
@@ -2189,6 +2226,8 @@ function edRender(){
   cfg.vehicles.forEach(function(_,i){rowEd(V,cfg.vehicles,i,false)});
   cfg.addons.forEach(function(_,i){rowEd(A,cfg.addons,i,true)});
   (cfg.plans||[]).forEach(function(_,i){planRow(P,i)});
+  var no=$('naOnly');if(no){var keep=no.value;no.innerHTML='';var o0=el('option',null,'تنطبق على كل المركبات');o0.value='';no.appendChild(o0);
+    cfg.vehicles.forEach(function(v){var q=el('option',null,'فقط: '+v.name);q.value=v.id;no.appendChild(q)});no.value=keep||''}
   renderSubForm();renderBkVeh();
 }
 
@@ -2388,13 +2427,38 @@ $('monExp').onclick=function(){var m=$('mon').value;exportCsv(data.filter(functi
 $('expDate').value=dkey(Date.now());
 $('expDay').onclick=function(){var k=$('expDate').value;exportCsv(data.filter(function(e){return dkey(e.ts)===k}),'wash-log-'+k+'.csv')};
 $('expAll').onclick=function(){exportCsv(data,'wash-log-all.csv')};
-$('biz').onchange=function(){if(!can('editSettings'))return;cfg.biz=this.value.trim();saveCfg();applyBiz()};
-$('shopPhone').onchange=function(){if(!can('editSettings'))return;cfg.shopPhone=this.value.trim()||'+973 3897 4280';saveCfg();applyBiz()};
-$('shopInsta').onchange=function(){if(!can('editSettings'))return;cfg.shopInsta=this.value.trim().replace(/^@/,'')||'2jz.bh';saveCfg();applyBiz()};
-$('loyN').onchange=function(){if(!can('editSettings'))return;var n=parseInt(this.value,10);cfg.loyal=n>1?n:10;saveCfg();render()};
-$('addV').onclick=function(){if(!can('editSettings'))return;cfg.vehicles.push({id:'v'+Date.now(),name:'خدمة جديدة',price:0});saveCfg();edRender();chips()};
-$('addA').onclick=function(){if(!can('editSettings'))return;cfg.addons.push({id:'a'+Date.now(),name:'إضافة جديدة',price:0,only:''});saveCfg();edRender();chips()};
-$('addP').onclick=function(){if(!can('editSettings'))return;cfg.plans=cfg.plans||[];cfg.plans.push({id:'p'+Date.now(),name:'اشتراك شهري',price:0,days:30,washes:0,benefits:''});saveCfg();edRender()};
+$('biz').onchange=function(){if(!needEdit())return;cfg.biz=this.value.trim();saveCfg();applyBiz()};
+$('shopPhone').onchange=function(){if(!needEdit())return;cfg.shopPhone=this.value.trim()||'+973 3897 4280';saveCfg();applyBiz()};
+$('shopInsta').onchange=function(){if(!needEdit())return;cfg.shopInsta=this.value.trim().replace(/^@/,'')||'2jz.bh';saveCfg();applyBiz()};
+$('loyN').onchange=function(){if(!needEdit())return;var n=parseInt(this.value,10);cfg.loyal=n>1?n:10;saveCfg();render()};
+$('addV').onclick=function(){
+  if(!needEdit())return;
+  var n=$('nvName').value.trim(),p=parseFloat($('nvPrice').value);
+  if(!n){toast('اكتب اسم الخدمة');$('nvName').focus();return}
+  if(!(p>=0)){toast('اكتب سعر الخدمة');$('nvPrice').focus();return}
+  if(cfg.vehicles.some(function(v){return v.name===n})){toast('هذه الخدمة موجودة مسبقاً');return}
+  p=Math.round(p*1000)/1000;
+  cfg.vehicles.push({id:'v'+Date.now(),name:n,price:p});
+  saveCfg('تمت إضافة الخدمة');addLog('cfg','إضافة خدمة',n,f(p)+' د.ب');
+  $('nvName').value='';$('nvPrice').value='';edRender();chips();$('nvName').focus();
+};
+$('addA').onclick=function(){
+  if(!needEdit())return;
+  var n=$('naName').value.trim(),p=parseFloat($('naPrice').value);
+  if(!n){toast('اكتب اسم الإضافة');$('naName').focus();return}
+  if(!(p>=0)){toast('اكتب سعر الإضافة');$('naPrice').focus();return}
+  if(cfg.addons.some(function(a){return a.name===n})){toast('هذه الإضافة موجودة مسبقاً');return}
+  p=Math.round(p*1000)/1000;
+  cfg.addons.push({id:'a'+Date.now(),name:n,price:p,only:$('naOnly').value||''});
+  saveCfg('تمت إضافة الإضافة');addLog('cfg','إضافة إضافة',n,f(p)+' د.ب');
+  $('naName').value='';$('naPrice').value='';$('naOnly').value='';edRender();chips();$('naName').focus();
+};
+$('addP').onclick=function(){
+  if(!needEdit())return;
+  cfg.plans=cfg.plans||[];cfg.plans.push({id:'p'+Date.now(),name:'اشتراك شهري',price:0,days:30,washes:0,benefits:''});
+  saveCfg('تمت إضافة القالب');edRender();
+  var ins=$('edP').querySelectorAll('input[type=text]'),l=ins[ins.length-1];if(l){l.focus();l.select();l.scrollIntoView({block:'center',behavior:'smooth'})}
+};
 $('myName2').onchange=function(){
   var n=this.value.trim();
   if(n&&staffCol&&me.uid){staffCol.doc(me.uid).set({name:n,email:me.email||'',ts:Date.now()},{merge:true}).then(function(){toast('تم حفظ الاسم');beat()})}
